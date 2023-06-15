@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/me/me",
-    "pages/message/message",
+    "pages/notice/notice",
+    "pages/detail/detail",
+    "pages/experience/experience",
     "pages/leave/leave",
     "pages/addressChange/addressChange",
     "pages/locationChange/locationChange",
@@ -37,5 +39,8 @@
       }
     ]
   },
+  "navigateToMiniProgramAppIdList": [
+    "wx14c2b0d4a80a43d0"
+  ],
   "usingComponents": {}
 }

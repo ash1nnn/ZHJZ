@@ -63,7 +63,7 @@
 		<image class="bb" src="../../static/index/9.png" ></image>
 	</view>
 	<view class="new">
-		<view class="cc" v-for="(item,index) in newsList">
+		<view class="cc" v-for="(item,index) in newsList" @click="change(item.id)">
 				<img  :src="item.icon" alt="" class="dd" >
 				<view class="tt">
 					<text class="ee">{{item.text}}</text>
@@ -101,6 +101,7 @@
 					{
 						icon: "../../static/index/6.png",
 						text: "矫正经历",
+						url: "/pages/experience/experience"
 						
 					}
 				],
@@ -161,21 +162,25 @@
 					// }
 				],
 				newsList: [{
+						id: "2",
 						icon: "../../static/index/10.png",
-						text: "社区矫正对象报道接受规范",
+						text: "社区矫正对象报到接受规范",
 						text1: "1236人阅读"
 					},
 					{
+						id: "3",
 						icon: "../../static/index/11.png",
 						text: "社区矫正对象报告规范",
 						text1: "7786人阅读"
 					},
 					{
+						id: "4",
 						icon: "../../static/index/12.png",
 						text: "请假外出审批规范",
 						text1: "5658人阅读"
 					},
 					{
+						id: "5",
 						icon: "../../static/index/13.png",
 						text: "居住、执行地变更审批规范",
 						text1: "5675人阅读"
@@ -194,7 +199,15 @@
 				uni.navigateTo({
 					url: item
 				});
-			}
+			},
+			change(id) {
+			        uni.navigateTo({
+			          url: '/pages/detail/detail?id=' + JSON.stringify(id)//将传递的对象转化成字符串
+			        })
+			},
+				
+
+					
 
 		}
 	}

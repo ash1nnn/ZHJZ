@@ -21,7 +21,8 @@ const _sfc_main = {
         },
         {
           icon: "../../static/index/6.png",
-          text: "矫正经历"
+          text: "矫正经历",
+          url: "/pages/experience/experience"
         }
       ],
       // list2: [{
@@ -84,21 +85,25 @@ const _sfc_main = {
       ],
       newsList: [
         {
+          id: "2",
           icon: "../../static/index/10.png",
-          text: "社区矫正对象报道接受规范",
+          text: "社区矫正对象报到接受规范",
           text1: "1236人阅读"
         },
         {
+          id: "3",
           icon: "../../static/index/11.png",
           text: "社区矫正对象报告规范",
           text1: "7786人阅读"
         },
         {
+          id: "4",
           icon: "../../static/index/12.png",
           text: "请假外出审批规范",
           text1: "5658人阅读"
         },
         {
+          id: "5",
           icon: "../../static/index/13.png",
           text: "居住、执行地变更审批规范",
           text1: "5675人阅读"
@@ -112,6 +117,12 @@ const _sfc_main = {
     click(item) {
       common_vendor.index.navigateTo({
         url: item
+      });
+    },
+    change(id) {
+      common_vendor.index.navigateTo({
+        url: "/pages/detail/detail?id=" + JSON.stringify(id)
+        //将传递的对象转化成字符串
       });
     }
   }
@@ -150,10 +161,11 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       return {
         a: item.icon,
         b: common_vendor.t(item.text),
-        c: common_vendor.t(item.text1)
+        c: common_vendor.t(item.text1),
+        d: common_vendor.o(($event) => $options.change(item.id))
       };
     })
   });
 }
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "C:/Users/lcz/Documents/HBuilderProjects/111/pages/index/index.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "C:/Users/lcz/Documents/GitHub/ZHJZ/pages/index/index.vue"]]);
 wx.createPage(MiniProgramPage);

@@ -8,9 +8,21 @@
 			"path": "pages/me/me"
 		},
 		{
-			"path": "pages/message/message",
+			"path": "pages/notice/notice",
 			"style": {
 				"navigationBarTitleText": "矫正须知"
+			}
+		},	
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "矫正须知"
+			}
+		},	
+		{
+			"path": "pages/experience/experience",
+			"style": {
+				"navigationBarTitleText": "矫正经历"
 			}
 		},	
 		{

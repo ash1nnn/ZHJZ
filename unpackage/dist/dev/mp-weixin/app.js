@@ -4,7 +4,9 @@ const common_vendor = require("./common/vendor.js");
 if (!Math) {
   "./pages/index/index.js";
   "./pages/me/me.js";
-  "./pages/message/message.js";
+  "./pages/notice/notice.js";
+  "./pages/detail/detail.js";
+  "./pages/experience/experience.js";
   "./pages/leave/leave.js";
   "./pages/addressChange/addressChange.js";
   "./pages/locationChange/locationChange.js";
@@ -25,7 +27,7 @@ const _sfc_main = {
     console.log("App Hide");
   }
 };
-const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "C:/Users/lcz/Documents/HBuilderProjects/111/App.vue"]]);
+const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "C:/Users/lcz/Documents/GitHub/ZHJZ/App.vue"]]);
 function createApp() {
   const app = common_vendor.createSSRApp(App);
   return {

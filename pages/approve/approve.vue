@@ -4,7 +4,11 @@
 	</view>
 	<view class="new">
 		<view class="cc" v-for="(item,index) in newsList" @click="click(item.url)">
-				<img  :src="item.icon" alt="" class="dd" mode="widthFix">
+			<view :class="'aa'+(index+1)">
+				<text class="txt">{{item.text}}</text>
+				<img  :src="item.icon"  class="dd" mode="widthFix">
+			</view>
+				
 		</view>
 	</view>
 
@@ -16,15 +20,18 @@
 			data() {
 				return {
 					newsList: [{
-							icon: "../../static/check/6.png",
+							icon: "../../static/check/10.png",
+							text: "请假",
 							url: "/pages/leave/leave"
 						},
 						{
-							icon: "../../static/check/7.png",
+							icon: "../../static/check/11.png",
+							text: "居住地变更",
 							url: "/pages/addressChange/addressChange"
 						},
 						{
-							icon: "../../static/check/8.png",
+							icon: "../../static/check/12.png",
+							text: "执行地变更",
 							url: "/pages/locationChange/locationChange"
 						}
 						
@@ -51,7 +58,8 @@
 
 <style>
 	.a{
-		width: 750rpx;
+		width: 700rpx;
+		margin-left: 20rpx;
 	}
 	.new{
 		margin-top: 10rpx;
@@ -60,11 +68,41 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
-	.cc{
+	.aa1{
 		margin-top: 40rpx;
+		width: 330rpx;
+		height: 230rpx;
+		background-color: #ACF6DB;
+		border-radius: 30rpx;
+	}
+	.aa2{
+		margin-top: 40rpx;
+		width: 330rpx;
+		height: 230rpx;
+		background-color: #6796F9;
+		border-radius: 30rpx;
+	}
+	.aa3{
+		margin-top: 40rpx;
+		width: 330rpx;
+		height: 230rpx;
+		background-color: #FED9A8;
+		border-radius: 30rpx;
+	}
+
+		
+	.txt{
+		display: inline-block;
+		margin-top: 20rpx;
+		padding-left: 30rpx;
+		color: white;
+		font-weight: 100;
+		position: absolute;
 	}
 	.dd{
-		width: 330rpx;
-		height: 280rpx;
+		margin-top: 100rpx;
+		padding-left: 200rpx;
+		width: 100rpx;
+		height: 100rpx;
 	}
 </style>
