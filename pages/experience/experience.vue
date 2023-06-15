@@ -1,17 +1,17 @@
 <template>
 	<view class="content" v-if="no == 0">
-		<image class="b" src="../../static/ex/1.png" mode="widthFix"></image>
-		<image class="c" src="../../static/ex/2.png" mode="widthFix"></image>
-		<image class="d" src="../../static/ex/3.png" mode="widthFix"></image>
-		<image class="e" src="../../static/ex/4.png" mode="widthFix"></image>
-		<image class="f" src="../../static/ex/5.png" mode="widthFix"></image>
-		<image class="g" src="../../static/ex/6.png" mode="widthFix" @click="change(0)"></image>
+		<image class="b" src="https://test-37b.pages.dev/ex/1.png" mode="widthFix"></image>
+		<image class="c" src="https://test-37b.pages.dev/ex/2.png" mode="widthFix"></image>
+		<image class="d" src="https://test-37b.pages.dev/ex/3.png" mode="widthFix"></image>
+		<image class="e" src="https://test-37b.pages.dev/ex/4.png" mode="widthFix"></image>
+		<image class="f" src="https://test-37b.pages.dev/ex/5.png" mode="widthFix"></image>
+		<image class="g" src="https://test-37b.pages.dev/ex/6.png" mode="widthFix" @click="change(0)"></image>
 	</view>
 
 	<view class="box" v-if="no == 1">
 		<scroll-view scroll-y="true" class="box-scroll">
 			<view class="a" >
-				<image class="b" src="../../static/ex/11.png" mode="widthFix"></image>
+				<image class="b" src="https://test-37b.pages.dev/ex/11.png" mode="widthFix"></image>
 				<view class="aa">
 					<text class="bb">这一年您参加</text>
 					<text class="cc">集中学习教育25次</text>
@@ -20,7 +20,7 @@
 				</view>
 			</view>
 			<view class="a" >
-				<image class="b" src="../../static/ex/22.png" mode="widthFix"></image>
+				<image class="b" src="https://test-37b.pages.dev/ex/22.png" mode="widthFix"></image>
 				<view class="xx">
 					<text class="bb">这一年您提出</text>
 					<text class="ii">个人需求5个</text>
@@ -29,7 +29,7 @@
 				</view>
 			</view>
 			<view class="a" >
-				<image class="b" src="../../static/ex/33.png" mode="widthFix"></image>
+				<image class="b" src="https://test-37b.pages.dev/ex/33.png" mode="widthFix"></image>
 				<view class="yy">
 					<text class="jj">最早在早上</text>
 					<text class="jj">5:13签到打卡</text>

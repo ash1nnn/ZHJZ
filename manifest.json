@@ -1,6 +1,6 @@
 {
-    "name" : "111",
-    "appid" : "",
+    "name" : "矫正之家",
+    "appid" : "wx0ff6d3e29a2782d8",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -54,7 +54,7 @@
         "setting" : {
             "urlCheck" : false
         },
-		"navigateToMiniProgramAppIdList":["wx14c2b0d4a80a43d0","wxd9c723d098992660"],
+        "navigateToMiniProgramAppIdList" : [ "wx14c2b0d4a80a43d0", "wxd9c723d098992660" ],
         "usingComponents" : true
     },
     "mp-alipay" : {
