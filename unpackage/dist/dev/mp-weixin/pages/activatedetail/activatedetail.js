@@ -1,0 +1,1 @@
+"use strict";const e=require("../../common/vendor.js"),t={data(){return{}},methods:{}};function r(c,s,n,o,i,_){return{}}const a=e._export_sfc(t,[["render",r],["__file","C:/Users/lcz/Documents/GitHub/ZHJZ/pages/activatedetail/activatedetail.vue"]]);wx.createPage(a);

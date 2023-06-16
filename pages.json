@@ -8,6 +8,24 @@
 			"path": "pages/me/me"
 		},
 		{
+			"path": "pages/activatemain/activatemain",
+			"style": {
+				"navigationBarTitleText": "活动预约"
+			}
+		},
+		{
+			"path": "pages/actOrder/actOrder",
+			"style": {
+				"navigationBarTitleText": "活动预约"
+			}
+		},
+		{
+			"path": "pages/activatedetail/activatedetail",
+			"style": {
+				"navigationBarTitleText": "活动预约"
+			}
+		},
+		{
 			"path": "pages/notice/notice",
 			"style": {
 				"navigationBarTitleText": "矫正须知"

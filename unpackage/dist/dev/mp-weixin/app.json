@@ -2,6 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/me/me",
+    "pages/activatemain/activatemain",
+    "pages/actOrder/actOrder",
+    "pages/activatedetail/activatedetail",
     "pages/notice/notice",
     "pages/detail/detail",
     "pages/experience/experience",

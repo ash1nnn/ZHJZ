@@ -91,7 +91,7 @@
 					{
 						icon: "../../static/index/4.png",
 						text: "活动预约",
-						
+						url: "/pages/activatemain/activatemain"
 					},
 					{
 						icon: "../../static/index/5.png",

@@ -1,6 +1,6 @@
 <template>
 	<view >
-		<image class="a" src="../../static/check/1.png" mode="widthFix"></image>
+		<image class="a" src="https://test-37b.pages.dev/check/1.png" mode="widthFix"></image>
 	</view>
 	<view class="new">
 		<view  v-for="(item,index) in list1" @click="click(item.url)" :key="index">

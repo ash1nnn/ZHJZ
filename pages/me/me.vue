@@ -69,14 +69,14 @@
 				list1: [{
 						icon: "../../static/me/7.jpg",
 						text: "沪智矫",
-						appid: "wx14c2b0d4a80a43d0",
-						url: "/pages/home/index",
+						appid: "wxd9c723d098992660",
+						url: "/pages/flash/index",
 					},
 					{
 						icon: "../../static/me/8.jpg",
 						text: "慧矫正",
-						appid: "wxd9c723d098992660",
-						url: "/pages/flash/index",
+						appid: "wx14c2b0d4a80a43d0",
+						url: "/pages/home/index",
 					}
 				],
 				
