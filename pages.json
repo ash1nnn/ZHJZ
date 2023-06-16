@@ -1,0 +1,126 @@
+{
+	"lazyCodeLoading":"requiredComponents",
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index"
+		},
+		{
+			"path": "pages/me/me"
+		},
+		{
+			"path": "pages/activatemain/activatemain",
+			"style": {
+				"navigationBarTitleText": "活动预约"
+			}
+		},
+		{
+			"path": "pages/actOrder/actOrder",
+			"style": {
+				"navigationBarTitleText": "活动预约"
+			}
+		},
+		{
+			"path": "pages/activatedetail/activatedetail",
+			"style": {
+				"navigationBarTitleText": "活动预约"
+			}
+		},
+		{
+			"path": "pages/notice/notice",
+			"style": {
+				"navigationBarTitleText": "矫正须知"
+			}
+		},	
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "矫正须知"
+			}
+		},	
+		{
+			"path": "pages/experience/experience",
+			"style": {
+				"navigationBarTitleText": "矫正经历"
+			}
+		},	
+		{
+			"path": "pages/leave/leave",
+			"style": {
+				"navigationBarTitleText": "请假"
+			}
+		},
+		{
+			"path": "pages/addressChange/addressChange",
+			"style": {
+				"navigationBarTitleText": "居住地变更 "
+			}
+		},
+		{
+			"path": "pages/locationChange/locationChange",
+			"style": {
+				"navigationBarTitleText": "执行地变更 "
+			}
+		},
+		{
+			"path": "pages/check/check",
+			"style": {
+				"navigationBarTitleText": "日常考核"
+			}
+		},
+		{
+			"path": "pages/approve/approve",
+			"style": {
+				"navigationBarTitleText": "审批事项办理"
+			}
+		},
+		{
+			"path": "pages/approveQuery/approveQuery",
+			"style": {
+				"navigationBarTitleText": "审批事项查询"
+			}
+		},
+		{
+			"path": "pages/rollCall/rollCall",
+			"style": {
+				"navigationBarTitleText": "日常点名"
+			}
+		},
+		{
+			"path": "pages/sign/sign",
+			"style": {
+				"navigationBarTitleText": "签到签退"
+			}
+		}
+		
+
+		
+		
+		
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "矫正之家",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#bfbfbf",
+		"selectedColor": "#13227a",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"iconPath": "static/h1.png",
+				"selectedIconPath": "static/h.png",
+				"text": "首页",
+				"pagePath": "pages/index/index"
+			},
+			{
+				"iconPath": "static/m1.png",
+				"selectedIconPath": "static/m.png",
+				"text": "我的",
+				"pagePath": "pages/me/me"
+			}
+		]
+	}
+}

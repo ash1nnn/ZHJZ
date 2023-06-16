@@ -1,0 +1,11 @@
+
+.b{
+		display: flex;
+		flex-direction: column;
+		align-items: center;   
+		vertical-align: center;
+		justify-content:center;
+		padding: 40rpx;
+		margin: 40rpx;
+		border:1px solid;
+}
