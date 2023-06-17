@@ -15,7 +15,13 @@
     "pages/approve/approve",
     "pages/approveQuery/approveQuery",
     "pages/rollCall/rollCall",
-    "pages/sign/sign"
+    "pages/sign/sign",
+    "pages/demond/demond",
+    "pages/demond/demondApply",
+    "pages/demond/demondType",
+    "pages/demond/demondAnswer",
+    "pages/demond/weChat",
+    "pages/demond/demondTypeTeam"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -46,5 +52,6 @@
     "wx14c2b0d4a80a43d0",
     "wxd9c723d098992660"
   ],
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

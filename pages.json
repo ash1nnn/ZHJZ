@@ -90,7 +90,66 @@
 			"style": {
 				"navigationBarTitleText": "签到签退"
 			}
-		}
+		},
+		{
+		    "path" : "pages/demond/demond",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		
+		{
+            "path" : "pages/demond/demondApply",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,
+		{
+            "path" : "pages/demond/demondType",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,
+		{
+            "path" : "pages/demond/demondAnswer",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "需求处理",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,
+		{
+            "path" : "pages/demond/weChat",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新增需求",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,
+		{
+            "path" : "pages/demond/demondTypeTeam",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "需求处理分类",
+                "enablePullDownRefresh": false
+            }
+            
+        }
 		
 
 		

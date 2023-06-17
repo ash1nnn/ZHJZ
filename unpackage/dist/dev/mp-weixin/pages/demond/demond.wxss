@@ -1,0 +1,159 @@
+
+.demond.data-v-1ef6f19d{
+		position: relative;
+}
+.back.data-v-1ef6f19d{
+		position: absolute;
+}
+.container.data-v-1ef6f19d{
+		position: relative;
+}
+.background.data-v-1ef6f19d{
+		object-fit: cover;
+		width: 400px;
+}
+.txt1.data-v-1ef6f19d{
+		position: absolute;
+		top:40px;
+		left: 20px;
+		color: white;
+		font-size: 18px;
+		letter-spacing: 0.1em;
+}
+.txt2.data-v-1ef6f19d{
+		position: absolute;
+		top:68px;
+		left: 20px;
+		color: lightgrey;
+		font-size: 13px;
+		letter-spacing: 0.1em;
+}
+.box.data-v-1ef6f19d{
+		position: absolute;
+		width: 100px;
+		height: 1000px;
+		width: 100%;
+		margin-top: 120px;
+		border-radius: 40rpx;
+		background-color: white;
+		box-shadow: 3px 2px 10px #999;
+}
+.message.data-v-1ef6f19d{
+		position: relative;
+		top:10px;
+}
+.message1.data-v-1ef6f19d{
+		position: relative;
+		top:200px;
+}
+.wen.data-v-1ef6f19d{
+		position: absolute;
+		top:10px;
+		bottom: 20px;
+}
+.wen1.data-v-1ef6f19d{
+		position: absolute;
+		top:10px;
+		bottom: 20px;
+}
+.wenicon.data-v-1ef6f19d{
+		position: absolute;
+		left:10px;
+		width: 24px;
+		height: 24px;
+}
+.wenicon1.data-v-1ef6f19d{
+		position: absolute;
+		left:10px;
+		width: 24px;
+		height: 24px;
+}
+.txt3.data-v-1ef6f19d{
+		position: absolute;
+		top:0px;
+		left: 50px;
+		color: black;
+		width: 400px;
+		font-size: 20px;
+		letter-spacing: 0.1em;
+		font-weight: bold;
+}
+.txt31.data-v-1ef6f19d{
+		position: absolute;
+		top:0px;
+		left: 50px;
+		color: black;
+		width: 400px;
+		font-size: 20px;
+		letter-spacing: 0.1em;
+		font-weight: bold;
+}
+.da.data-v-1ef6f19d{
+		position: absolute;
+		top:40px;
+		bottom: 20px;
+}
+.da1.data-v-1ef6f19d{
+		position: absolute;
+		top:40px;
+		bottom: 20px;
+}
+.daicon.data-v-1ef6f19d{
+		position: absolute;
+		top:10px;
+		left:10px;
+		width: 24px;
+		height: 24px;
+}
+.daicon1.data-v-1ef6f19d{
+		position: absolute;
+		top:10px;
+		left:10px;
+		width: 24px;
+		height: 24px;
+}
+.txt4.data-v-1ef6f19d{
+		position: absolute;
+		top:10px;
+		left: 50px;
+		color: gray;
+		width: 300px;
+		font-size: 13px;
+		letter-spacing: 0.1em;
+}
+.txt41.data-v-1ef6f19d{
+		position: absolute;
+		top:10px;
+		left: 50px;
+		color: gray;
+		width: 300px;
+		font-size: 13px;
+		letter-spacing: 0.1em;
+}
+.line.data-v-1ef6f19d{
+		position: absolute;
+		top:140px;
+		left: 70px;
+		color: black;
+		width: 200px;
+}
+.line1.data-v-1ef6f19d{
+		position: absolute;
+		top:140px;
+		left: 70px;
+		color: black;
+		width: 200px;
+}
+.demondApply.data-v-1ef6f19d{
+		position: absolute;
+		top:100px;
+		width: 70px;
+}
+.demondApplyImg.data-v-1ef6f19d{
+		position: absolute;
+		top: 400px;
+		width: 150px;
+		height: 32px;
+		left: 120px;
+}
+	

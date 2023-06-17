@@ -1,1 +1,48 @@
-"use strict";const e=require("../../common/vendor.js"),s={data(){return{newsList:[{icon:"../../static/check/10.png",text:"请假",url:"/pages/leave/leave"},{icon:"../../static/check/11.png",text:"居住地变更",url:"/pages/addressChange/addressChange"},{icon:"../../static/check/12.png",text:"执行地变更",url:"/pages/locationChange/locationChange"}]}},onLoad(){},methods:{click(c){e.index.navigateTo({url:c})}}};function o(c,g,p,u,n,a){return{a:e.f(n.newsList,(t,r,l)=>({a:e.t(t.text),b:t.icon,c:e.n("aa"+(r+1)),d:e.o(d=>a.click(t.url))}))}}const i=e._export_sfc(s,[["render",o],["__file","C:/Users/lcz/Documents/GitHub/ZHJZ/pages/approve/approve.vue"]]);wx.createPage(i);
+"use strict";
+const common_vendor = require("../../common/vendor.js");
+const _sfc_main = {
+  data() {
+    return {
+      newsList: [
+        {
+          icon: "../../static/check/10.png",
+          text: "请假",
+          url: "/pages/leave/leave"
+        },
+        {
+          icon: "../../static/check/11.png",
+          text: "居住地变更",
+          url: "/pages/addressChange/addressChange"
+        },
+        {
+          icon: "../../static/check/12.png",
+          text: "执行地变更",
+          url: "/pages/locationChange/locationChange"
+        }
+      ]
+    };
+  },
+  onLoad() {
+  },
+  methods: {
+    click(item) {
+      common_vendor.index.navigateTo({
+        url: item
+      });
+    }
+  }
+};
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return {
+    a: common_vendor.f($data.newsList, (item, index, i0) => {
+      return {
+        a: common_vendor.t(item.text),
+        b: item.icon,
+        c: common_vendor.n("aa" + (index + 1)),
+        d: common_vendor.o(($event) => $options.click(item.url))
+      };
+    })
+  };
+}
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "C:/Users/lcz/Desktop/ZHJZ-main/pages/approve/approve.vue"]]);
+wx.createPage(MiniProgramPage);

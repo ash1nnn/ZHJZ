@@ -1,1 +1,13 @@
-"use strict";const e=require("../../common/vendor.js"),t={data(){return{}},methods:{}};function r(c,s,n,o,i,_){return{}}const a=e._export_sfc(t,[["render",r],["__file","C:/Users/lcz/Documents/GitHub/ZHJZ/pages/activatedetail/activatedetail.vue"]]);wx.createPage(a);
+"use strict";
+const common_vendor = require("../../common/vendor.js");
+const _sfc_main = {
+  data() {
+    return {};
+  },
+  methods: {}
+};
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return {};
+}
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "C:/Users/lcz/Desktop/ZHJZ-main/pages/activatedetail/activatedetail.vue"]]);
+wx.createPage(MiniProgramPage);

@@ -1,7 +1,7 @@
 <template>
 	<view class="content" v-if="classify == 1">
-			<image class="b" src="../../static/index/1.png" ></image>
-			<image class="c" src="../../static/index/2.png" mode="widthFix"></image>
+			<image class="b" src="https://test-37b.pages.dev/index/1.png" ></image>
+			<image class="c" src="https://test-37b.pages.dev/index/2.png" mode="widthFix"></image>
 
 		<view class="biaoge">
 			<view class="ii" v-for="(item,index) in list1" @click="click(item.url)">
@@ -13,10 +13,10 @@
 		</view>
 		
 		<view class="d">
-			<image class="e" src="../../static/index/7.png" ></image>
+			<image class="e" src="https://test-37b.pages.dev/index/7.png" ></image>
 			<text class="f">关于提高社矫教育水平管理...</text>
 		<!-- 	<text>1小时前</text> -->
-			<image class="g" src="../../static/index/8.png" ></image>
+			<image class="g" src="https://test-37b.pages.dev/index/8.png" ></image>
 		</view>
 		
 <!-- 		<view class="biaoge">
@@ -32,9 +32,9 @@
 		</view> --> 
 	</view>
 	<view class="content" v-if="classify == 2">
-		<image src="../../static/index/1.jpg" mode="widthFix"></image>
+		<image src="https://test-37b.pages.dev/index/1.png" mode="widthFix" ></image>
 		<view class="biaoge">
-			<view class="ii" v-for="(item,index) in list3">
+			<view class="ii" v-for="(item,index) in list3" @click="click(item.url)">
 				<view class="icon">
 					<img :src="item.icon" alt="" class="img">
 				</view>
@@ -46,9 +46,9 @@
 
 	</view>
 	<view class="content" v-if="classify == 3">
-		<image src="../../static/index/1.jpg" mode="widthFix"></image>
+		<image src="https://test-37b.pages.dev/index/1.png" mode="widthFix"></image>
 		<view class="biaoge">
-			<view class="ii" v-for="(item,index) in list4">
+			<view class="ii" v-for="(item,index) in list4" @click="click(item.url)">
 				<view class="icon">
 					<img :src="item.icon" alt="" class="img">
 				</view>
@@ -60,7 +60,7 @@
 	
 	</view>
 	<view class="aa">
-		<image class="bb" src="../../static/index/9.png" ></image>
+		<image class="bb" src="https://test-37b.pages.dev/index/9.png" ></image>
 	</view>
 	<view class="new">
 		<view class="cc" v-for="(item,index) in newsList" @click="change(item.id)">
@@ -84,104 +84,106 @@
 				classify:1,
 				title: 'Hello',
 				list1: [{
-						icon: "../../static/index/3.png",
+						icon: "https://test-37b.pages.dev/index/3.png",
 						text: "日常考核",
 						url: "/pages/check/check"
 					},
 					{
-						icon: "../../static/index/4.png",
+						icon: "https://test-37b.pages.dev/index/4.png",
 						text: "活动预约",
 						url: "/pages/activatemain/activatemain"
 					},
 					{
-						icon: "../../static/index/5.png",
+						icon: "https://test-37b.pages.dev/index/5.png",
 						text: "需求登记",
+						url: "/pages/demond/demond"
 						
 					},
 					{
-						icon: "../../static/index/6.png",
+						icon: "https://test-37b.pages.dev/index/6.png",
 						text: "矫正经历",
 						url: "/pages/experience/experience"
 						
 					}
 				],
 				// list2: [{
-				// 		icon: "../../static/5.png",
+				// 		icon: "https://test-37b.pages.dev/5.png",
 				// 		text: "活动预约",
-				// 		url: "../../static/h.png"
+				// 		url: "https://test-37b.pages.dev/h.png"
 				// 	},
 				// 	{
-				// 		icon: "../../static/6.png",
+				// 		icon: "https://test-37b.pages.dev/6.png",
 				// 		text: "事项审批",
-				// 		url: "../../static/h.png"
+				// 		url: "https://test-37b.pages.dev/h.png"
 				// 	},
 				// 	{
-				// 		icon: "../../static/7.png",
+				// 		icon: "https://test-37b.pages.dev/7.png",
 				// 		text: "需求登记",
-				// 		url: "../../static/h.png"
+				// 		url: "https://test-37b.pages.dev/h.png"
 				// 	},
 				// 	{
-				// 		icon: "../../static/8.png",
+				// 		icon: "https://test-37b.pages.dev/8.png",
 				// 		text: "经历查询",
-				// 		url: "../../static/h.png"
+				// 		url: "https://test-37b.pages.dev/h.png"
 				// 	}
 				// ],
 				list3: [{
-						icon: "../../static/index/3.png",
+						icon: "https://test-37b.pages.dev/index/3.png",
 						text: "社矫查询",
 					},
 					{
-						icon: "../../static/index/4.png",
+						icon: "https://test-37b.pages.dev/index/4.png",
 						text: "通知公告",
 					},
 					{
-						icon: "../../static/index/5.png",
+						icon: "https://test-37b.pages.dev/index/5.png",
 						text: "活动管理",
 					},
 					{
-						icon: "../../static/index/6.png",
+						icon: "https://test-37b.pages.dev/index/6.png",
 						text: "需求处理",
+						url: "/pages/demond/demondTypeTeam"
 					}
 				],
 				list4: [{
-						icon: "../../static/index/3.png",
+						icon: "https://test-37b.pages.dev/index/3.png",
 						text: "执法公开",
 					},
 					{
-						icon: "../../static/index/4.png",
+						icon: "https://test-37b.pages.dev/index/4.png",
 						text: "服务登记",
 					},
 					{
-						icon: "../../static/index/5.png",
+						icon: "https://test-37b.pages.dev/index/5.png",
 						text: "活动预约",
 					}
 					// {
-					// 	icon: "../../static/8.png",
+					// 	icon: "https://test-37b.pages.dev/8.png",
 					// 	text: "需求处理",
-					// 	url: "../../static/h.png"
+					// 	url: "https://test-37b.pages.dev/h.png"
 					// }
 				],
 				newsList: [{
 						id: "2",
-						icon: "../../static/index/10.png",
+						icon: "https://test-37b.pages.dev/index/10.png",
 						text: "社区矫正对象报到接受规范",
 						text1: "1236人阅读"
 					},
 					{
 						id: "3",
-						icon: "../../static/index/11.png",
+						icon: "https://test-37b.pages.dev/index/11.png",
 						text: "社区矫正对象报告规范",
 						text1: "7786人阅读"
 					},
 					{
 						id: "4",
-						icon: "../../static/index/12.png",
+						icon: "https://test-37b.pages.dev/index/12.png",
 						text: "请假外出审批规范",
 						text1: "5658人阅读"
 					},
 					{
 						id: "5",
-						icon: "../../static/index/13.png",
+						icon: "https://test-37b.pages.dev/index/13.png",
 						text: "居住、执行地变更审批规范",
 						text1: "5675人阅读"
 					}
