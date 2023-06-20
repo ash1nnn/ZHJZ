@@ -1,7 +1,7 @@
 <template>
 	<view class="cc">
 
-		<button plain class="but" >活动预约查询</button>
+		<button plain class="but" @click="tolist">活动预约查询</button>
 
 
 		<view class="content1" v-for="(item,index) in list">
@@ -35,7 +35,7 @@
 						detial2: "6月1日",
 						detial3: "剩余20人",
 						detial4: "1天前",
-						imgpass: "../../static/over.png",
+						imgpass: "../../static/going (1).png",
 						imgsrc: "../../static/jiuye1.jpg",
 						url: "",
 					},
@@ -45,7 +45,7 @@
 						detial2: "6月1日",
 						detial3: "剩余20人",
 						detial4: "1天前",
-						imgpass: "../../static/over.png",
+						imgpass: "../../static/going (1).png",
 						imgsrc: "../../static/jiuye1.jpg",
 						url: "",
 					},
@@ -55,7 +55,7 @@
 						detial2: "6月3日",
 						detial3: "剩余25人",
 						detial4: "3天前",
-						imgpass: "../../static/ordered.png",
+						imgpass: "../../static/going (1).png",
 						imgsrc: "../../static/jiuye2.jpg",
 						url: "",
 					},
@@ -65,7 +65,7 @@
 						detial2: "6月6日",
 						detial3: "剩余32人",
 						detial4: "6天前",
-						imgpass: "../../static/over.png",
+						imgpass: "../../static/going (2).png",
 						imgsrc: "../../static/jiuye1.jpg",
 						url: "",
 					},
@@ -75,7 +75,7 @@
 						detial2: "6月1日",
 						detial3: "剩余20人",
 						detial4: "1天前",
-						imgpass: "../../static/ordered.png",
+						imgpass: "../../static/going (3).png",
 						imgsrc: "../../static/jiuye2.jpg",
 						url: "",
 					}
@@ -87,6 +87,11 @@
 				uni.navigateTo({
 					url: '../../pages/activatedetail/activatedetail'
 				});
+			},
+			tolist(){
+				uni.navigateTo({
+					url: '../../pages/orderlist/orderlist'
+				});	
 			}
 		}
 	}
@@ -102,12 +107,12 @@
 		width: 100%;
 	} */
 	.but[plain]{
-		background-color: #aaf4db;
-		font-size: 45rpx;
-		color: #20cfa7;
+		background-color: #ebf2ff;
+		font-size: 35rpx;
+		color: #4b75ff;
 		/* border-bottom: #FFFFFF; */
 		/* button[plain]{ border:0 }; */
-		border-radius: 20rpx;
+		border-radius: 40rpx;
 		border: 0;
 		margin-left: 10rpx;
 		margin-right: 10rpx;

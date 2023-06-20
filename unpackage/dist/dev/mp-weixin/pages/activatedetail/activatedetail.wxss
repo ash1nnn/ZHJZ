@@ -1,1 +1,19 @@
-.ss{display:flex;flex-direction:column;margin-bottom:100rpx}.but[plain]{background-color:#aaf4db;font-size:45rpx;color:#20cfa7;border-radius:20rpx;border:0;margin:30rpx 30rpx 50rpx}
+
+.ss{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 100rpx;
+}
+.but[plain]{
+		background-color: #aaf4db;
+		font-size: 45rpx;
+		color: #20cfa7;
+		/* border-bottom: #FFFFFF; */
+		/* button[plain]{ border:0 }; */
+		border-radius: 20rpx;
+		border: 0;
+		margin-left: 30rpx;
+		margin-right: 30rpx;
+		margin-bottom: 50rpx;
+		margin-top: 30rpx;
+}

@@ -24,7 +24,8 @@
     "pages/demond/demondType",
     "pages/demond/demondAnswer",
     "pages/demond/weChat",
-    "pages/demond/demondTypeTeam"
+    "pages/demond/demondTypeTeam",
+    "pages/orderlist/orderlist"
   ],
   "window": {
     "navigationBarTextStyle": "black",
