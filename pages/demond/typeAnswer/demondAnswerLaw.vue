@@ -19,14 +19,14 @@
 						</view>
 						<!-- 头像 -->
 						<view class="avatar">
-							<img src="../../static/wen.png" width="24px" height="24px" class="wenicon">
+							<img src="../../../static/da.png" width="24px" height="24px" class="wenicon">
 						</view>
 					</view>
 					<!-- 机器人发的消息 -->
 					<view class="item Ai" v-if="item.botContent != ''">
 						<!-- 头像 -->     
 						<view class="avatar">
-							<img src="../../static/da.png" width="24px" height="24px" class="daicon">
+							<img src="../../../static/wen.png" width="24px" height="24px" class="daicon">
 						</view>
 						<!-- 文字内容 -->
 						<view class="content left">
@@ -62,7 +62,13 @@
 				chatMsg:"",
 				msgList:[
 					{
-					    botContent: "你好，有什么需求请留言",
+					    botContent: "你好呀我想问你一件事？",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "",
+					    userId: 0
+					},{
+					    botContent: "刑法对于盗窃的量刑标准是什么？",
 					    recordId: 0,
 					    titleId: 0,
 					    userContent: "",
@@ -72,7 +78,7 @@
 					    botContent: "",
 					    recordId: 0,
 					    titleId: 0,
-					    userContent: "你好呀我想问你一件事",
+					    userContent: "盗窃罪量刑的标准是：\n1、犯此罪，数额较大的，处三年以下有期徒刑、拘役或者管制，并处或者单处罚金；\n2、数额巨大或者有其他严重情节的，处三年以上十年以下有期徒刑，并处罚金；\n3、数额特别巨大或者有其他特别严重情节的，处十年以上有期徒刑或者无期徒刑，并处罚金或者没收财产。",
 					    userId: 0
 					},
 				]	

@@ -19,14 +19,14 @@
 						</view>
 						<!-- 头像 -->
 						<view class="avatar">
-							<img src="../../static/wen.png" width="24px" height="24px" class="wenicon">
+							<img src="../../../static/da.png" width="24px" height="24px" class="wenicon">
 						</view>
 					</view>
 					<!-- 机器人发的消息 -->
 					<view class="item Ai" v-if="item.botContent != ''">
 						<!-- 头像 -->     
 						<view class="avatar">
-							<img src="../../static/da.png" width="24px" height="24px" class="daicon">
+							<img src="../../../static/wen.png" width="24px" height="24px" class="daicon">
 						</view>
 						<!-- 文字内容 -->
 						<view class="content left">
@@ -62,7 +62,13 @@
 				chatMsg:"",
 				msgList:[
 					{
-					    botContent: "你好，有什么需求请留言",
+					    botContent: "你好呀我想问你一件事？",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "",
+					    userId: 0
+					},{
+					    botContent: "应对突发事件发生的方法？",
 					    recordId: 0,
 					    titleId: 0,
 					    userContent: "",
@@ -72,7 +78,7 @@
 					    botContent: "",
 					    recordId: 0,
 					    titleId: 0,
-					    userContent: "你好呀我想问你一件事",
+					    userContent: "遇到突发事件不要围观,应立即离开;如正处在突发事件现场,且无法逃避时,应利用地形、隐蔽物遮掩、躲藏;如遇恐怖事件实施者抛洒不明气体或液体，应迅速躲避,且用毛巾、衣物等捂住口鼻。",
 					    userId: 0
 					},
 				]	

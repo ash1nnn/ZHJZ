@@ -19,14 +19,14 @@
 						</view>
 						<!-- 头像 -->
 						<view class="avatar">
-							<img src="../../static/wen.png" width="24px" height="24px" class="wenicon">
+							<img src="../../../static/da.png" width="24px" height="24px" class="wenicon">
 						</view>
 					</view>
 					<!-- 机器人发的消息 -->
 					<view class="item Ai" v-if="item.botContent != ''">
 						<!-- 头像 -->     
 						<view class="avatar">
-							<img src="../../static/da.png" width="24px" height="24px" class="daicon">
+							<img src="../../../static/wen.png" width="24px" height="24px" class="daicon">
 						</view>
 						<!-- 文字内容 -->
 						<view class="content left">
@@ -62,7 +62,13 @@
 				chatMsg:"",
 				msgList:[
 					{
-					    botContent: "你好，有什么需求请留言",
+					    botContent: "你好呀我想问你一件事？",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "",
+					    userId: 0
+					},{
+					    botContent: "就业应该以钱优先还是家庭优先？",
 					    recordId: 0,
 					    titleId: 0,
 					    userContent: "",
@@ -72,7 +78,7 @@
 					    botContent: "",
 					    recordId: 0,
 					    titleId: 0,
-					    userContent: "你好呀我想问你一件事",
+					    userContent: "就业应该以什么为优先取决于你的个人情况和价值观。重要的是要在薪资和家庭之间找到一个平衡，并选择适合自己的工作和生活方式。",
 					    userId: 0
 					},
 				]	

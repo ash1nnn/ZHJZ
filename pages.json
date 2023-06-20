@@ -167,7 +167,52 @@
                 "enablePullDownRefresh": false
             }
             
-        }
+        },
+		{
+		    "path" : "pages/demond/history/demondAnswerMotion",
+		    "style" :
+		    {
+		        "navigationBarTitleText": "需求处理历史",
+		        "enablePullDownRefresh": false
+		    }
+
+		},
+		{
+		    "path" : "pages/demond/history/demondAnswerMeasure",
+		    "style" :
+		    {
+		        "navigationBarTitleText": "需求处理历史",
+		        "enablePullDownRefresh": false
+		    }
+
+		},
+		{
+		    "path" : "pages/demond/typeAnswer/demondAnswerEmploy",
+		    "style" :
+		    {
+		        "navigationBarTitleText": "需求处理",
+		        "enablePullDownRefresh": false
+		    }
+
+		},
+		{
+		    "path" : "pages/demond/typeAnswer/demondAnswerLaw",
+		    "style" :
+		    {
+		        "navigationBarTitleText": "需求处理",
+		        "enablePullDownRefresh": false
+		    }
+
+		},
+		{
+		    "path" : "pages/demond/typeAnswer/demondAnswerHelp",
+		    "style" :
+		    {
+		        "navigationBarTitleText": "需求处理",
+		        "enablePullDownRefresh": false
+		    }
+
+		}
 		
 
 		
