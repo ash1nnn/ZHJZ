@@ -28,6 +28,7 @@ if (!Math) {
   "./pages/demond/weChat.js";
   "./pages/demond/demondTypeTeam.js";
   "./pages/orderlist/orderlist.js";
+  "./pages/ordermanage/ordermanage.js";
 }
 const _sfc_main = {
   onLaunch: function() {

@@ -3,7 +3,7 @@ const common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   data() {
     return {
-      classify: 1,
+      classify: 2,
       title: "Hello",
       list1: [
         {
@@ -40,7 +40,8 @@ const _sfc_main = {
         },
         {
           icon: "https://test-37b.pages.dev/index/5.png",
-          text: "活动管理"
+          text: "活动管理",
+          url: "/pages/ordermanage/ordermanage"
         },
         {
           icon: "https://test-37b.pages.dev/index/6.png",

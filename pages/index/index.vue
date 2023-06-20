@@ -64,7 +64,7 @@
 	export default {
 		data() {
 			return {
-				classify: 1,
+				classify: 2,
 				title: 'Hello',
 				list1: [{
 						icon: "https://test-37b.pages.dev/index/3.png",
@@ -101,6 +101,7 @@
 					{
 						icon: "https://test-37b.pages.dev/index/5.png",
 						text: "活动管理",
+						url: "/pages/ordermanage/ordermanage"
 					},
 					{
 						icon: "https://test-37b.pages.dev/index/6.png",

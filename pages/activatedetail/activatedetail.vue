@@ -1,9 +1,10 @@
 <template>
 	<view class="ss">
-		<image src="../../static/400.jpg" mode=""></image>
-		<image src="../../static/400.jpg" mode=""></image>
-		<image src="../../static/400.jpg" mode=""></image>
-		<button class="but" plain @click="orderok" >立即报名</button>
+		<image src="../../static/hd.jpg" mode="widthFix"></image>
+<!-- 		<image src="../../static/400.jpg" mode=""></image>
+		<image src="../../static/400.jpg" mode=""></image> -->
+		<!-- <text class="but" plain @click="orderok" >立即报名</text> -->
+		<text class="but"  @click="orderok" >立即报名</text>
 	</view >
 </template>
 
@@ -43,19 +44,32 @@
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 100rpx;
+/* 		align-items: center;
+		align-content: center;
+		justify-items: center;
+		justify-content: center; */
+		text-align: center;
 	}
-	.but[plain]{
-		background-color: #aaf4db;
+	.but{
+/* 		justify-items: center;
+		align-content: center; */
+		background-color: #ff0000;
 		font-size: 45rpx;
-		color: #20cfa7;
+		color: #ffffff;
+		padding-top: 20rpx;
+		padding-bottom: 20rpx;
 		/* border-bottom: #FFFFFF; */
 		/* button[plain]{ border:0 }; */
-		border-radius: 20rpx;
-		border: 0;
-		margin-left: 30rpx;
-		margin-right: 30rpx;
+		/* border-radius: 40rpx; */
+		/* border: 0; */
+/* 		margin-left: 10rpx;
+		margin-right: 10rpx;
 		margin-bottom: 50rpx;
-		margin-top: 30rpx;
+		margin-top: 30rpx; */
+		width:100%;
+		
+		position:fixed;
+		bottom:0;
 		
 		
 	}
