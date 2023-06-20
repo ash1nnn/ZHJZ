@@ -6,6 +6,8 @@
     "pages/actOrder/actOrder",
     "pages/activatedetail/activatedetail",
     "pages/notice/notice",
+    "pages/select/select",
+    "pages/member/member",
     "pages/detail/detail",
     "pages/experience/experience",
     "pages/leave/leave",
@@ -13,6 +15,7 @@
     "pages/locationChange/locationChange",
     "pages/check/check",
     "pages/approve/approve",
+    "pages/approveCheck/approveCheck",
     "pages/approveQuery/approveQuery",
     "pages/rollCall/rollCall",
     "pages/sign/sign",
@@ -52,6 +55,5 @@
     "wx14c2b0d4a80a43d0",
     "wxd9c723d098992660"
   ],
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

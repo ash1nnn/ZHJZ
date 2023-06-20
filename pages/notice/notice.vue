@@ -44,7 +44,6 @@
 						},
 						{
 						id: "5",
-						url: "../../static/notice/3.png",
 						title: "居住、执行地变更审批规范",
 						text: "1687人阅读"
 						}

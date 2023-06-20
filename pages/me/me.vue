@@ -5,9 +5,11 @@
 			<image class="e" src="../../static/6.png" ></image>
 			<view class="aa">
 				<text class="f">张三</text>
-				<text class="g">一级矫正对象</text>
+				<text class="g" v-if="classify == 1">一级矫正对象</text>
+				<text class="g" v-if="classify == 2">矫正小组成员</text>
+				<text class="g" v-if="classify == 3">志愿者</text>
 			</view>
-			<view class="bb">
+			<view class="bb" v-if="classify == 1">
 				<view class="cc">
 					<text class="i">10</text>
 					<text class="i">今日积分</text>
@@ -22,28 +24,37 @@
 				</view>
 			</view>
 		</view>
-		<view class="b">
+		<view class="b" v-if="classify == 1">
 			<image src="../../static/me/2.png" mode="" class="c"></image>
 			<text class="x">集中教育次数</text>
 			<text class="y">5次</text>
 		</view>
-		<view class="b">
+		<view class="b" v-if="classify == 1">
 			<image src="../../static/me/3.png" mode="" class="c"></image>
 			<text class="x">个别教育次数</text>
 			<text class="y">3次</text>
 		</view>
-		<view class="b">
+		<view class="b" v-if="classify == 1">
 			<image src="../../static/me/4.png" mode="" class="c"></image>
 			<text class="x">活动预约查询</text>
 			<image src="../../static/me/6.png" mode="" class="z"></image>
 		</view>
-		<view class="b" @click="bigChange">
+		<view class="b" @click="bigChange" v-if="classify == 1">
 			<image src="../../static/me/5.png" mode="" class="c"></image>
 			<text class="x">审批事项查询</text>
 			<image src="../../static/me/6.png" mode="" class="z"></image>
-			
 		</view>
-		<view class="h">
+		<view class="b" v-if="classify == 2">
+			<image src="../../static/me/4.png" mode="" class="c"></image>
+			<text class="x">活动预约审核</text>
+			<image src="../../static/me/6.png" mode="" class="z"></image>
+		</view>
+		<view class="b" @click="change" v-if="classify == 2">
+			<image src="../../static/me/5.png" mode="" class="c"></image>
+			<text class="x">审批事项审核</text>
+			<image src="../../static/me/6.png" mode="" class="z"></image>
+		</view>
+		<view class="h" v-if="classify == 1">
 			<text class="xx">矫正平台</text>
 			<view class="biaoge">
 				<view class="ii" v-for="(item,index) in list1" @click="click(item)">
@@ -66,6 +77,7 @@
 	export default {
 		data() {
 			return {
+				classify: 2,
 				list1: [{
 						icon: "../../static/me/7.jpg",
 						text: "沪智矫",
@@ -100,6 +112,11 @@
 			bigChange(){
 						uni.navigateTo({
 							url: '/pages/approveQuery/approveQuery'
+						});
+			},
+			change(){
+						uni.navigateTo({
+							url: '/pages/approveCheck/approveCheck'
 						});
 			},
 		

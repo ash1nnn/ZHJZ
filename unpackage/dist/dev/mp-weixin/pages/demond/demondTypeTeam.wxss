@@ -1,18 +1,1 @@
-
-.a{
-		width: 750rpx;
-}
-.new{
-		margin-top: 10rpx;
-		padding: 0 15rpx;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-}
-.cc{
-		margin-top: 40rpx;
-}
-.dd{
-		width: 330rpx;
-		height: 280rpx;
-}
+.a{width:750rpx}.new{margin-top:10rpx;padding:0 15rpx;display:flex;flex-wrap:wrap;justify-content:space-between}.cc{margin-top:40rpx}.dd{width:330rpx;height:280rpx}

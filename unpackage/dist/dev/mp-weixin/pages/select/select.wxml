@@ -1,0 +1,1 @@
+<view wx:for="{{a}}" wx:for-item="item" class="a" bindtap="{{item.b}}"><image class="b" src="/static/6.png"></image><text class="x">{{item.a}}</text><image src="/static/me/6.png" mode="" class="z"></image></view>

@@ -1,10 +1,30 @@
 <template>
-	<view class="content" v-if="classify == 1">
+	<view class="content" >
 			<image class="b" src="https://test-37b.pages.dev/index/1.png" ></image>
 			<image class="c" src="https://test-37b.pages.dev/index/2.png" mode="widthFix"></image>
 
-		<view class="biaoge">
+		<view class="biaoge" v-if="classify == 1">
 			<view class="ii" v-for="(item,index) in list1" @click="click(item.url)">
+					<view class="icon"  >
+						<img  :src="item.icon" alt="" class="img" >
+					</view>
+					<text class="txt">{{item.text}}</text>
+			</view>
+		</view>
+		
+		
+		<view class="biaoge" v-if="classify == 2">
+			<view class="ii" v-for="(item,index) in list2" @click="click(item.url)">
+					<view class="icon"  >
+						<img  :src="item.icon" alt="" class="img" >
+					</view>
+					<text class="txt">{{item.text}}</text>
+			</view>
+		</view>
+		
+		
+		<view class="biaoge" v-if="classify == 3">
+			<view class="ii" v-for="(item,index) in list3" @click="click(item.url)">
 					<view class="icon"  >
 						<img  :src="item.icon" alt="" class="img" >
 					</view>
@@ -19,46 +39,9 @@
 			<image class="g" src="https://test-37b.pages.dev/index/8.png" ></image>
 		</view>
 		
-<!-- 		<view class="biaoge">
-			<view class="ii" v-for="(item,index) in list2">
-				<view class="icon">
-					<img :src="item.icon" alt="" class="img">
-				</view>
+	</view>
 
-<! 				<text class="txt">{{item.text}}</text>
-			</view> -->
-			<!-- <image src="" mode=""></image> -->
-<!-- 			
-		</view> --> 
-	</view>
-	<view class="content" v-if="classify == 2">
-		<image src="https://test-37b.pages.dev/index/1.png" mode="widthFix" ></image>
-		<view class="biaoge">
-			<view class="ii" v-for="(item,index) in list3" @click="click(item.url)">
-				<view class="icon">
-					<img :src="item.icon" alt="" class="img">
-				</view>
 	
-				<text class="txt">{{item.text}}</text>
-	
-			</view>
-		</view>
-
-	</view>
-	<view class="content" v-if="classify == 3">
-		<image src="https://test-37b.pages.dev/index/1.png" mode="widthFix"></image>
-		<view class="biaoge">
-			<view class="ii" v-for="(item,index) in list4" @click="click(item.url)">
-				<view class="icon">
-					<img :src="item.icon" alt="" class="img">
-				</view>
-	
-				<text class="txt">{{item.text}}</text>
-	
-			</view>
-		</view>
-	
-	</view>
 	<view class="aa">
 		<image class="bb" src="https://test-37b.pages.dev/index/9.png" ></image>
 	</view>
@@ -81,7 +64,7 @@
 	export default {
 		data() {
 			return {
-				classify:1,
+				classify: 2,
 				title: 'Hello',
 				list1: [{
 						icon: "https://test-37b.pages.dev/index/3.png",
@@ -103,37 +86,17 @@
 						icon: "https://test-37b.pages.dev/index/6.png",
 						text: "矫正经历",
 						url: "/pages/experience/experience"
-						
 					}
 				],
-				// list2: [{
-				// 		icon: "https://test-37b.pages.dev/5.png",
-				// 		text: "活动预约",
-				// 		url: "https://test-37b.pages.dev/h.png"
-				// 	},
-				// 	{
-				// 		icon: "https://test-37b.pages.dev/6.png",
-				// 		text: "事项审批",
-				// 		url: "https://test-37b.pages.dev/h.png"
-				// 	},
-				// 	{
-				// 		icon: "https://test-37b.pages.dev/7.png",
-				// 		text: "需求登记",
-				// 		url: "https://test-37b.pages.dev/h.png"
-				// 	},
-				// 	{
-				// 		icon: "https://test-37b.pages.dev/8.png",
-				// 		text: "经历查询",
-				// 		url: "https://test-37b.pages.dev/h.png"
-				// 	}
-				// ],
-				list3: [{
+				list2: [{
 						icon: "https://test-37b.pages.dev/index/3.png",
 						text: "社矫查询",
+						url: "/pages/select/select"
 					},
 					{
 						icon: "https://test-37b.pages.dev/index/4.png",
 						text: "通知公告",
+						url: "/pages/notice/notice"
 					},
 					{
 						icon: "https://test-37b.pages.dev/index/5.png",
@@ -145,7 +108,7 @@
 						url: "/pages/demond/demondTypeTeam"
 					}
 				],
-				list4: [{
+				list3: [{
 						icon: "https://test-37b.pages.dev/index/3.png",
 						text: "执法公开",
 					},
@@ -320,7 +283,10 @@
 		top: 500rpx;
 		border-radius: 25rpx;
 		background-color: white;
-		
+		display: flex;
+		flex-direction: row;	
+		width: 720rpx;
+		height: 200rpx;
 	}
 	
 
@@ -334,6 +300,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		margin: auto;
 		width: 180rpx;
 		height: 200rpx;
 
@@ -347,10 +314,10 @@
 		color: #00007f;
 	}
 
-	.biaoge {
-		display: flex;
-		flex-direction: row;
-	}
+	// .biaoge {
+	// 	display: flex;
+	// 	flex-direction: row;
+	// }
 
 	.icon {
 		display: flex;

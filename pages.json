@@ -32,6 +32,18 @@
 			}
 		},	
 		{
+			"path": "pages/select/select",
+			"style": {
+				"navigationBarTitleText": "社矫查询"
+			}
+		},
+		{
+			"path": "pages/member/member"
+			// "style": {
+			// 	"navigationBarTitleText": "社矫查询"
+			// }
+		},
+		{
 			"path": "pages/detail/detail",
 			"style": {
 				"navigationBarTitleText": "矫正须知"
@@ -71,6 +83,12 @@
 			"path": "pages/approve/approve",
 			"style": {
 				"navigationBarTitleText": "审批事项办理"
+			}
+		},
+		{
+			"path": "pages/approveCheck/approveCheck",
+			"style": {
+				"navigationBarTitleText": "审批事项审核"
 			}
 		},
 		{

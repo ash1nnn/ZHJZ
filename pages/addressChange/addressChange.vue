@@ -6,7 +6,7 @@
 	</view>
 	<swiper   style="height:1000rpx" :current="currentIndex">
 				<swiper-item >
-						<view >
+						<view class="x">
 							<uni-forms :modelValue="formData" label-position="top" label-width="1000rpx">
 								 <uni-forms-item  label="迁入地（乡镇、街道）" name="place" >
 								     <uni-easyinput v-model="formData.place" type="text"  placeholder="请输入外出目的地（乡镇、街道）" ></uni-easyinput>
@@ -21,7 +21,7 @@
 								     <uni-datetime-picker v-model="formData.date" type="date"></uni-datetime-picker>
 								</uni-forms-item>
 							</uni-forms>
-							<button type="primary" @click="submit">提交</button>
+							<button type="primary" @click="submit" class="aa">提交</button>
 						</view>
 				</swiper-item>
 				<swiper-item class="swiper-item sns-news">
@@ -131,6 +131,19 @@
 
 		
 	}
+	.x{
+		margin-left: 30rpx;
+		margin-top: 30rpx;
+		width: 700rpx;
+	}
+	.aa{
+		width: 500rpx;
+		align-items: center;  
+		margin: auto;
+		letter-spacing: 100rpx;
+		text-indent: 100rpx;
+	}
+	
 
 
 	

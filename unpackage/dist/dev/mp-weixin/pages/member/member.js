@@ -1,0 +1,31 @@
+"use strict";const e=require("../../common/vendor.js"),s={data(){return{id:"",list1:[{idd:"1",name:`杨福宝
+`,sex:`男
+`,age:`35
+`,tel:`18566421114
+`,place:`上海市徐汇区
+`,level:`一级矫正对象
+`},{idd:"2",name:`蒋振良
+`,sex:`男
+`,age:`35
+`,tel:`18566421114
+`,place:`上海市徐汇区
+`,level:`一级矫正对象
+`},{idd:"3",name:`胡晓俊
+`,sex:`男
+`,age:`35
+`,tel:`18566421114
+`,place:`上海市徐汇区
+`,level:`一级矫正对象
+`},{idd:"4",name:`姚惠琴
+`,sex:`女
+`,age:`35
+`,tel:`18566421114
+`,place:`上海市徐汇区
+`,level:`一级矫正对象
+`},{idd:"5",name:`宋百旺
+`,sex:`男
+`,age:`35
+`,tel:`18566421114
+`,place:`上海市徐汇区
+`,level:`一级矫正对象
+`}]}},onLoad(a){this.id=JSON.parse(a.id)},methods:{}};function d(a,r,c,i,l,o){return{a:e.f(l.list1,(n,p,g)=>e.e({a:l.id===n.idd},l.id===n.idd?{b:e.t(n.name),c:e.t(n.sex),d:e.t(n.age),e:e.t(n.tel),f:e.t(n.place),g:e.t(n.level)}:{}))}}const t=e._export_sfc(s,[["render",d],["__file","C:/Users/lcz/Documents/GitHub/ZHJZ/pages/member/member.vue"]]);wx.createPage(t);
