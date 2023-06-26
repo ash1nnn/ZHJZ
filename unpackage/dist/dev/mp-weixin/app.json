@@ -7,6 +7,8 @@
     "pages/activatedetail/activatedetail",
     "pages/notice/notice",
     "pages/select/select",
+    "pages/volunteerDetail/volunteerDetail",
+    "pages/volunteerList/volunteerList",
     "pages/member/member",
     "pages/detail/detail",
     "pages/experience/experience",
@@ -62,6 +64,5 @@
     "wx14c2b0d4a80a43d0",
     "wxd9c723d098992660"
   ],
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

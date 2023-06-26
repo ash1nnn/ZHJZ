@@ -38,6 +38,18 @@
 			}
 		},
 		{
+			"path": "pages/volunteerDetail/volunteerDetail",
+			"style": {
+				"navigationBarTitleText": "志愿服务登记"
+			}
+		},	
+		{
+			"path": "pages/volunteerList/volunteerList",
+			"style": {
+				"navigationBarTitleText": "志愿活动预约"
+			}
+		},	
+		{
 			"path": "pages/member/member"
 			// "style": {
 			// 	"navigationBarTitleText": "社矫查询"

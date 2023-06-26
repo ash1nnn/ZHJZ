@@ -77,7 +77,7 @@
 	export default {
 		data() {
 			return {
-				classify: 1,
+				classify: 3,
 				list1: [{
 						icon: "../../static/me/7.jpg",
 						text: "沪智矫",

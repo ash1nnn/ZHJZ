@@ -1,10 +1,7 @@
 <template>
 	<view class="cc">
-
-
-
 		<view class="content1" v-for="(item,index) in list">
-			<view class="content" @click="todetial()">
+			<view class="content" @click="todetial(item)">
 				<view class="txt_right">
 					<text class="title1">
 						{{item.title1}}
@@ -19,8 +16,11 @@
 						<text class="xijie">{{item.detial1}}</text>
 						<text class="xijie">{{item.detial2}}</text>
 						<text class="xijie">{{item.detial3}}</text>
-						<text class="xijie">{{item.detial4}}</text>
-						<img :src="item.imgpass" class="img1">
+						<text class="xijie" v-if="item.id == 1">{{item.detial4}}</text>
+						<text class="xijie" v-if="item.id == 2">{{item.detial5}}</text>
+						<text class="xijie" v-if="item.id == 3">{{item.detial6}}</text>
+						<img :src="item.imgpass" class="img1" v-if="item.url == 1">
+						<img :src="item.img1" class="img1" v-if="item.url == 2">
 					</view>
 				</view>
 				<!-- <img :src="item.imgsrc" class="img"> -->
@@ -35,52 +35,66 @@
 		data() {
 			return {
 				list: [{
+						id: "2",
 						title1: "请审批：请假",
 						title: "地点：江苏省太仓市",
 						title2: " 时间：2023.6.22-2023.6.24",
 						detial1: "报名人:",
 						detial2: "杨福宝",
 						detial3: "审核结果:",
-						detial4: "通过",
+						detial4: "",
+						detial5: "通过",
+						detial6: "未通过",
 						imgpass: "../../static/sh (1).png",
+						img1:"../../static/sh (2).png",
 						imgsrc: "../../static/jiuye1.jpg",
-						url: "",
+						url: "1",
 					},
 					{
+						id: "1",
 						title1: "请审批：居住地变更",
 						title: "地点：上海市徐家汇街道",
 						title2: " 时间：2023.6.24",
 						detial1: "报名人:",
 						detial2: "胡骁俊",
 						detial3: "审核结果:",
-						detial4: "不通过",
-						imgpass: "../../static/sh (2).png",
+						detial4: "",
+						detial5: "通过",
+						detial6: "未通过",
+						imgpass: "../../static/sh (1).png",
+						img1: "../../static/sh (2).png",
 						imgsrc: "../../static/jiuye2.jpg",
-						url: "",
+						url: "2",
 					}
 				]
 			}
 		},
 		methods: {
-			todetial() {
-				
-				uni.showModal({
-						title: '活动预约审核',
-						content: '是否同意该申请？',
-						
-						cancelText: "不同意",
-						// 确认按钮的文字自定义
-						confirmText: "同意",
-						success: function(res) {
-						if (res.confirm) {
-						    // 执行确认后的操作
+			todetial(item) {
+				if(item.url == 2){
+					uni.showModal({
+							title: '活动预约审核',
+							content: '是否同意该申请？',
 							
-						} 
-						else {
-							// 执行取消后的操作
+							cancelText: "不同意",
+							// 确认按钮的文字自定义
+							confirmText: "同意",
+							success: function(res) {
+							if (res.confirm) {
+							    // 执行确认后的操作
+								item.url = 1;
+								item.id = 2;
+							} 
+							else {
+								// 执行取消后的操作
+								item.url = 1;
+								item.id = 3;
+								
+							}
 						}
-					}
-				})
+					})
+				}
+			
 			
 			},
 			tolist(){

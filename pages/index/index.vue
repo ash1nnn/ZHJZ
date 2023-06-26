@@ -64,7 +64,7 @@
 	export default {
 		data() {
 			return {
-				classify: 1,
+				classify: 3,
 				title: 'Hello',
 				list1: [{
 						icon: "https://test-37b.pages.dev/index/3.png",
@@ -112,14 +112,17 @@
 				list3: [{
 						icon: "https://test-37b.pages.dev/index/3.png",
 						text: "执法公开",
+						url: "/pages/notice/notice"
 					},
 					{
 						icon: "https://test-37b.pages.dev/index/4.png",
 						text: "服务登记",
+						url: "/pages/volunteerDetail/volunteerDetail"
 					},
 					{
 						icon: "https://test-37b.pages.dev/index/5.png",
 						text: "活动预约",
+						url: "/pages/volunteerList/volunteerList"
 					}
 					// {
 					// 	icon: "https://test-37b.pages.dev/8.png",
