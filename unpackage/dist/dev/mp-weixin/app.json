@@ -25,6 +25,11 @@
     "pages/demond/demondAnswer",
     "pages/demond/weChat",
     "pages/demond/demondTypeTeam",
+    "pages/demond/history/demondAnswerMotion",
+    "pages/demond/history/demondAnswerMeasure",
+    "pages/demond/typeAnswer/demondAnswerEmploy",
+    "pages/demond/typeAnswer/demondAnswerLaw",
+    "pages/demond/typeAnswer/demondAnswerHelp",
     "pages/orderlist/orderlist",
     "pages/ordermanage/ordermanage"
   ],
@@ -57,5 +62,6 @@
     "wx14c2b0d4a80a43d0",
     "wxd9c723d098992660"
   ],
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

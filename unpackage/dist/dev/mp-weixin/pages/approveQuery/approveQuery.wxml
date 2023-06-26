@@ -1,1 +1,1 @@
-<view class="b"><text>审批事项：外出请假</text><text>时间：2023.5.20-2023.5.25</text><text>外出目的地：江苏省太仓市</text><text>审核情况：通过</text></view>
+<view class="cc"><view wx:for="{{a}}" wx:for-item="item" class="content1"><view class="content"><view class="txt_right"><text class="title">{{item.a}}</text><view class="litxt"><text class="xijie">{{item.b}}</text><text class="xijie">{{item.c}}</text><text class="xijie">{{item.d}}</text><image src="{{item.e}}" class="img1"></image></view></view></view></view></view>

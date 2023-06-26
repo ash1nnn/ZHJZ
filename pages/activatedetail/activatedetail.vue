@@ -1,6 +1,6 @@
 <template>
 	<view class="ss">
-		<image src="../../static/hd.jpg" mode="widthFix"></image>
+		<image src="../../static/400.jpg" mode="widthFix"></image>
 <!-- 		<image src="../../static/400.jpg" mode=""></image>
 		<image src="../../static/400.jpg" mode=""></image> -->
 		<!-- <text class="but" plain @click="orderok" >立即报名</text> -->
