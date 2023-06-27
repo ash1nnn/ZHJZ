@@ -3,14 +3,14 @@
 		<image src="https://test-37b.pages.dev/check/1.png" mode="widthFix" class="imgh"></image>
 		<view class="main">
 			<!-- <view class="img1" @click="toedu"> -->
-			<image class="img1" src="../../static/a1.png" mode="widthFix" @click="toedu"></image>
+			<image class="img1" src="https://zhjz-pic.pages.dev/a1.png" mode="widthFix" @click="toedu"></image>
 			<!-- </view> -->
 			<view class="c2">
 				<!-- <view class="img2" @click="towork"> -->
-				<image class="img2" src="../../static/a2.png" mode="widthFix" @click="towork"></image>
+				<image class="img2" src="https://zhjz-pic.pages.dev/a2.png" mode="widthFix" @click="towork"></image>
 				<!-- </view> -->
 				<!-- <view class="img2" @click="todisplay"> -->
-				<image class="img2" src="../../static/a3.png" mode="widthFix" @click="todisplay"></image>
+				<image class="img2" src="https://zhjz-pic.pages.dev/a3.png" mode="widthFix" @click="todisplay"></image>
 				<!-- </view> -->
 			</view>
 		</view>

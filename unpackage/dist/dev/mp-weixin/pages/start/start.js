@@ -1,0 +1,1 @@
+"use strict";const e=require("../../common/vendor.js"),s={data(){return{}},methods:{goto(t){e.index.switchTab({url:"../../pages/index/index"})}}};function n(t,a,c,i,u,r){return{a:e.o(_=>r.goto())}}const o=e._export_sfc(s,[["render",n],["__file","C:/Users/lcz/Documents/GitHub/ZHJZ/pages/start/start.vue"]]);wx.createPage(o);

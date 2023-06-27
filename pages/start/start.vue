@@ -1,6 +1,6 @@
 <template>
 	<view class="bk">
-		<image src="../../static/sf.jpg" mode="widthFix"></image>
+		<image src="../../static/notice/1.png" mode="widthFix" class="img"></image>
 
 		<view class="max">
 			<text class="txt">你好，欢迎来到社矫之家</text>
@@ -47,6 +47,10 @@
 		font-size: 45rpx;
 		font-weight: 800;
 		margin-bottom: 50rpx;
+	}
+		
+	.img{
+		width: 100%;
 	}
 	.bk{
 		background-color: #eeeeee;

@@ -64,7 +64,7 @@
 	export default {
 		data() {
 			return {
-				classify: 3,
+				classify: 1,
 				title: 'Hello',
 				list1: [{
 						icon: "https://test-37b.pages.dev/index/3.png",
