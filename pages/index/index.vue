@@ -64,7 +64,7 @@
 	export default {
 		data() {
 			return {
-				classify: 1,
+				classify: '',
 				title: 'Hello',
 				list1: [{
 						icon: "https://test-37b.pages.dev/index/3.png",
@@ -160,8 +160,13 @@
 
 		},
 		onLoad() {
-			
-
+			var self = this
+			uni.getStorage({
+				key: 'classify',
+				success: function (res) {
+					self.classify = res.data
+				}
+			})
 		},
 		methods: {	
 			click(item){

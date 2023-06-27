@@ -3,11 +3,11 @@
 
 	<view class="x">
 		<uni-forms :modelValue="formData" label-position="top" label-width="1000rpx">
-			<uni-forms-item label="姓名" name="place">
-				<uni-easyinput v-model="formData.place" type="text" placeholder="请输入姓名 "></uni-easyinput>
+			<uni-forms-item label="姓名" name="name">
+				<uni-easyinput v-model="formData.name" type="text" placeholder="请输入姓名 "></uni-easyinput>
 			</uni-forms-item>
-			<uni-forms-item label="性别" name="detail">
-				<uni-easyinput v-model="formData.detail" type="text" placeholder="请输入性别"></uni-easyinput>
+			<uni-forms-item label="性别" name="sex">
+				<uni-easyinput v-model="formData.sex" type="text" placeholder="请输入性别"></uni-easyinput>
 			</uni-forms-item>
 			<uni-forms-item label="出生日期" name="date">
 				<uni-datetime-picker v-model="formData.date" type="date"></uni-datetime-picker>
@@ -15,8 +15,8 @@
 			<uni-forms-item label="专业服务" name="detail">
 				<uni-data-select v-model="value" :localdata="range" ></uni-data-select>
 			</uni-forms-item>
-			<uni-forms-item label="志愿时间" name="date">
-				<uni-datetime-picker v-model="formData.date" type="date"></uni-datetime-picker>
+			<uni-forms-item label="志愿时间" name="date1">
+				<uni-datetime-picker v-model="formData.date1" type="date"></uni-datetime-picker>
 			</uni-forms-item>
 		</uni-forms>
 		<button type="primary" @click="submit" class="aa">提交</button>
@@ -32,13 +32,12 @@
 			return {
 				currentIndex: 0,
 				formData: {
-					place: '',
-					detail: '',
-					reason: '',
-					days: '',
+					name: '',
+					sex: '',
 					date: '',
+					date1: '',
 				},
-				value: 0,
+				value: '',
 				range: [
 				        { value: 0, text: "帮困救助" },
 				        { value: 1, text: "法律咨询" },
@@ -54,9 +53,7 @@
 
 		},
 		methods: {
-			change(index) {
-				this.currentIndex = index
-			},
+
 			submit() {
 				uni.showToast({
 					title: '提交成功！',
@@ -69,11 +66,6 @@
 				})
 
 			},
-			bigChange() {
-				uni.navigateTo({
-					url: '/pages/approveQuery/approveQuery'
-				});
-			}
 		},
 
 	}

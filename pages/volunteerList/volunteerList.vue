@@ -64,6 +64,7 @@
 		border-radius: 25rpx;
 		margin-top: 50rpx;
 		background-color: #ebf2ff;
+		margin-left: 10rpx;
 	}
 		
 	.img{
@@ -73,7 +74,7 @@
 		margin-top: 20rpx;
 	}
 	.txt{
-		margin-top: 50rpx;
+		margin-top: 70rpx;
 		margin-left: 80rpx;
 		font-size: 40rpx;
 		font-weight: bold;

@@ -77,7 +77,7 @@
 	export default {
 		data() {
 			return {
-				classify: 1,
+				classify: '',
 				list1: [{
 						icon: "../../static/me/7.jpg",
 						text: "沪智矫",
@@ -95,6 +95,13 @@
 			};
 		},
 		onLoad() {
+			var self = this
+			uni.getStorage({
+				key: 'classify',
+				success: function (res) {
+					self.classify = res.data
+				}
+			})
 			
 		
 		},
