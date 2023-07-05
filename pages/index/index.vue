@@ -64,11 +64,8 @@
 	export default {
 		data() {
 			return {
-<<<<<<< HEAD
 				classify: 1,
-=======
 				classify: '',
->>>>>>> 9aaf9e77dbd3815e604ac12287520fe7701666db
 				title: 'Hello',
 				list1: [{
 						icon: "https://test-37b.pages.dev/index/3.png",
