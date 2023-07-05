@@ -1,8 +1,1 @@
-"use strict";
-const common_vendor = require("../../common/vendor.js");
-const _sfc_main = {};
-function _sfc_render(_ctx, _cache) {
-  return {};
-}
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/ZHJZ-main/pages/approveQuery/approveQuery.vue"]]);
-wx.createPage(MiniProgramPage);
+"use strict";const e=require("../../common/vendor.js"),a={data(){return{list:[{title:"审批事项：外出请假",detial1:"时间：2023.5.20-2023.5.25",detial2:"外出目的地：江苏省太仓市",detial3:"审核情况：通过！",imgpass:"../../static/success.png"},{title:"审批事项：居住地变更",detial1:"时间：2023.6.24",detial2:"外出目的地：上海市徐家汇街道",detial3:"审核情况：不通过！",imgpass:"../../static/fail.png"}]}},methods:{}};function i(c,n,l,d,s,o){return{a:e.f(s.list,(t,p,u)=>({a:e.t(t.title),b:e.t(t.detial1),c:e.t(t.detial2),d:e.t(t.detial3),e:t.imgpass}))}}const r=e._export_sfc(a,[["render",i],["__file","C:/Users/lcz/Documents/GitHub/ZHJZ/pages/approveQuery/approveQuery.vue"]]);wx.createPage(r);

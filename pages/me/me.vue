@@ -34,7 +34,7 @@
 			<text class="x">个别教育次数</text>
 			<text class="y">3次</text>
 		</view>
-		<view class="b" v-if="classify == 1">
+		<view class="b" @click="tolist" v-if="classify == 1">
 			<image src="../../static/me/4.png" mode="" class="c"></image>
 			<text class="x">活动预约查询</text>
 			<image src="../../static/me/6.png" mode="" class="z"></image>
@@ -44,7 +44,7 @@
 			<text class="x">审批事项查询</text>
 			<image src="../../static/me/6.png" mode="" class="z"></image>
 		</view>
-		<view class="b" v-if="classify == 2">
+		<view class="b" v-if="classify == 2" @click="change1" >
 			<image src="../../static/me/4.png" mode="" class="c"></image>
 			<text class="x">活动预约审核</text>
 			<image src="../../static/me/6.png" mode="" class="z"></image>
@@ -77,7 +77,7 @@
 	export default {
 		data() {
 			return {
-				classify: 2,
+				classify: '',
 				list1: [{
 						icon: "../../static/me/7.jpg",
 						text: "沪智矫",
@@ -95,6 +95,13 @@
 			};
 		},
 		onLoad() {
+			var self = this
+			uni.getStorage({
+				key: 'classify',
+				success: function (res) {
+					self.classify = res.data
+				}
+			})
 			
 		
 		},
@@ -119,6 +126,16 @@
 							url: '/pages/approveCheck/approveCheck'
 						});
 			},
+			change1(){
+						uni.navigateTo({
+							url: '/pages/ordermanage/ordermanage'
+						});
+			},
+			tolist(){
+				uni.navigateTo({
+					url: '../../pages/orderlist/orderlist'
+				});	
+			}
 		
 		},
 	}

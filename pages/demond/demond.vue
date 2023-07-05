@@ -11,7 +11,7 @@
 			
 		</div>
 		<div class = "box">
-			<div  class="message" v-for="(item,index) in list">
+			<div  class="message" v-for="(item,index) in list" @click="history1()">
 				<div class="wen">
 					<img src="../../static/wen.png" width="24px" height="24px" class="wenicon">
 				<text class="txt3">{{item.text1}}</text>
@@ -32,7 +32,7 @@
 				
 			</div>
 			
-			<div  class="message1" v-for="(item,index) in list1">
+			<div  class="message1" v-for="(item,index) in list1" @click="history2()">
 				<div class="wen1">
 					<img src="../../static/wen.png" width="24px" height="24px" class="wenicon1">
 				<text class="txt31">{{item.text1}}</text>
@@ -85,7 +85,17 @@
 				uni.navigateTo({
 				    url:"../demond/demondType"
 				});
-			}
+			},
+			history1(url){
+				uni.navigateTo({
+				    url:"../demond/history/demondAnswerMotion"
+				});
+			},
+			history2(url){
+				uni.navigateTo({
+				    url:"../demond/history/demondAnswerMeasure"
+				});
+			},
 		}
 		    
 	}

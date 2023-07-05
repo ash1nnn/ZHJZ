@@ -1,9 +1,13 @@
 <template>
 	<view class="bk">
-		<image src="../../static/sf.jpg" mode="widthFix"></image>
+		<image src="https://zhjz-pic.pages.dev/sf.jpg" mode="widthFix" class="img"></image>
 
 		<view class="max">
 			<text class="txt">你好，欢迎来到社矫之家</text>
+			<view class="tel">
+				<text>请选择人员类型</text>
+				<uni-data-select v-model="value" :localdata="range"  :clear="false" @change="change" class="a" ></uni-data-select>
+			</view>
 			<view class="tel">
 				<text>身份证：</text>
 				<view class="t">
@@ -17,7 +21,7 @@
 				</view>
 			</view>
 
-			<button @click="goto()" class="but"><text>登陆</text></button>
+			<button @click="goto(value)" class="but"><text>登陆</text></button>
 			<view class="bot"> </view>
 		</view>
 	</view>
@@ -27,15 +31,29 @@
 	export default {
 		data() {
 			return {
+				value:'',
+				range: [
+				        { value: 1, text: "矫正对象" },
+				        { value: 2, text: "矫正小组成员" },
+						{ value: 3, text: "志愿者" },
+				    ],
 
 			};
 		},
 		methods: {
-			goto(url) {
+			change(e){
+				// console.log("e:",e)
+				uni.setStorage({
+					key: 'classify',
+					data: e,
+				})
+			},
+			goto(value) {
+			
 				uni.switchTab({
 					url: "../../pages/index/index"
 				})
-			}
+			},
 		},
 		}
 </script>
@@ -46,7 +64,11 @@
 		color: #0000ff;
 		font-size: 45rpx;
 		font-weight: 800;
-		margin-bottom: 50rpx;
+		// margin-bottom: 50rpx;
+	}
+		
+	.img{
+		width: 100%;
 	}
 	.bk{
 		background-color: #eeeeee;
@@ -67,6 +89,10 @@
 		// border: 5rpx,solid,#6b6b6b;
 		align-items: center;
 		align-content: center;
+	}
+	.a{
+		margin-left: 30rpx;
+		width: 250rpx;
 	}
 	.t{
 		border-radius: 10rpx;

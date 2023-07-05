@@ -9,6 +9,12 @@
 		>
 			<!-- 聊天主体 -->
 			<view id="msglistview" class="chat-body">
+				<!-- 留言提示 -->
+				<view class="message">
+					{{messageBoard}}
+				</view>
+
+
 				<!-- 聊天记录 -->
 				<view v-for="(item,index) in msgList" :key="index">
 					<!-- 自己发的消息 -->
@@ -24,7 +30,7 @@
 					</view>
 					<!-- 机器人发的消息 -->
 					<view class="item Ai" v-if="item.botContent != ''">
-						<!-- 头像 -->     
+						<!-- 头像 -->
 						<view class="avatar">
 							<img src="../../static/da.png" width="24px" height="24px" class="daicon">
 						</view>
@@ -60,14 +66,9 @@
 				userId:'',
 				//发送的消息
 				chatMsg:"",
+				messageBoard:"您好，有什么需求请留言",
 				msgList:[
-					{
-					    botContent: "hello，请问我有什么可以帮助你的吗？",
-					    recordId: 0,
-					    titleId: 0,
-					    userContent: "",
-					    userId: 0
-					},
+
 					{
 					    botContent: "",
 					    recordId: 0,
@@ -75,7 +76,7 @@
 					    userContent: "你好呀我想问你一件事",
 					    userId: 0
 					},
-				]	
+				]
 			}
 		},
 		computed: {
@@ -111,10 +112,10 @@
 	}
 </script>
 <style lang="scss" scoped>
-	
+
 	$chatContentbgc: #C2DCFF;
 	$sendBtnbgc: #4F7DF5;
-	
+
 	view,button,text,input,textarea {
 		margin: 0;
 		padding: 0;
@@ -132,16 +133,16 @@
 					    background: transparent;
 					    color: transparent;
 					  }
-			
+
 			// background-color: orange;
 			background-color: #F6F6F6;
-			
+
 			.chat-body {
 				display: flex;
 				flex-direction: column;
 				padding-top: 23rpx;
 				// background-color:skyblue;
-				
+
 				.self {
 					justify-content: flex-end;
 				}
@@ -205,7 +206,7 @@
 						background: white;
 						// border-radius: 8rpx;
 						overflow: hidden;
-						
+
 						image {
 							align-self: center;
 						}
@@ -234,7 +235,7 @@
 
 			.uni-textarea {
 				padding-bottom: 70rpx;
-                
+
 				textarea {
 					width: 537rpx;
 					min-height: 75rpx;
@@ -248,7 +249,7 @@
 					padding: 5rpx 8rpx;
 				}
 			}
-            
+
 			.send-btn {
 				display: flex;
 				align-items: center;
@@ -266,7 +267,7 @@
 				line-height: 28rpx;
 			}
 		}
-		
+
 	}
 	.wenicon{
 		position: absolute;
@@ -277,5 +278,22 @@
 		position: absolute;
 		width: 78rpx;
 		height: 78rpx;
+	}
+	.message{
+		background-color: #FFFFFF;
+
+		width: 700rpx;
+		height: 50rpx;
+		margin-left: 25rpx;
+		font-size: 30rpx;
+		font-family: PingFang SC;
+		font-weight: 500;
+		text-align:center;
+		// vertical-align:middle;
+		// display:table-cell;
+		border-radius: 20rpx;
+		border: 12rpx solid transparent;
+		border-right: 12rpx solid #FFFFFF;
+
 	}
 </style>

@@ -68,7 +68,7 @@
 		height: 150rpx;
 		border: 3px solid #F5F6FA;
 		border-radius: 25rpx;
-		background-color: white;
+		background-color: #ebf2ff;
 	}
 		
 	.img{

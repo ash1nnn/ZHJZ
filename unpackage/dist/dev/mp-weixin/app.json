@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/start/start",
     "pages/index/index",
     "pages/me/me",
     "pages/activatemain/activatemain",
@@ -7,6 +8,8 @@
     "pages/activatedetail/activatedetail",
     "pages/notice/notice",
     "pages/select/select",
+    "pages/volunteerDetail/volunteerDetail",
+    "pages/volunteerList/volunteerList",
     "pages/member/member",
     "pages/detail/detail",
     "pages/experience/experience",
@@ -25,6 +28,11 @@
     "pages/demond/demondAnswer",
     "pages/demond/weChat",
     "pages/demond/demondTypeTeam",
+    "pages/demond/history/demondAnswerMotion",
+    "pages/demond/history/demondAnswerMeasure",
+    "pages/demond/typeAnswer/demondAnswerEmploy",
+    "pages/demond/typeAnswer/demondAnswerLaw",
+    "pages/demond/typeAnswer/demondAnswerHelp",
     "pages/orderlist/orderlist",
     "pages/ordermanage/ordermanage"
   ],

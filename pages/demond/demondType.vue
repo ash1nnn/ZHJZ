@@ -56,7 +56,8 @@
 
 <style>
 	.a{
-		width: 750rpx;
+		width: 710rpx;
+		margin-left: 20rpx;
 	}
 	.new{
 		margin-top: 10rpx;
@@ -71,5 +72,7 @@
 	.dd{
 		width: 330rpx;
 		height: 280rpx;
+		margin-left: 10rpx;
+		margin-right: 10rpx;
 	}
 </style>

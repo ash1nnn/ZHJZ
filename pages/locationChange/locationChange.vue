@@ -26,8 +26,8 @@
 				</swiper-item>
 				<swiper-item class="swiper-item sns-news">
 					<view class="b">
-						<text>时间：2023.5.20-2023.5.25</text>
-						<text>执行地：上海市徐家汇街道</text>
+						<text class="xijie">时间：2023.5.20-2023.5.25</text>
+						<text class="xijie">执行地：上海市徐家汇街道</text>
 					</view>
 				</swiper-item>
 	</swiper>
@@ -120,14 +120,23 @@
 	.b{
 		display: flex;
 		flex-direction: column;
-		align-items: center;   
-		vertical-align: center;
-		justify-content:center;
-		padding: 40rpx;
-		margin: 40rpx;
-		border:1px solid;
-
-		
+		width: 97%;
+		height: 150rpx;
+		margin-top:50rpx;
+		margin-left: 10rpx;
+		// align-items: center;   
+		// vertical-align: center;
+		// justify-content:center;
+		// padding: 40rpx;
+		// margin: 40rpx;
+		background-color: #ebf2ff;
+		border-radius: 40rpx;
+	}
+	.xijie {
+		font-size: 30rpx;
+		color: #3c66ef;
+		margin-top: 20rpx;
+		margin-left: 20rpx;
 	}
 	.x{
 		margin-left: 30rpx;

@@ -17,7 +17,7 @@
 				return {
 					newsList: [{
 							icon: "../../static/demondType/bk.png",
-							url: "/pages/demond/demondAnswer"
+							url: "/pages/demond/typeAnswer/demondAnswerHelp"
 						},
 						{
 							icon: "../../static/demondType/xl.png",
@@ -25,11 +25,11 @@
 						},
 						{
 							icon: "../../static/demondType/fl.png",
-							url: "/pages/demond/demondAnswer"
+							url: "/pages/demond/typeAnswer/demondAnswerLaw"
 						},
 						{
 							icon: "../../static/demondType/jy.png",
-							url: "/pages/demond/demondAnswer"
+							url: "/pages/demond/typeAnswer/demondAnswerEmploy"
 						}
 						
 					],
@@ -55,7 +55,8 @@
 
 <style>
 	.a{
-		width: 750rpx;
+		width: 710rpx;
+		margin-left: 20rpx;
 	}
 	.new{
 		margin-top: 10rpx;
@@ -70,5 +71,7 @@
 	.dd{
 		width: 330rpx;
 		height: 280rpx;
+		margin-left: 10rpx;
+		margin-right: 10rpx;
 	}
 </style>
