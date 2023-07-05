@@ -17,13 +17,30 @@
 		},
 		methods: {
 			orderok(){
-				uni.showToast({
-				    title: '报名成功！',
-				    //将值设置为 success 或者直接不用写icon这个参数
-				    icon: 'success',
-				    //显示持续时间为 2秒
-				    duration: 490
-				});
+				const ook = uni.getStorage({
+					key:"orderok"
+				})
+				if (ook) {
+					uni.showToast({
+						title:"已报名！",
+						icon: 'success',
+						duration: 490
+					})
+				} else{
+					uni.setStorage({
+						data: true,
+						key:"orderok"
+					})
+					
+					uni.showToast({
+					    title: '报名成功！',
+					    //将值设置为 success 或者直接不用写icon这个参数
+					    icon: 'success',
+					    //显示持续时间为 2秒
+					    duration: 490
+					});
+				}
+
 				setTimeout(function() {
 				uni.navigateTo({
 					url: '../../pages/orderlist/orderlist'

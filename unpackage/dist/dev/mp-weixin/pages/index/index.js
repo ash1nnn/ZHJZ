@@ -3,7 +3,7 @@ const common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   data() {
     return {
-      classify: 2,
+      classify: 1,
       title: "Hello",
       list1: [
         {

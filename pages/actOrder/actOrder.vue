@@ -1,27 +1,58 @@
 <template>
-	<view class="cc">
 
-		<button plain class="but" @click="tolist">活动预约查询</button>
+	<!-- <view> -->
+	<!-- <view class="content1"></view> -->
+	<view class="">
 
 
-		<view class="content1" v-for="(item,index) in list">
-			<view class="content" @click="todetial()">
-				<view class="txt_right">
-					<text class="title">
-						{{item.title}}
-					</text>
-					<view class="litxt">
-						<text class="xijie">{{item.detial1}}</text>
-						<text class="xijie">{{item.detial2}}</text>
-						<text class="xijie">{{item.detial3}}</text>
-						<text class="xijie">{{item.detial4}}</text>
-						<img :src="item.imgpass" class="img1">
-					</view>
+		<view class="">
+			<view class="content1">
+
+			</view>
+
+			<view class="search-block">
+				<view class="search-ico-wapper">
+					<image src="../../static/chongzhi_sousuo/chongzhi-icon-sousuo@3x.png" class="search-ico" mode="">
+					</image>
 				</view>
-				<img :src="item.imgsrc" class="img">
+				<input type="text" value="" placeholder="请输入待查寻活动名称" class="search-text" maxlength="10" focus />
+				<view class="search-ico-wapper1">
+					<image src="../../static/search.png" class="search-ico-1" mode="">
+					</image>
+				</view>
+			</view>
+			<view class="shadow">
 			</view>
 		</view>
+		<view class="cc">
+			<!-- </view> -->
+			<!-- <button plain class="but" @click="tolist">活动预约查询</button> -->
+			<view class="search" @click="tolist">
+				<image src="../../static/acts.png" alt=""></image>
+				<text>活动预约查询</text>
+			</view>
 
+
+			<view class="contentlist" v-for="(item,index) in list">
+				<view class="content" @click="todetial()">
+					<view class="txt_right">
+						<text class="title">
+							{{item.title}}
+						</text>
+						<view class="litxt">
+							<text class="xijie">{{item.detial1}}</text>
+							<text class="xijie">{{item.detial2}}</text>
+							<text class="xijie">{{item.detial3}}</text>
+							<text class="xijie">{{item.detial4}}</text>
+							<img :src="item.imgpass" class="img1">
+						</view>
+					</view>
+					<img :src="item.imgsrc" class="img">
+				</view>
+			</view>
+
+
+		</view>
 	</view>
 </template>
 
@@ -70,7 +101,7 @@
 						url: "",
 					},
 					{
-						title: "职业技能行业登记培训课程，火热招生种！",
+						title: "热招，职业技能行业登记培训课程，火热招生种！",
 						detial1: "徐汇区",
 						detial2: "6月1日",
 						detial3: "剩余20人",
@@ -88,25 +119,28 @@
 					url: '../../pages/activatedetail/activatedetail'
 				});
 			},
-			tolist(){
+			tolist() {
 				uni.navigateTo({
 					url: '../../pages/orderlist/orderlist'
-				});	
+				});
 			}
 		}
 	}
 </script>
 
 <style>
-/* 	.cc{
+	.cc {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		align-content: center;
 		justify-items: center;
 		width: 100%;
-	} */
-	.but[plain]{
+		position: relative;
+		top: -80upx;
+	}
+
+	.but[plain] {
 		background-color: #ebf2ff;
 		font-size: 35rpx;
 		color: #4b75ff;
@@ -116,33 +150,61 @@
 		border: 0;
 		margin-left: 10rpx;
 		margin-right: 10rpx;
-		
+
+
+	}
+
+	.search {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 110rpx;
+		width: 110rpx;
+		border-radius: 50%;
+		background-color: #00007f;
+		position: fixed;
+		font-size: 16rpx;
+		color: white;
+		box-shadow: 0 0 10px #00007f;
+		right: 50rpx;
+		bottom: 100rpx;
 		
 	}
+	.search image{
+		padding-top: 20rpx;
+		height: 50rpx;
+		width: 50rpx;
+	}
+
 	.content {
 		display: flex;
 		flex-direction: row;
 		width: 98%;
+		/* position: absolute; */
+		/* height: 200rpx; */
+
 		padding-top: 20rpx;
 		padding-bottom: 20rpx;
 		border-radius: 40rpx;
 		/* border-bottom: 5rpx solid #ececec; */
 		/* border-top: 5rpx solid #ececec; */
-/* 		border-left: 5rpx solid #ec/* ecec;
-		border-right: 5rpx solid #ececec; */ 
+		/* 		border-left: 5rpx solid #ec/* ecec;
+		border-right: 5rpx solid #ececec; */
 		margin-bottom: 10rpx;
 		margin-left: 10rpx;
 		margin-right: 10rpx;
 		margin-top: 10rpx;
-		background-color: #ebf2ff;
-		
+		background-color: #eff1fe;
+		box-shadow: 0 0 10px #e6e6e6;
+
 	}
 
 	.img {
 		width: 25%;
 		height: 200rpx;
 	}
-	.img1{
+
+	.img1 {
 		width: 100rpx;
 		height: 100rpx;
 	}
@@ -153,7 +215,7 @@
 		font-size: 35rpx;
 		font-weight: 600;
 		font-style: oblique;
-		color: #4b75ff;
+		color: #5a6679;
 	}
 
 	.txt_right {
@@ -174,57 +236,82 @@
 
 	.xijie {
 		padding-right: 20rpx;
-		color: #3c66ef;
+		color: #5a6679;
 	}
 
-	.weui-search-bar {
-		position: relative;
-		padding: 8px 10px;
-		display: -webkit-box;
-		display: -webkit-flex;
+
+	.contentlist {
 		display: flex;
-		box-sizing: border-box;
-		background-color: #EFEFF4;
-		border-top: 1rpx solid #D7D6DC;
-		border-bottom: 1rpx solid #D7D6DC;
+		flex-direction: column;
+
+		/* position: absolute; */
 	}
 
-	.weui-icon-search_in-box {
-		position: absolute;
-		left: 10px;
-		top: 7px;
+
+
+	.content1 {
+		height: 50rpx;
+		background-color: #eff1fe;
+		border-bottom-left-radius: 30rpx;
+		border-bottom-right-radius: 30rpx;
+		/* border-bottom: ; */
 	}
 
-	.weui-search-bar__form {
-		position: relative;
-		-webkit-box-flex: 1;
-		-webkit-flex: auto;
-		flex: auto;
-		border-radius: 5px;
-		background: #FFFFFF;
-		border: 1rpx solid #E6E6EA;
+	page {
+		background-color: #FFFFFF;
 	}
 
-	.weui-search-bar__box {
-		position: relative;
-		padding-left: 30px;
-		padding-right: 30px;
-		width: 100%;
-		box-sizing: border-box;
-		z-index: 1;
+	/* 搜索框 */
+	.search-ico,
+	.search-ico-1 {
+		width: 40upx;
+		height: 40upx;
 	}
 
-	.weui-search-bar__input {
-		height: 28px;
-		line-height: 28px;
+	.search-text {
 		font-size: 14px;
+		background-color: #FFFFFF;
+		height: 60upx;
+		width: 480upx;
 	}
 
-	.weui-search-bar__cancel-btn {
-		margin-left: 10px;
-		line-height: 28px;
-		color: #09BB07;
-		white-space: nowrap;
+	.search-block {
+		display: flex;
+		flex-direction: row;
+		padding-left: 60upx;
+		position: relative;
+		top: -32upx;
+	}
+
+	.search-ico-wapper {
+		background-color: #FFFFFF;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0upx 0upx 0upx 40upx;
+		border-bottom-left-radius: 18px;
+		border-top-left-radius: 18px;
+	}
+
+	.search-ico-wapper1 {
+		background-color: #FFFFFF;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0upx 40upx 0upx 0upx;
+		border-bottom-right-radius: 18px;
+		border-top-right-radius: 18px;
+	}
+
+	.shadow {
+		width: 638upx;
+		height: 60upx;
+		border-radius: 18px;
+		-moz-box-shadow: 0 0 10px #e6e6e6;
+		-webkit-box-shadow: 0 0 10px #e6e6e6;
+		box-shadow: 0 0 10px #e6e6e6;
+		position: relative;
+		top: -90upx;
+		left: 60upx;
 	}
 </style>
-

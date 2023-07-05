@@ -6,13 +6,28 @@ const _sfc_main = {
   },
   methods: {
     orderok() {
-      common_vendor.index.showToast({
-        title: "报名成功！",
-        //将值设置为 success 或者直接不用写icon这个参数
-        icon: "success",
-        //显示持续时间为 2秒
-        duration: 490
+      const ook = common_vendor.index.getStorage({
+        key: "orderok"
       });
+      if (ook) {
+        common_vendor.index.showToast({
+          title: "已报名！",
+          icon: "success",
+          duration: 490
+        });
+      } else {
+        common_vendor.index.setStorage({
+          data: true,
+          key: "orderok"
+        });
+        common_vendor.index.showToast({
+          title: "报名成功！",
+          //将值设置为 success 或者直接不用写icon这个参数
+          icon: "success",
+          //显示持续时间为 2秒
+          duration: 490
+        });
+      }
       setTimeout(function() {
         common_vendor.index.navigateTo({
           url: "../../pages/orderlist/orderlist"
