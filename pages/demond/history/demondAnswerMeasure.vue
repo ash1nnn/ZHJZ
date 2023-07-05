@@ -38,7 +38,7 @@
 		</scroll-view>
 		<!-- 底部消息发送栏 -->
 		<!-- 用来占位，防止聊天消息被发送框遮挡 -->
-		<view class="chat-bottom">
+		<!-- <view class="chat-bottom">
 			<view class="send-msg">
                 <view class="uni-textarea">
 					<textarea v-model="chatMsg"
@@ -48,7 +48,7 @@
 				</view>
 				<button @click="handleSend" class="send-btn">发送</button>
 			</view>
-		</view>
+		</view> -->
 	</view>
 </template>
 <script>
@@ -65,7 +65,7 @@
 					    botContent: "",
 					    recordId: 0,
 					    titleId: 0,
-					    userContent: "你好呀我想问你一件事？",
+					    userContent: "你好我想问你一件事？",
 					    userId: 0
 					},{
 					    botContent: "",

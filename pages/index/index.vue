@@ -83,7 +83,7 @@
 					{
 						icon: "https://test-37b.pages.dev/index/5.png",
 						text: "需求登记",
-						url: "/pages/demond/demond"
+						url: "/pages/demond/demondFix"
 						
 					},
 					{

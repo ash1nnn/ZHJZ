@@ -132,6 +132,14 @@
 		        "enablePullDownRefresh": false
 		    }
 		    
+		},{
+		    "path" : "pages/demond/demondFix",
+		    "style" :
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+
 		},
 		
 		{
