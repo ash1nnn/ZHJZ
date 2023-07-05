@@ -29,7 +29,7 @@
 				<!-- <img :src="item.imgsrc" class="img"> -->
 			</view>
 		</view>
-		<text class="xijie1">-----已显示全部活动审核-----</text>
+		<text class="xijie1"> —— · - 已显示全部活动审核 - · —— </text>
 	</view>
 </template>
 
@@ -148,7 +148,8 @@
 		margin-left: 10rpx;
 		margin-right: 10rpx;
 		margin-top: 10rpx;
-		background-color: #ebf2ff;
+		background-color: #eff1fe;
+		box-shadow: 0 0 10px #e6e6e6;
 		
 	}
 
@@ -168,7 +169,7 @@
 		font-size: 40rpx;
 		/* font-weight: 600; */
 		/* font-style: oblique; */
-		color: #0000ff;
+		color: #5a6679;
 	}
 	.title {
 		padding-top: 10rpx;
@@ -176,7 +177,7 @@
 		font-size: 30rpx;
 		/* font-weight: 600; */
 		/* font-style: oblique; */
-		color: #4b75ff;
+		color: #5a6679;
 	}
 
 	.txt_right {
@@ -198,12 +199,12 @@
 	.xijie {
 		font-size: 32rpx;
 		padding-right: 20rpx;
-		color: #0000ff;
+		color: #5a6679;
 	}
 	.xijie1 {
 		font-size: 28rpx;
 		padding-right: 20rpx;
-		color: #3c66ef;
+		color: #5a6679;
 	}
 
 	.weui-search-bar {

@@ -64,6 +64,7 @@
 	export default {
 		data() {
 			return {
+				classify: 1,
 				classify: '',
 				title: 'Hello',
 				list1: [{
@@ -79,7 +80,7 @@
 					{
 						icon: "https://test-37b.pages.dev/index/5.png",
 						text: "需求登记",
-						url: "/pages/demond/demond"
+						url: "/pages/demond/demondFix"
 						
 					},
 					{
