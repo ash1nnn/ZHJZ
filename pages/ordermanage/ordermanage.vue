@@ -1,6 +1,15 @@
 <template>
-	<view class="cc">
-
+	<view class="topTabBar">
+		<view class="grid" v-for="(item, tbIndex) in handlingType" @click="showType(tbIndex)">
+			<!-- <view class="">
+				{{item.value}}
+			</view> -->
+			<view class="text" :class="[tbIndex == tabbarIndex ? 'active' : '']">{{item.value}}</view>
+	
+		</view>
+	</view>
+	<view class="cc" v-if="tabbarIndex==0">
+		
 		<!-- <button plain class="but" @click="tolist">活动预约查询</button> -->
 
 
@@ -31,14 +40,55 @@
 		</view>
 		<text class="xijie1"> —— · - 已显示全部活动审核 - · —— </text>
 	</view>
+	<view class="cc" v-if="tabbarIndex==1">
+		
+		<!-- <button plain class="but" @click="tolist">活动预约查询</button> -->
+	
+	
+		<view class="content1" v-for="(item,index) in list1">
+			<view class="content" @click="todetial(item)">
+				<view class="txt_right">
+					<text class="title1">
+						{{item.title1}}
+					</text>					
+					<text class="title">
+						{{item.title}}
+					</text>
+					<view class="litxt">
+						<text class="xijie">{{item.detial1}}</text>
+						<text class="xijie">{{item.detial2}}</text>
+						<text class="xijie">{{item.detial3}}</text>
+						<text class="xijie" v-if="item.id == 1">{{item.detial4}}</text>
+						<text class="xijie" v-if="item.id == 2">{{item.detial5}}</text>
+						<text class="xijie" v-if="item.id == 3">{{item.detial6}}</text>
+						<img :src="item.imgpass" class="img1" v-if="item.url == 1">
+						<img :src="item.img1" class="img1" v-if="item.url == 2">
+						<!-- <text class="xijie">{{item.detial4}}</text> -->
+						<!-- <img :src="item.imgpass" class="img1"> -->
+					</view>
+				</view>
+				<!-- <img :src="item.imgsrc" class="img"> -->
+			</view>
+		</view>
+		<text class="xijie1"> —— · - 已显示全部活动审核 - · —— </text>
+	</view>
 </template>
 
 <script>
+	var that;
 	export default {
 		data() {
 			return {
+				tabbarIndex: 0,
+				handlingType: [{
+						value: '待审核'
+					},
+					{
+						value: '已审核'
+					}
+				],
 				list: [{
-						id: "2",
+						id: "1",
 						title1: "请审批：杨福宝 活动预约",
 						title: "活动名称：【闵行区-6月6日】课讯！线下花艺分享冬日浪漫，你的生活需要这样的仪式感！",
 						detial1: "报名人:",
@@ -50,7 +100,7 @@
 						imgpass: "../../static/sh (1).png",
 						img1:"../../static/sh (2).png",
 						imgsrc: "../../static/jiuye1.jpg",
-						url: "1",
+						url: "2",
 					},
 					{
 						id: "1",
@@ -66,6 +116,37 @@
 						img1:"../../static/sh (2).png",
 						imgsrc: "../../static/jiuye2.jpg",
 						url: "2",
+					}
+				],
+				list1: [{
+						id: "2",
+						title1: "请审批：杨福宝 活动预约",
+						title: "活动名称：【闵行区-6月6日】课讯！线下花艺分享冬日浪漫，你的生活需要这样的仪式感！",
+						detial1: "报名人:",
+						detial2: "杨福宝",
+						detial3: "审核结果:",
+						detial4: "",
+						detial5: "通过",
+						detial6: "未通过",
+						imgpass: "../../static/sh (1).png",
+						img1:"../../static/sh (2).png",
+						imgsrc: "../../static/jiuye1.jpg",
+						url: "1",
+					},
+					{
+						id: "3",
+						title1: "请审批：胡骁俊 活动预约",
+						title: "活动名称：【徐汇区-6月1日】职业技能行业登记培训课程，火热招生种！",
+						detial1: "报名人:",
+						detial2: "胡骁俊",
+						detial3: "审核结果:",
+						detial4: "",
+						detial5: "通过",
+						detial6: "未通过",
+						imgpass: "../../static/sh (1).png",
+						img1:"../../static/sh (2).png",
+						imgsrc: "../../static/jiuye2.jpg",
+						url: "1",
 					}
 				]
 			}
@@ -101,12 +182,54 @@
 				uni.navigateTo({
 					url: '../../pages/orderlist/orderlist'
 				});	
-			}
+			},
+			showType(tbIndex) {
+				that = this
+				//跳转订单列表类型
+				this.tabbarIndex = tbIndex;
+				if (this.tabbarIndex == 0) {
+			
+				}
+				if (this.tabbarIndex == 1) {
+			
+				}
+				console.info(this.tabbarIndex)
+			},
 		}
 	}
 </script>
 
 <style>
+	.topTabBar {
+		width: 100%;
+		height: 80upx;
+		display: flex;
+		justify-content: space-around;
+		position: fixed;
+		top: 0px;
+		background-color: #f8f8f8;
+	}
+	
+	.grid {
+		width: 20%;
+		height: 80upx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #444;
+		font-size: 28upx;
+	}
+	
+	.text {
+		height: 76upx;
+		display: flex;
+		align-items: center;
+	}
+	
+	.active {
+		color: #0a79ff;
+		border-bottom: solid 4upx #0a79ff;
+	}
 	.cc{
 		display: flex;
 		flex-direction: column;
@@ -114,6 +237,7 @@
 		align-content: center;
 		justify-items: center;
 		width: 100%;
+		padding-top: 30px;
 	}
 	.but[plain]{
 		background-color: #ebf2ff;
@@ -166,7 +290,7 @@
 	.title1 {
 		padding-top: 10rpx;
 		padding-left: 15rpx;
-		font-size: 40rpx;
+		font-size: 35rpx;
 		/* font-weight: 600; */
 		/* font-style: oblique; */
 		color: #5a6679;

@@ -1,1 +1,40 @@
-.a{margin-left:50rpx}.cc{margin-top:20rpx}.d{margin-left:30rpx}.e{margin-top:50rpx;margin-left:280rpx}.i{font-weight:700;font-size:40rpx}.b{display:flex;flex-direction:row;margin-top:40rpx;height:80rpx;border-bottom:3px solid #F5F6FA;position:relative}.c{width:50rpx;height:50rpx;margin-left:30rpx}.x{margin-left:50rpx}.y{position:absolute;right:30rpx}
+
+.a{
+		margin-left: 50rpx;
+}
+.cc{
+		margin-top: 20rpx;
+}
+.d{
+		margin-left: 30rpx;
+}
+.e{
+		margin-top: 50rpx;
+		margin-left: 280rpx;
+}
+.i{
+		font-weight: bold;
+		font-size: 40rpx;
+}
+.b{
+		display: flex;
+		flex-direction: row;
+		margin-top: 40rpx;
+		height: 80rpx;
+		border-bottom: 3px solid #F5F6FA;
+		position: relative;
+}
+.c{
+		width: 50rpx;
+		height: 50rpx;
+		margin-left: 30rpx;
+}
+.x{
+		margin-left: 50rpx;
+}
+.y{
+		
+		position: absolute;
+		right: 30rpx;
+}
+

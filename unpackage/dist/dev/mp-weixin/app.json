@@ -35,7 +35,9 @@
     "pages/demond/typeAnswer/demondAnswerLaw",
     "pages/demond/typeAnswer/demondAnswerHelp",
     "pages/orderlist/orderlist",
-    "pages/ordermanage/ordermanage"
+    "pages/ordermanage/ordermanage",
+    "pages/toptabbarcompent/toptabbar/toptabbar",
+    "pages/orderlistnew/orderlistnew"
   ],
   "window": {
     "navigationBarTextStyle": "black",
