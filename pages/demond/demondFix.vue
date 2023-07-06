@@ -13,6 +13,15 @@
 		
 		
 		<div class = "box">
+			<view class="search-block">
+				<input type="text" value="" placeholder="请输入需要搜索的需求" class="search-text" maxlength="10" focus />
+				<view class="search-ico-wapper1">
+					<image src="../../static/search.png" class="search-ico-1" mode="">
+					</image>
+				</view>
+			</view>
+			<view class="shadow">
+			</view>
 			<!-- 新增内容 -->
 			<view class="content1" v-for="(item,index) in list3" :key="index" >
 				<view class="content" @click="todetial()">
@@ -526,6 +535,74 @@
 			width: 400px;
 			font-size: 13px;
 			letter-spacing: 0.1em;
+		}
+		.search {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 110rpx;
+			width: 110rpx;
+			border-radius: 50%;
+			background-color: #00007f;
+			position: fixed;
+			font-size: 16rpx;
+			color: white;
+			box-shadow: 0 0 10px #00007f;
+			right: 50rpx;
+			bottom: 100rpx;
+			
+		}
+		.search-ico,
+		.search-ico-1 {
+			width: 40upx;
+			height: 40upx;
+		}
+		
+		.search-text {
+			font-size: 14px;
+			background-color: #FFFFFF;
+			height: 60upx;
+			width: 480upx;
+		}
+		
+		.search-block {
+			display: flex;
+			flex-direction: row;
+			padding-left: 130upx;
+			position: relative;
+			top: 30upx;
+		}
+		
+		.search-ico-wapper {
+			background-color: #FFFFFF;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0upx 0upx 0upx 40upx;
+			border-bottom-left-radius: 18px;
+			border-top-left-radius: 18px;
+		}
+		
+		.search-ico-wapper1 {
+			background-color: #FFFFFF;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0upx 40upx 0upx 0upx;
+			border-bottom-right-radius: 18px;
+			border-top-right-radius: 18px;
+		}
+		
+		.shadow {
+			width: 638upx;
+			height: 60upx;
+			border-radius: 18px;
+			-moz-box-shadow: 0 0 10px #e6e6e6;
+			-webkit-box-shadow: 0 0 10px #e6e6e6;
+			box-shadow: 0 0 10px gray;
+			position: relative;
+			top: -30upx;
+			left: 60upx;
 		}
 	
 		
