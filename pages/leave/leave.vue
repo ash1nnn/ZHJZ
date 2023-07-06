@@ -7,10 +7,30 @@
 	<swiper   style="height:1500rpx" :current="currentIndex" >
 				<swiper-item >
 						<view class="x">
-							<uni-forms :modelValue="formData" label-position="top" label-width="1000rpx">
-								 <uni-forms-item  label="外出目的地（乡镇、街道）" name="place"  >
-								     <!-- <uni-easyinput v-model="formData.place" type="text"  placeholder="请输入外出目的地（乡镇、街道）"></uni-easyinput> -->
-									 <input class="t" type="text" v-model="formData.place" focus placeholder="请输入身份证号">
+							<view class="tel">
+								<text>外出目的地:</text>
+								<input class="t" type="text" focus placeholder="请输入外出目的地（乡镇、街道）">
+							</view>
+							<view class="tel">
+								<text>目的地明细：</text>
+								<input class="t" type="text" focus placeholder="请输入外出目的地明细">
+							</view>
+							<view class="tel">
+								<text>外出理由：</text>
+								<input class="t" type="text" focus placeholder="请输入外出理由">
+							</view>
+							<view class="tel">
+								<text> 外出天数：</text>
+								<input class="t" type="number" focus placeholder="请输入外出天数">
+							</view>
+							<view class="tel">
+								<text>外出日期：</text>
+								<uni-datetime-picker v-model="formData.date" type="daterange"></uni-datetime-picker>
+							</view>
+							
+							<!-- <uni-forms :modelValue="formData" label-position="left" label-width="400rpx"  >
+								<uni-forms-item  label="外出目的地（乡镇、街道）" name="place" >
+								     <uni-easyinput v-model="formData.place" type="text"  placeholder="请输入外出目的地（乡镇、街道）"></uni-easyinput>
 								</uni-forms-item>
 								<uni-forms-item  label="目的地明细" name="detail">
 								     <uni-easyinput v-model="formData.detail" type="text"  placeholder="请输入外出目的地明细" ></uni-easyinput>
@@ -24,19 +44,22 @@
 								<uni-forms-item  label="外出日期" name="date">
 								     <uni-datetime-picker v-model="formData.date" type="daterange"></uni-datetime-picker>
 								</uni-forms-item>
-							</uni-forms>
-							<button type="primary" @click="submit" class="aa">提交</button>
+							</uni-forms> -->
+							<button  @click="submit" class="aa">提交</button>
 						</view>
 				</swiper-item>
 				<swiper-item class="swiper-item sns-news">
-					<view class="b" >
-						<text class="xijie">时间：2023.5.20-2023.5.25</text>
-						<text class="xijie">外出目的地：江苏省太仓市</text>
+					<view class="bb" :class="{active:flag}">
+						<view class="b"  v-for="(item,index) in list1" >
+							
+							<text class="xijie">{{item.text}}</text>
+							<text class="xijie">{{item.text1}}</text>
+										
+						</view>
 					</view>
-	<!-- 				<view class="b">
-						<text>时间：2023.5.20-2023.5.25</text>
-						<text>外出目的地：江苏省太仓市</text>
-					</view> -->
+					
+					<view class="ss" @click = "showTag">{{flag?"收起":"查看全部"}}</view>
+					
 				</swiper-item>
 	</swiper>
 	<!-- <view >
@@ -70,6 +93,7 @@
 		data() {
 			return {
 				currentIndex:0 ,
+				flag: false,
 				formData: {
 					place: '',
 					detail:'',
@@ -77,6 +101,31 @@
 					days:'',
 					date:'',
 				},
+				list1: [{
+						text: "江苏省太仓市",
+						text1: "2023.07.01 —— 2023.07.06"
+					},
+					{
+						text: "江苏省南京市",
+						text1: "2023.07.01 —— 2023.07.06"
+					},
+					{
+						text: "广东省深圳市",
+						text1: "2023.07.01 —— 2023.07.06"
+					},
+					{
+						text: "广东省深圳市",
+						text1: "2023.07.01 —— 2023.07.06"
+					},
+					{
+						text: "广东省广州市",
+						text1: "2023.07.01 —— 2023.07.06"
+					},
+					{
+						text: "湖北省武汉市",
+						text1: "2023.07.01 —— 2023.07.06"
+					},
+				],
 
 			}
 
@@ -105,7 +154,11 @@
 						uni.navigateTo({
 							url: '/pages/approveQuery/approveQuery'
 						});
-					}
+					},
+			showTag(){
+					    this.flag = !this.flag;
+					}, 
+			
 			},
 
 		}
@@ -117,28 +170,61 @@
 	.a{
 		display: flex;
 		flex-direction: row;
+		margin-top: 30rpx;
+	}
+	.bb{
+		height: 450rpx;
+		overflow: hidden;
+		line-height: 70rpx;
+		border-bottom: 1px dashed #E8E7E7;
+	}
+	.active{
+        height: auto;
+        overflow: visible;
+    }
+	.ss{
+		margin-left: 300rpx;
+	}
+	
+	// .ii{
+	// 	border-bottom: 1px solid #CDCDCD;
+	// }
+	.tel {
+		margin-top: 50rpx;
+		display: flex;
+		flex-direction: row;
+		// background-color: #ffffff;
+		// border: 5rpx,solid,#6b6b6b;
+		align-items: center;
+		align-content: center;
+		border-bottom: 1px solid #CDCDCD;
+		// margin-left: 50rpx;
+		width: 700rpx;
+		height: 100rpx;
 	}
 	
 	.t{
-		border-bottom: 1px solid #CDCDCD;
+		
 		background-color: #ffffff;
-		padding-left: 10rpx;
+		padding-left: 30rpx;
 		padding-top: 5rpx;
 		padding-bottom: 5rpx;
-		text-align: right;
-	}
-	.bb{
+		width: 500rpx;
+	
+
 		
 	}
+
 	
 	.button {
 	  width: 500rpx;
 	  height:80rpx;
 	  font-size: 30rpx;
 	  padding: 0 10rpx;
+	  
 	}
 	.nav-actived{
-		background-color: #79C27B;
+		background-color: #5FA4FD;
 	}
 	.b{
 		display: flex;
@@ -147,12 +233,12 @@
 		height: 150rpx;
 		margin-top:50rpx;
 		margin-left: 10rpx;
-		// align-items: center;   
-		// vertical-align: center;
-		// justify-content:center;
+		align-items: center;   
+		vertical-align: center;
+		justify-content:center;
 		// padding: 40rpx;
 		// margin: 40rpx;
-		background-color: #ebf2ff;
+		background-color: #eff1fe;
 		border-radius: 40rpx;
 	}
 	.x{
@@ -166,14 +252,17 @@
 		margin: auto;
 		letter-spacing: 100rpx;
 		text-indent: 100rpx;
+		background-color: #5FA4FD;
+		margin-top: 50rpx;
+		border-radius: 50rpx;
 	}
 	
 	
 	.xijie {
 		font-size: 30rpx;
-		color: #3c66ef;
-		margin-top: 20rpx;
-		margin-left: 20rpx;
+		color: #5a6679;
+		// margin-top: 20rpx;
+		// margin-left: 20rpx;
 	}
 
 

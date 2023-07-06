@@ -4,31 +4,55 @@
 		<button class="button" :class="currentIndex === 1 ? 'nav-actived' : ''" @click="change(1)">历史记录</button>
 		<button class="button" @click="bigChange">审批事项查询</button>
 	</view>
-	<swiper   style="height:1000rpx" :current="currentIndex">
+	<swiper   style="height:1500rpx" :current="currentIndex" >
 				<swiper-item >
 						<view class="x">
-							<uni-forms :modelValue="formData" label-position="top" label-width="1000rpx">
-								 <uni-forms-item  label="执行地（乡镇、街道）" name="place" >
-								     <uni-easyinput v-model="formData.place" type="text"  placeholder="请输入外出目的地（乡镇、街道）" ></uni-easyinput>
+							<view class="tel">
+								<text>迁入地:</text>
+								<input class="t" type="text" focus placeholder="请输入迁入地（乡镇、街道）">
+							</view>
+							<view class="tel">
+								<text>迁入地明细：</text>
+								<input class="t" type="text" focus placeholder="请输入迁入地明细">
+							</view>
+							<view class="tel">
+								<text>变更理由：</text>
+								<input class="t" type="text" focus placeholder="请输入变更理由">
+							</view>
+							<view class="tel">
+								<text>申请时间：</text>
+								<uni-datetime-picker v-model="formData.date" type="daterange"></uni-datetime-picker>
+							</view>
+							
+							<!-- <uni-forms :modelValue="formData" label-position="left" label-width="400rpx"  >
+								<uni-forms-item  label="外出目的地（乡镇、街道）" name="place" >
+								     <uni-easyinput v-model="formData.place" type="text"  placeholder="请输入外出目的地（乡镇、街道）"></uni-easyinput>
 								</uni-forms-item>
-								<uni-forms-item  label="执行地明细" name="detail">
+								<uni-forms-item  label="目的地明细" name="detail">
 								     <uni-easyinput v-model="formData.detail" type="text"  placeholder="请输入外出目的地明细" ></uni-easyinput>
 								</uni-forms-item>
-								<uni-forms-item  label="变更理由" name="reason">
+								<uni-forms-item  label="外出理由" name="reason">
 								     <uni-easyinput v-model="formData.reason" type="text"  placeholder="请输入外出理由" ></uni-easyinput>
 								</uni-forms-item>
-								<uni-forms-item  label="申请时间" name="date">
-								     <uni-datetime-picker v-model="formData.date" type="date"></uni-datetime-picker>
+								<uni-forms-item  label="外出天数" name="days">
+								     <uni-easyinput v-model="formData.days" type="number"  placeholder="请输入外出天数" ></uni-easyinput>
 								</uni-forms-item>
-							</uni-forms>
-							<button type="primary" @click="submit" class="aa">提交</button>
+								<uni-forms-item  label="外出日期" name="date">
+								     <uni-datetime-picker v-model="formData.date" type="daterange"></uni-datetime-picker>
+								</uni-forms-item>
+							</uni-forms> -->
+							<button  @click="submit" class="aa">提交</button>
 						</view>
 				</swiper-item>
 				<swiper-item class="swiper-item sns-news">
-					<view class="b">
-						<text class="xijie">时间：2023.5.20-2023.5.25</text>
-						<text class="xijie">执行地：上海市徐家汇街道</text>
+					<view class="b" >
+						<text class="xijie">时间：2023.7.1</text>
+						<text class="xijie">迁入地：上海市徐家汇街道</text>
 					</view>
+	<!-- 				<view class="b">
+						<text>时间：2023.5.20-2023.5.25</text>
+						<text>外出目的地：江苏省太仓市</text>
+					</view> -->
 				</swiper-item>
 	</swiper>
 	<!-- <view >
@@ -66,6 +90,7 @@
 					place: '',
 					detail:'',
 					reason:'',
+					days:'',
 					date:'',
 				},
 
@@ -80,7 +105,7 @@
 			change(index){
 				this.currentIndex = index
 			},
-			submit(){
+			submit() {
 						uni.showToast({
 						            title: '提交成功！',
 						            icon: 'success',
@@ -90,13 +115,15 @@
 												}, 500)
 											}
 						          })
+	
 					},
 			bigChange(){
 						uni.navigateTo({
 							url: '/pages/approveQuery/approveQuery'
 						});
-					},
+					}
 			},
+
 		}
 	
 </script>
@@ -106,6 +133,39 @@
 	.a{
 		display: flex;
 		flex-direction: row;
+		margin-top: 30rpx;
+	}
+	
+	// .ii{
+	// 	border-bottom: 1px solid #CDCDCD;
+	// }
+	.tel {
+		margin-top: 50rpx;
+		display: flex;
+		flex-direction: row;
+		// background-color: #ffffff;
+		// border: 5rpx,solid,#6b6b6b;
+		align-items: center;
+		align-content: center;
+		border-bottom: 1px solid #CDCDCD;
+		// margin-left: 50rpx;
+		width: 700rpx;
+		height: 100rpx;
+	}
+	
+	.t{
+		
+		background-color: #ffffff;
+		padding-left: 30rpx;
+		padding-top: 5rpx;
+		padding-bottom: 5rpx;
+		width: 500rpx;
+	
+
+		
+	}
+	.bb{
+		
 	}
 	
 	.button {
@@ -113,9 +173,10 @@
 	  height:80rpx;
 	  font-size: 30rpx;
 	  padding: 0 10rpx;
+	  
 	}
 	.nav-actived{
-		background-color: #79C27B;
+		background-color: #5FA4FD;
 	}
 	.b{
 		display: flex;
@@ -124,19 +185,13 @@
 		height: 150rpx;
 		margin-top:50rpx;
 		margin-left: 10rpx;
-		// align-items: center;   
-		// vertical-align: center;
-		// justify-content:center;
+		align-items: center;   
+		vertical-align: center;
+		justify-content:center;
 		// padding: 40rpx;
 		// margin: 40rpx;
-		background-color: #ebf2ff;
+		background-color: #eff1fe;
 		border-radius: 40rpx;
-	}
-	.xijie {
-		font-size: 30rpx;
-		color: #3c66ef;
-		margin-top: 20rpx;
-		margin-left: 20rpx;
 	}
 	.x{
 		margin-left: 30rpx;
@@ -149,8 +204,19 @@
 		margin: auto;
 		letter-spacing: 100rpx;
 		text-indent: 100rpx;
+		background-color: #5FA4FD;
+		margin-top: 50rpx;
+		border-radius: 50rpx;
 	}
 	
+	
+	.xijie {
+		font-size: 30rpx;
+		color: #5a6679;
+		// margin-top: 20rpx;
+		// margin-left: 20rpx;
+	}
+
 
 
 	

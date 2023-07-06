@@ -23,6 +23,7 @@
     "pages/rollCall/rollCall",
     "pages/sign/sign",
     "pages/demond/demond",
+    "pages/demond/demondFix",
     "pages/demond/demondApply",
     "pages/demond/demondType",
     "pages/demond/demondAnswer",
@@ -65,6 +66,5 @@
     "wx14c2b0d4a80a43d0",
     "wxd9c723d098992660"
   ],
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

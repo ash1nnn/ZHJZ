@@ -78,7 +78,7 @@
 		margin-left: 10rpx;
 		margin-right: 10rpx;
 		margin-top: 10rpx;
-		background-color: #ebf2ff;
+		background-color: #eff1fe;
 		
 	}
 
@@ -100,7 +100,7 @@
 		font-size: 30rpx;
 		/* font-weight: 600; */
 		/* font-style: oblique; */
-		color: #4b75ff;
+		color: #5a6679;
 	}
 
 	.txt_right {
@@ -121,12 +121,12 @@
 	.xijie {
 		margin-left: 50rpx;
 		margin-top: 20rpx;
-		color: #3c66ef;
+		color: #5a6679;
 	}
 	.xijie1 {
 		font-size: 28rpx;
 		padding-right: 20rpx;
-		color: #3c66ef;
+		color: #5a6679;
 	}
 
 	.weui-search-bar {
