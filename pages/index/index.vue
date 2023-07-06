@@ -63,11 +63,7 @@
 	export default {
 		data() {
 			return {
-				classify: 1,
-<<<<<<< HEAD
-=======
 				classify: '',
->>>>>>> 0c01d05ceb68768966ef3165d30ecaf7f909e1a1
 				title: 'Hello',
 				list1: [{
 						icon: "https://test-37b.pages.dev/index/3.png",
@@ -82,13 +78,7 @@
 					{
 						icon: "https://test-37b.pages.dev/index/5.png",
 						text: "需求登记",
-<<<<<<< HEAD
-						url: "/pages/demond/demond"
-
-=======
 						url: "/pages/demond/demondFix"
-						
->>>>>>> 0c01d05ceb68768966ef3165d30ecaf7f909e1a1
 					},
 					{
 						icon: "https://test-37b.pages.dev/index/6.png",

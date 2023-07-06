@@ -1,8 +1,1 @@
-<<<<<<< HEAD
-
-.a{
-		width: 750rpx;
-}
-=======
 .ii{display:flex;flex-direction:row;margin-top:50rpx;height:130rpx;border-bottom:1px solid #CDCDCD}.img{width:50rpx;height:50rpx;margin-left:50rpx}.b{display:flex;flex-direction:column}.txt{margin-left:50rpx;font-weight:700}.txt1{margin-left:50rpx;margin-top:20rpx;font-size:30rpx;color:#cdcdcd}
->>>>>>> 0c01d05ceb68768966ef3165d30ecaf7f909e1a1
