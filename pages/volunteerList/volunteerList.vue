@@ -1,83 +1,97 @@
 <template>
-	
-	<view class="b">
-			<view class="ii" v-for="(item,index) in list1" @click="click(item.url)">
-					<view class="icon"  >
-						<img  :src="item.icon" alt="" class="img" >
-					</view>
-					<text class="txt">{{item.text}}</text>
-			</view>
+	<view >
+		<image class="a" src="https://test-37b.pages.dev/check/1.png" mode="widthFix"></image>
 	</view>
+	<view class="new">
+		<view class="cc" v-for="(item,index) in newsList" >
+			<view :class="'aa'+(index+1)">
+				<text class="txt">{{item.text}}</text>
+				<img  :src="item.icon"  class="dd" mode="widthFix">
+			</view>
+				
+		</view>
+	</view>
+
 	
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				classify:1,
-				title: 'Hello',
-				list1: [{
-						icon: "../../static/3.png",
-						text: "矫正中心开放日预约",
-					},
-					{
-						icon: "../../static/4.png",
-						text: "志愿服务预约",
+		export default {
+			data() {
+				return {
+					newsList: [{
+							icon: "../../static/check/10.png",
+							text: "矫正中心开放日预约",
+						},
+						{
+							icon: "../../static/check/11.png",
+							text: "志愿服务预约",
+						},
+
 						
-					},
-				],
-			}
+					],
+				}
 	
-		},
-		onLoad() {
-			
+			},
+			onLoad() {
+				
 	
-		},
-		methods: {	
-			click(item){
-				uni.navigateTo({
-					url: item
-				});
-			}
+			},
+			methods: {	
 	
+				}
+
 		}
-	}
+	
 </script>
 
 <style>
 	.a{
-		width: 750rpx;
+		width: 700rpx;
+		margin-left: 20rpx;
 	}
-	.b{
+	.new{
+		margin-top: 10rpx;
+		padding: 0 15rpx;
 		display: flex;
-		flex-direction: column;
-		
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
-		
-	.ii{
-		display: flex;
-		flex-direction: row;
-		width: 720rpx;
-		height: 200rpx;
-		border: 3px solid #F5F6FA;
-		border-radius: 25rpx;
-		margin-top: 50rpx;
-		background-color: #ebf2ff;
-		margin-left: 10rpx;
+	.aa1{
+		margin-top: 40rpx;
+		width: 330rpx;
+		height: 230rpx;
+		background-color: #ACF6DB;
+		border-radius: 30rpx;
 	}
-		
-	.img{
-		height: 120rpx;
-		width: 120rpx;
-		margin-left: 100rpx;
-		margin-top: 20rpx;
+	.aa2{
+		margin-top: 40rpx;
+		width: 330rpx;
+		height: 230rpx;
+		background-color: #6796F9;
+		border-radius: 30rpx;
 	}
+/* 	.aa3{
+		margin-top: 40rpx;
+		width: 330rpx;
+		height: 230rpx;
+		background-color: #FED9A8;
+		border-radius: 30rpx;
+	} */
+
+		
 	.txt{
-		margin-top: 70rpx;
-		margin-left: 80rpx;
-		font-size: 40rpx;
-		font-weight: bold;
-		color: #00007f;
+		display: inline-block;
+		margin-top: 20rpx;
+		padding-left: 30rpx;
+		color: white;
+		font-weight: 100;
+		position: absolute;
+	}
+	.dd{
+		margin-top: 100rpx;
+		padding-left: 200rpx;
+		width: 100rpx;
+		height: 100rpx;
 	}
 </style>

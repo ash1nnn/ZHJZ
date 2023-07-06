@@ -1,4 +1,5 @@
 <template>
+	<!-- 留言板 -->
 	<view class="chat">
 		<scroll-view  :style="{height: `${windowHeight}rpx`}"
 		id="scrollview"
@@ -32,7 +33,8 @@
 					<view class="item Ai" v-if="item.botContent != ''">
 						<!-- 头像 -->
 						<view class="avatar">
-							<img src="../../static/da.png" width="24px" height="24px" class="daicon">
+							<!-- <img src="../../static/da.png" width="24px" height="24px" class="daicon"> -->
+							<img src="../../static/6.png" width="24px" height="24px" class="daicon">
 						</view>
 						<!-- 文字内容 -->
 						<view class="content left">
@@ -70,10 +72,10 @@
 				msgList:[
 
 					{
-					    botContent: "",
+					    botContent: "你好我要留言",
 					    recordId: 0,
 					    titleId: 0,
-					    userContent: "你好呀我想问你一件事",
+					    userContent: "",
 					    userId: 0
 					},
 				]
@@ -96,10 +98,10 @@
 				//如果消息不为空
 				if(!this.chatMsg||!/^\s+$/.test(this.chatMsg)){
 					let obj = {
-						botContent: "",
+						botContent: this.chatMsg,
 						recordId: 0,
 						titleId: 0,
-						userContent: this.chatMsg,
+						userContent: "",
 						userId: 0
 					}
 					this.msgList.push(obj);

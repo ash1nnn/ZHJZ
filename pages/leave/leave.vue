@@ -8,8 +8,9 @@
 				<swiper-item >
 						<view class="x">
 							<uni-forms :modelValue="formData" label-position="top" label-width="1000rpx">
-								 <uni-forms-item  label="外出目的地（乡镇、街道）" name="place" >
-								     <uni-easyinput v-model="formData.place" type="text"  placeholder="请输入外出目的地（乡镇、街道）"></uni-easyinput>
+								 <uni-forms-item  label="外出目的地（乡镇、街道）" name="place"  >
+								     <!-- <uni-easyinput v-model="formData.place" type="text"  placeholder="请输入外出目的地（乡镇、街道）"></uni-easyinput> -->
+									 <input class="t" type="text" v-model="formData.place" focus placeholder="请输入身份证号">
 								</uni-forms-item>
 								<uni-forms-item  label="目的地明细" name="detail">
 								     <uni-easyinput v-model="formData.detail" type="text"  placeholder="请输入外出目的地明细" ></uni-easyinput>
@@ -116,6 +117,18 @@
 	.a{
 		display: flex;
 		flex-direction: row;
+	}
+	
+	.t{
+		border-bottom: 1px solid #CDCDCD;
+		background-color: #ffffff;
+		padding-left: 10rpx;
+		padding-top: 5rpx;
+		padding-bottom: 5rpx;
+		text-align: right;
+	}
+	.bb{
+		
 	}
 	
 	.button {

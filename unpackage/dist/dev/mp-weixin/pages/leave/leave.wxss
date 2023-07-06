@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -64,3 +65,6 @@
   margin-top: 20rpx;
   margin-left: 20rpx;
 }
+=======
+.a{display:flex;flex-direction:row}.t{border-bottom:1px solid #CDCDCD;background-color:#fff;padding-left:10rpx;padding-top:5rpx;padding-bottom:5rpx;text-align:right}.button{width:500rpx;height:80rpx;font-size:30rpx;padding:0 10rpx}.nav-actived{background-color:#79c27b}.b{display:flex;flex-direction:column;width:97%;height:150rpx;margin-top:50rpx;margin-left:10rpx;background-color:#ebf2ff;border-radius:40rpx}.x{margin-left:30rpx;margin-top:30rpx;width:700rpx}.aa{width:500rpx;align-items:center;margin:auto;letter-spacing:100rpx;text-indent:100rpx}.xijie{font-size:30rpx;color:#3c66ef;margin-top:20rpx;margin-left:20rpx}
+>>>>>>> 0c01d05ceb68768966ef3165d30ecaf7f909e1a1
