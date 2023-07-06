@@ -1,57 +1,56 @@
 <template>
-	<view class="content" >
-			<image class="b" src="https://test-37b.pages.dev/index/1.png" ></image>
-			<image class="c" src="https://test-37b.pages.dev/index/2.png" mode="widthFix"></image>
-
+	<view class="content">
+		<image class="b" src="https://test-37b.pages.dev/index/1.png"></image>
+		<image class="c" src="https://test-37b.pages.dev/index/2.png" mode="widthFix"></image>
 		<view class="biaoge" v-if="classify == 1">
 			<view class="ii" v-for="(item,index) in list1" @click="click(item.url)">
-					<view class="icon"  >
-						<img  :src="item.icon" alt="" class="img" >
-					</view>
-					<text class="txt">{{item.text}}</text>
+				<view class="icon">
+					<img :src="item.icon" alt="" class="img">
+				</view>
+				<text class="txt">{{item.text}}</text>
 			</view>
 		</view>
-		
-		
+
+
 		<view class="biaoge" v-if="classify == 2">
 			<view class="ii" v-for="(item,index) in list2" @click="click(item.url)">
-					<view class="icon"  >
-						<img  :src="item.icon" alt="" class="img" >
-					</view>
-					<text class="txt">{{item.text}}</text>
+				<view class="icon">
+					<img :src="item.icon" alt="" class="img">
+				</view>
+				<text class="txt">{{item.text}}</text>
 			</view>
 		</view>
-		
-		
+
+
 		<view class="biaoge" v-if="classify == 3">
 			<view class="ii" v-for="(item,index) in list3" @click="click(item.url)">
-					<view class="icon"  >
-						<img  :src="item.icon" alt="" class="img" >
-					</view>
-					<text class="txt">{{item.text}}</text>
+				<view class="icon">
+					<img :src="item.icon" alt="" class="img">
+				</view>
+				<text class="txt">{{item.text}}</text>
 			</view>
 		</view>
-		
+
 		<view class="d">
-			<image class="e" src="https://test-37b.pages.dev/index/7.png" ></image>
+			<image class="e" src="https://test-37b.pages.dev/index/7.png"></image>
 			<text class="f">关于提高社矫教育水平管理...</text>
-		<!-- 	<text>1小时前</text> -->
-			<image class="g" src="https://test-37b.pages.dev/index/8.png" ></image>
+			<!-- 	<text>1小时前</text> -->
+			<image class="g" src="https://test-37b.pages.dev/index/8.png"></image>
 		</view>
-		
+
 	</view>
 
-	
+
 	<view class="aa">
-		<image class="bb" src="https://test-37b.pages.dev/index/9.png" ></image>
+		<image class="bb" src="https://test-37b.pages.dev/index/9.png"></image>
 	</view>
 	<view class="new">
 		<view class="cc" v-for="(item,index) in newsList" @click="change(item.id)">
-				<img  :src="item.icon" alt="" class="dd" >
-				<view class="tt">
-					<text class="ee">{{item.text}}</text>
-					<text class="ff">{{item.text1}}</text>
-				</view>
+			<img :src="item.icon" alt="" class="dd">
+			<view class="tt">
+				<text class="ee">{{item.text}}</text>
+				<text class="ff">{{item.text1}}</text>
+			</view>
 
 		</view>
 	</view>
@@ -64,11 +63,7 @@
 	export default {
 		data() {
 			return {
-<<<<<<< HEAD
 				classify: 1,
-=======
-				classify: '',
->>>>>>> 9aaf9e77dbd3815e604ac12287520fe7701666db
 				title: 'Hello',
 				list1: [{
 						icon: "https://test-37b.pages.dev/index/3.png",
@@ -84,7 +79,7 @@
 						icon: "https://test-37b.pages.dev/index/5.png",
 						text: "需求登记",
 						url: "/pages/demond/demond"
-						
+
 					},
 					{
 						icon: "https://test-37b.pages.dev/index/6.png",
@@ -158,7 +153,7 @@
 						text: "居住、执行地变更审批规范",
 						text1: "5675人阅读"
 					}
-					
+
 				],
 			}
 
@@ -167,25 +162,25 @@
 			var self = this
 			uni.getStorage({
 				key: 'classify',
-				success: function (res) {
+				success: function(res) {
 					self.classify = res.data
 				}
 			})
 		},
-		methods: {	
-			click(item){
+		methods: {
+			click(item) {
 				uni.navigateTo({
 					url: item
 				});
 			},
 			change(id) {
-			        uni.navigateTo({
-			          url: '/pages/detail/detail?id=' + JSON.stringify(id)//将传递的对象转化成字符串
-			        })
+				uni.navigateTo({
+					url: '/pages/detail/detail?id=' + JSON.stringify(id) //将传递的对象转化成字符串
+				})
 			},
-				
 
-					
+
+
 
 		}
 	}
@@ -198,22 +193,22 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
-		width:  750rpx;
+		width: 750rpx;
 		height: 872rpx;
 	}
 
-		
-	.b{
-		width:100%;
-		height:100%;
+
+	.b {
+		width: 100%;
+		height: 100%;
 	}
-		
-	.c{
+
+	.c {
 		position: absolute;
 		top: 100rpx;
 	}
-		
-	.d{
+
+	.d {
 		display: flex;
 		flex-direction: row;
 		// align-items: center;
@@ -225,43 +220,49 @@
 		border: 3px solid #F5F6FA;
 		border-radius: 25rpx;
 		background-color: white;
-		
+
 	}
-	.e{
+
+	.e {
 		margin-top: 30rpx;
-		margin-left:30rpx;
+		margin-left: 30rpx;
 		width: 110rpx;
 		height: 100rpx;
 	}
-	.f{
+
+	.f {
 		margin-top: 60rpx;
-		margin-left:25rpx;
+		margin-left: 25rpx;
 		width: 400rpx;
 		height: 20rpx;
 		font-size: 30rpx;
 		font-weight: bold;
 
 	}
-	.g{
+
+	.g {
 		margin-top: 50rpx;
-		margin-left:10rpx;
+		margin-left: 10rpx;
 		width: 120rpx;
 		height: 60rpx
 	}
-	.bb{
+
+	.bb {
 		margin-top: 100rpx;
 		margin-left: 190rpx;
 		width: 350rpx;
 		height: 60rpx;
 	}
-	.new{
+
+	.new {
 		margin-top: 10rpx;
 		padding: 0 15rpx;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
-	.cc{
+
+	.cc {
 		margin-top: 20rpx;
 		width: 330rpx;
 		height: 380rpx;
@@ -269,21 +270,24 @@
 		border-radius: 25rpx;
 		background-color: white;
 	}
-	.dd{
+
+	.dd {
 		width: 330rpx;
 		height: 280rpx;
 	}
-		
-	.tt{
+
+	.tt {
 		display: flex;
 		flex-direction: column;
 	}
-	.ee{
+
+	.ee {
 		font-size: 25rpx;
 		font-weight: bold;
 		margin-left: 20rpx;
 	}
-	.ff{
+
+	.ff {
 		width: 150rpx;
 		font-size: 20rpx;
 		margin-left: auto;
@@ -291,17 +295,17 @@
 
 	}
 
-	.biaoge{
+	.biaoge {
 		position: absolute;
 		top: 500rpx;
 		border-radius: 25rpx;
 		background-color: white;
 		display: flex;
-		flex-direction: row;	
+		flex-direction: row;
 		width: 720rpx;
 		height: 200rpx;
 	}
-	
+
 
 	.img {
 		height: 120rpx;

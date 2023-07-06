@@ -121,7 +121,7 @@
 			},
 			tolist() {
 				uni.navigateTo({
-					url: '../../pages/orderlist/orderlist'
+					url: '../../pages/orderlistnew/orderlistnew'
 				});
 			}
 		}

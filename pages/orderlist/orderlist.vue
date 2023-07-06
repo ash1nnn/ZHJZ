@@ -1,8 +1,10 @@
 <template>
+	
+
+
 	<view class="cc">
-
-		<!-- <button plain class="but" @click="tolist">活动预约查询</button> -->
-
+		<!-- <index-tabbar :tabBars="tabBars" @TarTap="TarData" :tabIndex="tabIndex"></index-tabbar> -->
+		<!-- </view> -->
 
 		<view class="content1" v-for="(item,index) in list">
 			<view class="content" @click="todetial()">
@@ -26,6 +28,7 @@
 </template>
 
 <script>
+	import indexTabbar from '../toptabbarcompent/toptabbar/toptabbar.vue'
 	export default {
 		data() {
 			return {
@@ -49,7 +52,31 @@
 						imgsrc: "../../static/jiuye2.jpg",
 						url: "",
 					}
-				]
+				],
+				tabIndex: "GuanZhu",
+				tabBars: [{
+						name: "关注",
+						id: "GuanZhu"
+					},
+					{
+						name: "推荐",
+						id: "TuiJian"
+					},
+					{
+						name: "财经",
+						id: "caijing"
+					},
+					{
+						name: "体育",
+						id: 'tiyu'
+					},
+					{
+						name: "娱乐",
+						id: "yule"
+					}
+				],
+				currentTabComponent: "GuanZhu"
+
 			}
 		},
 		methods: {
@@ -58,17 +85,38 @@
 					url: '../../pages/activatedetail/activatedetail'
 				});
 			},
-			tolist(){
+			tolist() {
 				uni.navigateTo({
 					url: '../../pages/orderlist/orderlist'
-				});	
+				});
+			},
+			tabtap(index) {
+				this.$emit('tabtap', index)
 			}
+
+
 		}
 	}
 </script>
 
 <style>
-	.cc{
+	.uni-swiper-tab {
+		border-bottom: 1upx solid #EEEEEE;
+	}
+
+	.active {
+		color: #343434;
+	}
+
+	.active .swiper-tab-line {
+		border-bottom: 6upx solid #5598E7;
+		width: 70upx;
+		margin: auto;
+		border-top: 6upx solid #5598E7;
+		border-radius: 20upx;
+	}
+
+	.cc {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -76,7 +124,8 @@
 		justify-items: center;
 		/* width: 100%; */
 	}
-	.but[plain]{
+
+	.but[plain] {
 		background-color: #ebf2ff;
 		font-size: 35rpx;
 		color: #4b75ff;
@@ -86,12 +135,14 @@
 		border: 0;
 		margin-left: 10rpx;
 		margin-right: 10rpx;
-		
-		
+
+
 	}
-	.content1{
+
+	.content1 {
 		width: 98%;
 	}
+
 	.content {
 		display: flex;
 		flex-direction: row;
@@ -101,21 +152,22 @@
 		border-radius: 40rpx;
 		/* border-bottom: 5rpx solid #ececec; */
 		/* border-top: 5rpx solid #ececec; */
-/* 		border-left: 5rpx solid #ec/* ecec;
-		border-right: 5rpx solid #ececec; */ 
+		/* 		border-left: 5rpx solid #ec/* ecec;
+		border-right: 5rpx solid #ececec; */
 		margin-bottom: 10rpx;
 		margin-left: 10rpx;
 		margin-right: 10rpx;
 		margin-top: 10rpx;
 		background-color: #eff1fe;
-		
+
 	}
 
 	.img {
 		width: 25%;
 		height: 200rpx;
 	}
-	.img1{
+
+	.img1 {
 		width: 100rpx;
 		height: 100rpx;
 	}
@@ -149,6 +201,7 @@
 		padding-right: 20rpx;
 		color: #5a6679;
 	}
+
 	.xijie1 {
 		font-size: 28rpx;
 		padding-right: 20rpx;
@@ -204,5 +257,46 @@
 		color: #09BB07;
 		white-space: nowrap;
 	}
-</style>
 
+	.tabs {
+		display: flex;
+		flex: 1;
+		flex-direction: row;
+		overflow-x: scroll;
+		height: 100%;
+	}
+
+	.uni-tab-item {
+		width: 100%;
+		white-space: nowrap;
+		line-height: 100rpx;
+		height: 100rpx;
+		border-bottom: 1px solid #eee;
+	}
+
+	.uni-tab-item-title {
+		color: #969696;
+		font-weight: bold;
+		font-size: 38rpx;
+		width: 150rpx;
+		display: inline-block;
+		text-align: center;
+		color: #555;
+	}
+
+	.tabActive {
+		color: #343434;
+	}
+
+	.tabActive .tab-item-title-line {
+		display: block;
+		border-bottom: 4rpx solid #fede33;
+		border-top: 4rpx solid #fede33;
+		width: 86rpx;
+		margin: 0 auto;
+		border-radius: 40rpx;
+		margin-top: -10px;
+		background-color: #FEDE33;
+		box-sizing: border-box;
+	}
+</style>

@@ -1,1 +1,47 @@
-"use strict";const e=require("../../common/vendor.js"),r={data(){return{newsList:[{icon:"../../static/demondType/bk.png",url:"/pages/demond/typeAnswer/demondAnswerHelp"},{icon:"../../static/demondType/xl.png",url:"/pages/demond/demondAnswer"},{icon:"../../static/demondType/fl.png",url:"/pages/demond/typeAnswer/demondAnswerLaw"},{icon:"../../static/demondType/jy.png",url:"/pages/demond/typeAnswer/demondAnswerEmploy"}]}},onLoad(){},methods:{click(n){e.index.navigateTo({url:n})}}};function t(n,a,i,p,o,s){return{a:e.f(o.newsList,(d,m,u)=>({a:d.icon,b:e.o(l=>s.click(d.url))}))}}const c=e._export_sfc(r,[["render",t],["__file","C:/Users/lcz/Documents/GitHub/ZHJZ/pages/demond/demondTypeTeam.vue"]]);wx.createPage(c);
+"use strict";
+const common_vendor = require("../../common/vendor.js");
+const _sfc_main = {
+  data() {
+    return {
+      newsList: [
+        {
+          icon: "../../static/demondType/bk.png",
+          url: "/pages/demond/typeAnswer/demondAnswerHelp"
+        },
+        {
+          icon: "../../static/demondType/xl.png",
+          url: "/pages/demond/demondAnswer"
+        },
+        {
+          icon: "../../static/demondType/fl.png",
+          url: "/pages/demond/typeAnswer/demondAnswerLaw"
+        },
+        {
+          icon: "../../static/demondType/jy.png",
+          url: "/pages/demond/typeAnswer/demondAnswerEmploy"
+        }
+      ]
+    };
+  },
+  onLoad() {
+  },
+  methods: {
+    click(item) {
+      common_vendor.index.navigateTo({
+        url: item
+      });
+    }
+  }
+};
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return {
+    a: common_vendor.f($data.newsList, (item, index, i0) => {
+      return {
+        a: item.icon,
+        b: common_vendor.o(($event) => $options.click(item.url))
+      };
+    })
+  };
+}
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/ZHJZ-main/pages/demond/demondTypeTeam.vue"]]);
+wx.createPage(MiniProgramPage);
