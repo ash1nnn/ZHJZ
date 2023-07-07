@@ -19,20 +19,35 @@
 						</view>
 						<!-- 头像 -->
 						<view class="avatar">
-							<img src="../../../static/wen.png" width="24px" height="24px" class="wenicon">
+							<img src="../../../static/6.png" width="24px" height="24px" class="wenicon">
 						</view>
 					</view>
 					<!-- 机器人发的消息 -->
 					<view class="item Ai" v-if="item.botContent != ''">
 						<!-- 头像 -->     
 						<view class="avatar">
-							<img src="../../../static/da.png" width="24px" height="24px" class="daicon">
+							<img src="../../../static/xl.png" width="24px" height="24px" class="daicon">
 						</view>
 						<!-- 文字内容 -->
 						<view class="content left">
 							{{item.botContent}}
 						</view>
 					</view>
+					<!-- 回复的消息 -->
+					<view class="item Ai" v-if="item.ansContent != ''">
+						<!-- 头像 -->     
+						<view class="avatar">
+							<img src="../../../static/da.png" width="24px" height="24px" class="daicon">
+						</view>
+						<!-- 文字内容 -->
+						<view class="content left">
+							{{item.ansContent}}
+						</view>
+					</view>
+					
+					
+					
+					
 				</view>
 			</view>
 		</scroll-view>
@@ -65,20 +80,31 @@
 					    botContent: "",
 					    recordId: 0,
 					    titleId: 0,
-					    userContent: "你好呀我想问你一件事？",
+					    userContent: "你好我要留言",
+						ansContent:"",
 					    userId: 0
 					},{
 					    botContent: "",
 					    recordId: 0,
 					    titleId: 0,
 					    userContent: "怎样可以快速调整情绪？",
+						ansContent:"",
 					    userId: 0
 					},
 					{
-					    botContent: "做自己喜欢、感兴趣的事情,转移注意力，让自己不再过度的沉浸在负面情绪中，全身心的去做自己喜欢的事情,可以暂时忘却使你感到压抑的负面情绪,最大程度的得到愉悦感，满足感。减少压抑感。",
+					    botContent: "收到您的留言了，您的家人正在拯救宇宙，请等待回复。",
 					    recordId: 0,
 					    titleId: 0,
 					    userContent: "",
+						ansContent:"",
+					    userId: 0
+					},
+					{
+					    botContent: "",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "",
+						ansContent:"做自己喜欢、感兴趣的事情,转移注意力，让自己不再过度的沉浸在负面情绪中，全身心的去做自己喜欢的事情,可以暂时忘却使你感到压抑的负面情绪,最大程度的得到愉悦感，满足感。减少压抑感。",
 					    userId: 0
 					},
 				]	

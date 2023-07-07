@@ -19,20 +19,34 @@
 						</view>
 						<!-- 头像 -->
 						<view class="avatar">
-							<img src="../../../static/wen.png" width="24px" height="24px" class="wenicon">
+							<img src="../../../static/6.png" width="24px" height="24px" class="wenicon">
 						</view>
 					</view>
 					<!-- 机器人发的消息 -->
 					<view class="item Ai" v-if="item.botContent != ''">
 						<!-- 头像 -->     
 						<view class="avatar">
-							<img src="../../../static/da.png" width="24px" height="24px" class="daicon">
+							<img src="../../../static/xl.png" width="24px" height="24px" class="daicon">
 						</view>
 						<!-- 文字内容 -->
 						<view class="content left">
 							{{item.botContent}}
 						</view>
 					</view>
+					<!-- 回复的消息 -->
+					<view class="item Ai" v-if="item.ansContent != ''">
+						<!-- 头像 -->     
+						<view class="avatar">
+							<img src="../../../static/da.png" width="24px" height="24px" class="daicon">
+						</view>
+						<!-- 文字内容 -->
+						<view class="content left">
+							{{item.ansContent}}
+						</view>
+					</view>
+					
+					
+					
 				</view>
 			</view>
 		</scroll-view>
@@ -65,20 +79,31 @@
 					    botContent: "",
 					    recordId: 0,
 					    titleId: 0,
-					    userContent: "你好我想问你一件事？",
+					    userContent: "你好我要留言",
+						ansContent:"",
 					    userId: 0
 					},{
 					    botContent: "",
 					    recordId: 0,
 					    titleId: 0,
 					    userContent: "应对突发事件发生的方法？",
+						ansContent:"",
 					    userId: 0
 					},
 					{
-					    botContent: "遇到突发事件不要围观,应立即离开;如正处在突发事件现场,且无法逃避时,应利用地形、隐蔽物遮掩、躲藏;如遇恐怖事件实施者抛洒不明气体或液体，应迅速躲避,且用毛巾、衣物等捂住口鼻。",
+					    botContent: "收到您的留言了，您的家人正在拯救宇宙，请等待回复。",
 					    recordId: 0,
 					    titleId: 0,
 					    userContent: "",
+						ansContent:"",
+					    userId: 0
+					},
+					{
+					    botContent: "",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "",
+						ansContent:"遇到突发事件不要围观,应立即离开;如正处在突发事件现场,且无法逃避时,应利用地形、隐蔽物遮掩、躲藏;如遇恐怖事件实施者抛洒不明气体或液体，应迅速躲避,且用毛巾、衣物等捂住口鼻。",
 					    userId: 0
 					},
 				]	

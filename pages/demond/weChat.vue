@@ -11,30 +11,49 @@
 			<!-- 聊天主体 -->
 			<view id="msglistview" class="chat-body">
 				<!-- 留言提示 -->
-				<view class="message">
-					{{messageBoard}}
+				<view class="picMessageBoard">
+					<img src="../../static/liuyanban1.png" mode="widthFix" class="picMessage">
 				</view>
+				
+				<!-- <view class="message">
+					{{messageBoard}}
+				</view> -->
 
 
 				<!-- 聊天记录 -->
 				<view v-for="(item,index) in msgList" :key="index">
 					<!-- 自己发的消息 -->
-					<view class="item self" v-if="item.userContent != ''" >
+					<!-- <view class="item self" v-if="item.userContent != ''" > -->
 						<!-- 文字内容 -->
-						<view class="content right">
+						<!-- <view class="content right">
 						{{item.userContent}}
-						</view>
+						</view> -->
 						<!-- 头像 -->
-						<view class="avatar">
+						<!-- <view class="avatar">
 							<img src="../../static/wen.png" width="24px" height="24px" class="wenicon">
 						</view>
+					</view> -->
+					<!-- 新的自己发的消息 -->
+					<view class="item Ai" v-if="item.userContent != ''" >
+						<!-- 头像 -->
+						<view class="avatar">
+							<img src="../../static/6.png" width="24px" height="24px" class="daicon">
+						</view>
+						<!-- 文字内容 -->
+						<view class="content left">
+						{{item.userContent}}
+						</view>
 					</view>
+					
+					
+					
+					
 					<!-- 机器人发的消息 -->
 					<view class="item Ai" v-if="item.botContent != ''">
 						<!-- 头像 -->
 						<view class="avatar">
 							<!-- <img src="../../static/da.png" width="24px" height="24px" class="daicon"> -->
-							<img src="../../static/6.png" width="24px" height="24px" class="daicon">
+							<img src="../../static/xl.png" width="24px" height="24px" class="daicon">
 						</view>
 						<!-- 文字内容 -->
 						<view class="content left">
@@ -54,7 +73,7 @@
 					  :show-confirm-bar="false"
 					 auto-height></textarea>
 				</view>
-				<button @click="handleSend" class="send-btn">发送</button>
+				<button @click="handleSend" class="send-btn">写留言</button>
 			</view>
 		</view>
 	</view>
@@ -72,10 +91,10 @@
 				msgList:[
 
 					{
-					    botContent: "你好我要留言",
+					    botContent: "",
 					    recordId: 0,
 					    titleId: 0,
-					    userContent: "",
+					    userContent: "你好我要留言",
 					    userId: 0
 					},
 				]
@@ -98,13 +117,21 @@
 				//如果消息不为空
 				if(!this.chatMsg||!/^\s+$/.test(this.chatMsg)){
 					let obj = {
-						botContent: this.chatMsg,
+						botContent: 0,
 						recordId: 0,
 						titleId: 0,
-						userContent: "",
+						userContent: this.chatMsg,
 						userId: 0
 					}
 					this.msgList.push(obj);
+					let obj1 = {
+						botContent: "收到您的留言了，您的家人正在拯救宇宙，请等待回复。",
+						recordId: 0,
+						titleId: 0,
+						userContent: 0,
+						userId: 0
+					}
+					this.msgList.push(obj1);
 					this.chatMsg = '';
 				}else {
 					this.$modal.showToast('不能发送空白消息')
@@ -142,7 +169,7 @@
 			.chat-body {
 				display: flex;
 				flex-direction: column;
-				padding-top: 23rpx;
+				padding-top: 0rpx;
 				// background-color:skyblue;
 
 				.self {
@@ -298,4 +325,15 @@
 		border-right: 12rpx solid #FFFFFF;
 
 	}
+	
+	.picMessageBoard{
+		text-align:center;
+	}
+	.picMessage{
+		text-align:center;
+		width: 400px;
+		
+		
+	}
+	
 </style>
