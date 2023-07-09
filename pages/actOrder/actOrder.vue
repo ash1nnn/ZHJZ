@@ -15,7 +15,7 @@
 					<image src="../../static/chongzhi_sousuo/chongzhi-icon-sousuo@3x.png" class="search-ico" mode="">
 					</image>
 				</view>
-				<input type="text" value="" placeholder="请输入待查寻活动名称" class="search-text" maxlength="10" focus />
+				<input type="text" value="" placeholder="请输入待查询活动名称" class="search-text" maxlength="10" focus />
 				<view class="search-ico-wapper1">
 					<image src="../../static/search.png" class="search-ico-1" mode="">
 					</image>
@@ -78,6 +78,36 @@
 						detial4: "1天前",
 						imgpass: "../../static/going (1).png",
 						imgsrc: "../../static/jiuye1.jpg",
+						url: "",
+					},
+					{
+						title: "好消息！咖啡 日料 插花专项类补贴课程又来了，一定不要错过！",
+						detial1: "闵行区",
+						detial2: "6月3日",
+						detial3: "剩余25人",
+						detial4: "3天前",
+						imgpass: "../../static/going (1).png",
+						imgsrc: "../../static/jiuye2.jpg",
+						url: "",
+					},
+					{
+						title: "好消息！咖啡 日料 插花专项类补贴课程又来了，一定不要错过！",
+						detial1: "闵行区",
+						detial2: "6月3日",
+						detial3: "剩余25人",
+						detial4: "3天前",
+						imgpass: "../../static/going (1).png",
+						imgsrc: "../../static/jiuye2.jpg",
+						url: "",
+					},
+					{
+						title: "好消息！咖啡 日料 插花专项类补贴课程又来了，一定不要错过！",
+						detial1: "闵行区",
+						detial2: "6月3日",
+						detial3: "剩余25人",
+						detial4: "3天前",
+						imgpass: "../../static/going (1).png",
+						imgsrc: "../../static/jiuye2.jpg",
 						url: "",
 					},
 					{
@@ -161,11 +191,11 @@
 		height: 110rpx;
 		width: 110rpx;
 		border-radius: 50%;
-		background-color: #00007f;
+		background-color: #2f6dff;
 		position: fixed;
 		font-size: 16rpx;
 		color: white;
-		box-shadow: 0 0 10px #00007f;
+		box-shadow: 0 0 3rpx #2f6dff;
 		right: 50rpx;
 		bottom: 100rpx;
 		
@@ -195,7 +225,7 @@
 		margin-right: 10rpx;
 		margin-top: 10rpx;
 		background-color: #eff1fe;
-		box-shadow: 0 0 10px #e6e6e6;
+		box-shadow: 0 0 5px #bcbcbc;
 
 	}
 

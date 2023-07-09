@@ -20,7 +20,7 @@
 							<text class="xijie">{{item.detial1}}</text>
 							<text class="xijie">{{item.detial2}}</text>
 							<text class="xijie">{{item.detial3}}</text>
-							<text class="xijie">{{item.detial4}}</text>
+							<!-- <text class="xijie">{{item.detial4}}</text> -->
 							<img :src="item.imgpass" class="img1">
 						</view>
 					</view>
@@ -40,7 +40,7 @@
 							<text class="xijie">{{item.detial1}}</text>
 							<text class="xijie">{{item.detial2}}</text>
 							<text class="xijie">{{item.detial3}}</text>
-							<text class="xijie">{{item.detial4}}</text>
+							<!-- <text class="xijie">{{item.detial4}}</text> -->
 							<img :src="item.imgpass" class="img1">
 						</view>
 					</view>
@@ -257,12 +257,13 @@
 	}
 
 	.xijie {
+		font-size: 24rpx;
 		padding-right: 20rpx;
 		color: #5a6679;
 	}
 
 	.xijie1 {
-		font-size: 28rpx;
+		font-size: 24rpx;
 		padding-right: 20rpx;
 		color: #5a6679;
 	}

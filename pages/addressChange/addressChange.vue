@@ -295,7 +295,7 @@
 	  
 	}
 	.nav-actived{
-		background-color: #6796F9;
+		background-color: #2f6dff;
 	}
 	.b{
 		display: flex;
@@ -325,7 +325,7 @@
 		margin: auto;
 		letter-spacing: 100rpx;
 		text-indent: 100rpx;
-		background-color: #6796F9;
+		background-color: #2f6dff;
 		margin-top: 50rpx;
 		border-radius: 30rpx;
 	}
