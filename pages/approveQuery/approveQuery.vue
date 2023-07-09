@@ -28,14 +28,14 @@
 			return {
 				list: [{
 						title: "审批事项：外出请假",
-						detial1: "时间：2023.5.20-2023.5.25",
+						detial1: "时间：2023.05.20-2023.05.25",
 						detial2: "外出目的地：江苏省太仓市",
 						detial3: "审核情况：通过！",
 						imgpass: "../../static/success.png",
 					},
 					{
 						title: "审批事项：居住地变更",
-						detial1: "时间：2023.6.24",
+						detial1: "时间：2023.06.24",
 						detial2: "外出目的地：上海市徐家汇街道",
 						detial3: "审核情况：不通过！",
 						imgpass: "../../static/fail.png",

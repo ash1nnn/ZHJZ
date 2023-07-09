@@ -20,7 +20,7 @@
 			data() {
 				return {
 					newsList: [{
-							icon: "../../static/check/10.png",
+							icon: "../../static/check/6.png",
 							text: "个别教育",
 						},
 						{

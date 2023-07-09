@@ -23,7 +23,7 @@
 					},
 					{
 						icon: "../../static/xl.png",
-						text: "上海市虹口区水电路609弄-14号-210室",
+						text: "上海市虹口区水电路609弄-210室",
 						text1: "2023-07-02 08：10"
 					},
 					{
@@ -51,31 +51,42 @@
 </script>
 
 <style>
+	.a{
+		height: 100%;
+		background-color: #FBFAFF;
+	}
 		
 	.ii{
 		display: flex;
 		flex-direction: row;
 		margin-top: 50rpx;
-		height: 130rpx;
-		border-bottom: 1px solid #CDCDCD ;
+		margin-left: 15rpx;
+		height: 140rpx;
+		border: 1px solid #CDCDCD ;
+		background-color: white;
+		border-radius: 25rpx;
+		width: 95%;
 	}
 	.img{
 		width: 50rpx;
 		height: 50rpx;
-		margin-left: 50rpx;
+		margin-left: 40rpx;
+		margin-top: 20rpx;
 	}
 	.b{
 		display: flex;
 		flex-direction: column;
 	}
 	.txt{
-		margin-left: 50rpx;
-		font-weight: bold;
+		margin-left: 40rpx;
+		margin-top: 20rpx;
+
+		
 	}
 	.txt1{
-		margin-left: 50rpx;
+		margin-left: 40rpx;
 		margin-top: 20rpx;
-		font-size: 30rpx;
+		font-size: 25rpx;
 		color: #CDCDCD ;
 	}
 
