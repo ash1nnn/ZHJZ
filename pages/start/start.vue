@@ -11,13 +11,13 @@
 			<view class="tel">
 				<text>身份证：</text>
 				
-				<input class="t" type="text" focus placeholder="请输入身份证号">
+				<input class="t" type="text" placeholder="请输入身份证号">
 				
 			</view>
 			<view class="tel">
 				<text>手机号：</text>
 				
-				<input class="t" type="text" focus placeholder="请输入手机号">
+				<input class="t" type="text"  placeholder="请输入手机号">
 				
 			</view>
 
