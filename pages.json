@@ -33,7 +33,7 @@
 			"style": {
 				"navigationBarTitleText": "矫正须知"
 			}
-		},	
+		},
 		{
 			"path": "pages/select/select",
 			"style": {
@@ -45,13 +45,13 @@
 			"style": {
 				"navigationBarTitleText": "志愿服务登记"
 			}
-		},	
+		},
 		{
 			"path": "pages/volunteerList/volunteerList",
 			"style": {
 				"navigationBarTitleText": "志愿活动预约"
 			}
-		},	
+		},
 		{
 			"path": "pages/member/member"
 			// "style": {
@@ -63,13 +63,13 @@
 			"style": {
 				"navigationBarTitleText": "矫正须知"
 			}
-		},	
+		},
 		{
 			"path": "pages/experience/experience",
 			"style": {
 				"navigationBarTitleText": "矫正经历"
 			}
-		},	
+		},
 		{
 			"path": "pages/leave/leave",
 			"style": {
@@ -125,159 +125,168 @@
 			}
 		},
 		{
-		    "path" : "pages/demond/demond",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false
-		    }
-		    
+			"path" : "pages/demond/demond",
+			"style" :
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		},{
-		    "path" : "pages/demond/demondFix",
-		    "style" :
-		    {
-		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false
-		    }
+			"path" : "pages/demond/demondFix",
+			"style" :
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
 
 		},
-		
-		{
-            "path" : "pages/demond/demondApply",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-		,
-		{
-            "path" : "pages/demond/demondType",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-		,
-		{
-            "path" : "pages/demond/demondAnswer",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "需求处理",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-		,
-		{
-            "path" : "pages/demond/weChat",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "需求留言板",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-		,
-		{
-            "path" : "pages/demond/demondTypeTeam",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "需求处理分类",
-                "enablePullDownRefresh": false
-            }
-            
-        },
-		{
-		    "path" : "pages/demond/history/demondAnswerMotion",
-		    "style" :
-		    {
-		        "navigationBarTitleText": "需求处理历史",
-		        "enablePullDownRefresh": false
-		    }
 
-		},
 		{
-		    "path" : "pages/demond/history/demondAnswerMeasure",
-		    "style" :
-		    {
-		        "navigationBarTitleText": "需求处理历史",
-		        "enablePullDownRefresh": false
-		    }
-
-		},
-		{
-		    "path" : "pages/demond/typeAnswer/demondAnswerEmploy",
-		    "style" :
-		    {
-		        "navigationBarTitleText": "需求处理",
-		        "enablePullDownRefresh": false
-		    }
-
-		},
-		{
-		    "path" : "pages/demond/typeAnswer/demondAnswerLaw",
-		    "style" :
-		    {
-		        "navigationBarTitleText": "需求处理",
-		        "enablePullDownRefresh": false
-		    }
-
-		},
-		{
-		    "path" : "pages/demond/typeAnswer/demondAnswerHelp",
-		    "style" :
-		    {
-		        "navigationBarTitleText": "需求处理",
-		        "enablePullDownRefresh": false
-		    }
+			"path" : "pages/demond/demondApply",
+			"style" :
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
 
 		}
-		
+	,
+		{
+			"path" : "pages/demond/demondType",
+			"style" :
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
 
-		
-		
-		
-	    ,{
-            "path" : "pages/orderlist/orderlist",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/ordermanage/ordermanage",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/toptabbarcompent/toptabbar/toptabbar",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/orderlistnew/orderlistnew",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+		}
+	,
+		{
+			"path" : "pages/demond/demondAnswer",
+			"style" :
+			{
+				"navigationBarTitleText": "需求处理",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	,
+		{
+			"path" : "pages/demond/weChat",
+			"style" :
+			{
+				"navigationBarTitleText": "需求留言板",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	,
+		{
+			"path" : "pages/demond/demondTypeTeam",
+			"style" :
+			{
+				"navigationBarTitleText": "需求处理分类",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path" : "pages/demond/history/demondAnswerMotion",
+			"style" :
+			{
+				"navigationBarTitleText": "需求处理历史",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path" : "pages/demond/history/demondAnswerMeasure",
+			"style" :
+			{
+				"navigationBarTitleText": "需求处理历史",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path" : "pages/demond/typeAnswer/demondAnswerEmploy",
+			"style" :
+			{
+				"navigationBarTitleText": "需求处理",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path" : "pages/demond/typeAnswer/demondAnswerLaw",
+			"style" :
+			{
+				"navigationBarTitleText": "需求处理",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path" : "pages/demond/typeAnswer/demondAnswerHelp",
+			"style" :
+			{
+				"navigationBarTitleText": "需求处理",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path" : "pages/demond/history/oneDemand",
+			"style" :
+			{
+				"navigationBarTitleText": "需求记录",
+				"enablePullDownRefresh": false
+			}
+
+		}
+
+
+
+
+
+	,{
+			"path" : "pages/orderlist/orderlist",
+			"style" :
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	,{
+			"path" : "pages/ordermanage/ordermanage",
+			"style" :
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	,{
+			"path" : "pages/toptabbarcompent/toptabbar/toptabbar",
+			"style" :
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	,{
+			"path" : "pages/orderlistnew/orderlistnew",
+			"style" :
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "矫正之家",

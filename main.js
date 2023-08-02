@@ -1,4 +1,9 @@
 import App from './App'
+// import VueResource from 'vue-resource';
+// import axios from 'axios'
+// // Vue.use(VueResource);
+
+// Vue.prototype.$axios = axios
 
 // #ifndef VUE3
 import Vue from 'vue'
@@ -20,3 +25,10 @@ export function createApp() {
   }
 }
 // #endif
+
+
+
+export default{//后端地址
+	url: "http://127.0.0.1:9090",
+	demandId : '0',
+}

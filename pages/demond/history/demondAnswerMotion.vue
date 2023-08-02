@@ -67,6 +67,13 @@
 	</view>
 </template>
 <script>
+	import main from '../../../main.js';
+	import {
+			oneDemandUrl,
+			myrequest,
+			myget,
+		} from '../../../api.js';
+	
 	export default {
 		data() {
 			return {
@@ -76,37 +83,37 @@
 				//发送的消息
 				chatMsg:"",
 				msgList:[
-					{
-					    botContent: "",
-					    recordId: 0,
-					    titleId: 0,
-					    userContent: "你好我要留言",
-						ansContent:"",
-					    userId: 0
-					},{
-					    botContent: "",
-					    recordId: 0,
-					    titleId: 0,
-					    userContent: "怎样可以快速调整情绪？",
-						ansContent:"",
-					    userId: 0
-					},
-					{
-					    botContent: "收到您的留言了，您的家人正在拯救宇宙，请等待回复。",
-					    recordId: 0,
-					    titleId: 0,
-					    userContent: "",
-						ansContent:"",
-					    userId: 0
-					},
-					{
-					    botContent: "",
-					    recordId: 0,
-					    titleId: 0,
-					    userContent: "",
-						ansContent:"做自己喜欢、感兴趣的事情,转移注意力，让自己不再过度的沉浸在负面情绪中，全身心的去做自己喜欢的事情,可以暂时忘却使你感到压抑的负面情绪,最大程度的得到愉悦感，满足感。减少压抑感。",
-					    userId: 0
-					},
+					// {
+					//     botContent: "",
+					//     recordId: 0,
+					//     titleId: 0,
+					//     userContent: "你好我要留言",
+					// 	ansContent:"",
+					//     userId: 0
+					// },{
+					//     botContent: "",
+					//     recordId: 0,
+					//     titleId: 0,
+					//     userContent: "怎样可以快速调整情绪？",
+					// 	ansContent:"",
+					//     userId: 0
+					// },
+					// {
+					//     botContent: "收到您的留言了，您的家人正在拯救宇宙，请等待回复。",
+					//     recordId: 0,
+					//     titleId: 0,
+					//     userContent: "",
+					// 	ansContent:"",
+					//     userId: 0
+					// },
+					// {
+					//     botContent: "",
+					//     recordId: 0,
+					//     titleId: 0,
+					//     userContent: "",
+					// 	ansContent:"做自己喜欢、感兴趣的事情,转移注意力，让自己不再过度的沉浸在负面情绪中，全身心的去做自己喜欢的事情,可以暂时忘却使你感到压抑的负面情绪,最大程度的得到愉悦感，满足感。减少压抑感。",
+					//     userId: 0
+					// },
 				]	
 			}
 		},
@@ -115,7 +122,72 @@
 			    return this.rpxTopx(uni.getSystemInfoSync().windowHeight)
 			}
 		},
+		
+		created() {
+			this.initial();
+		},
+		
+		
 		methods: {
+			async initial(){
+				console.log(main.demandId);
+				console.log(uni.getStorageSync('demondId'));
+
+				let tid = "demandId="+uni.getStorageSync('demandId');
+				// console.log(dId);
+				let demondreply = await myrequest(oneDemandUrl,'GET',{ demandId : tid});
+				
+				console.log(demondreply);
+				let obj = 
+					{
+					    botContent: "",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "你好我要留言",
+						ansContent:"",
+					    userId: 0
+					}
+				this.msgList.push(obj);
+				let obj1 =
+					{
+					    botContent: "",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: demondreply.data.demand.demandDesc,
+						ansContent:"",
+					    userId: 0
+					}
+					this.msgList.push(obj1);
+				let obj2 =
+					{
+					    botContent: "收到您的留言了，您的家人正在拯救宇宙，请等待回复。",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "",
+					    ansContent:"",
+					    userId: 0
+					}
+					this.msgList.push(obj2);
+				if(demondreply.data.replyContent){
+					let obj3 =
+					{
+					    botContent: "",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "",
+					    ansContent: demondreply.data.replyContent,
+					    userId: 0
+					}
+					this.msgList.push(obj3);
+				}
+				
+				
+			},
+			
+			
+			
+			
+			
 			// px转换成rpx
 			rpxTopx(px){
 				let deviceWidth = wx.getSystemInfoSync().windowWidth

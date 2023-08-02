@@ -1,5 +1,7 @@
 <template>
 	<!-- <title>心理辅导</title> -->
+	<!-- <title>本模块已放弃使用</title> -->
+	
 	<view class = "demond">
 		<div class = "back">
 			<div class="container">

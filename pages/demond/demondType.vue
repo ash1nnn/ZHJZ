@@ -1,10 +1,11 @@
 <template>
+	<!-- 矫正对象端type -->
 	<view >
 		<image class="a" src="https://test-37b.pages.dev/check/1.png" mode="widthFix"></image>
 <!-- 		<image class="a" src="../../static/demondType/demondType.png" mode="widthFix"></image> -->
 	</view>
 	<view class="new">
-		<view class="cc" v-for="(item,index) in newsList" @click="click(item.url)">
+		<view class="cc" v-for="(item,index) in newsList" @click="click(item.url,item.type)">
 				<img  :src="item.icon" alt="" class="dd" mode="widthFix">
 		</view>
 	</view>
@@ -18,19 +19,23 @@
 				return {
 					newsList: [{
 							icon: "../../static/demondType/bk.png",
-							url: "/pages/demond/weChat"
+							url: "/pages/demond/weChat",
+							type:"1"
 						},
 						{
 							icon: "../../static/demondType/xl.png",
-							url: "/pages/demond/weChat"
+							url: "/pages/demond/weChat",
+							type:"2"
 						},
 						{
 							icon: "../../static/demondType/fl.png",
-							url: "/pages/demond/weChat"
+							url: "/pages/demond/weChat",
+							type:"3"
 						},
 						{
 							icon: "../../static/demondType/jy.png",
-							url: "/pages/demond/weChat"
+							url: "/pages/demond/weChat",
+							type:"4"
 						}
 						
 					],
@@ -42,9 +47,14 @@
 	
 			},
 			methods: {	
-				click(item){
+				click(item,type){
+					// console.log(type);
+					uni.setStorage({key:'demandType',data:type});
+					let tid = uni.getStorageSync('demandType');
+					// console.log(tid);
+						
 						uni.navigateTo({
-							url: item
+							url:item
 						});
 					}
 				

@@ -52,6 +52,15 @@
 	</view>
 </template>
 <script>
+	
+	import main from '../../main.js';
+	import {
+			demandReplyInitialUrl,
+			demandReplyUrl,
+			myrequest,
+			myget,
+		} from '../../api.js';
+	
 	export default {
 		data() {
 			return {
@@ -61,35 +70,90 @@
 				//发送的消息
 				chatMsg:"",
 				msgList:[
-					{
-					    botContent: "你好呀我想问你一件事？",
-					    recordId: 0,
-					    titleId: 0,
-					    userContent: "",
-					    userId: 0
-					},{
-					    botContent: "怎样可以快速调整情绪？",
-					    recordId: 0,
-					    titleId: 0,
-					    userContent: "",
-					    userId: 0
-					},
-					{
-					    botContent: "",
-					    recordId: 0,
-					    titleId: 0,
-					    userContent: "做自己喜欢、感兴趣的事情,转移注意力，让自己不再过度的沉浸在负面情绪中，全身心的去做自己喜欢的事情,可以暂时忘却使你感到压抑的负面情绪,最大程度的得到愉悦感，满足感。减少压抑感。",
-					    userId: 0
-					},
+					// {
+					//     botContent: "你好呀我想问你一件事？",
+					//     recordId: 0,
+					//     titleId: 0,
+					//     userContent: "",
+					//     userId: 0
+					// },{
+					//     botContent: "怎样可以快速调整情绪？",
+					//     recordId: 0,
+					//     titleId: 0,
+					//     userContent: "",
+					//     userId: 0
+					// },
+					// {
+					//     botContent: "",
+					//     recordId: 0,
+					//     titleId: 0,
+					//     userContent: "做自己喜欢、感兴趣的事情,转移注意力，让自己不再过度的沉浸在负面情绪中，全身心的去做自己喜欢的事情,可以暂时忘却使你感到压抑的负面情绪,最大程度的得到愉悦感，满足感。减少压抑感。",
+					//     userId: 0
+					// },
 				]	
 			}
 		},
+		created(){
+			// this.init();//初始化
+			this.initial();//初始化
+		},
+		
 		computed: {
 			windowHeight() {
 			    return this.rpxTopx(uni.getSystemInfoSync().windowHeight)
 			}
 		},
+		
 		methods: {
+			//初始化，获得需求
+			async initial(){ //自带版本
+				const demondReply = await myrequest(demandReplyInitialUrl,'GET',{ userId : "userId=2&demandType=2" })
+				// const demondreply = await myrequest(hostreplyurl,{ userId : "2" })
+				console.log(demondReply)
+				let id = demondReply.data[0].demand.demandId;
+				console.log(id);
+				uni.setStorage({key:'demandId',data:id});
+				
+				let obj =
+					{
+					    botContent: "你好我要留言",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "",
+						ansContent:"",
+					    userId: 0
+					}
+				this.msgList.push(obj);
+				let obj1 =
+					{
+					    botContent: demondReply.data[0].demand.demandDesc,
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "",
+						ansContent:"",
+					    userId: 0
+					}
+					this.msgList.push(obj1);
+				
+				if(demondReply.data[0].replyContent){
+					let obj3 =
+					{
+					    botContent: "",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: demondReply.data[0].replyContent,
+					    ansContent: "",
+					    userId: 0
+					}
+					this.msgList.push(obj3);
+				}
+				
+	
+			},
+			
+			
+			
+			
 			// px转换成rpx
 			rpxTopx(px){
 				let deviceWidth = wx.getSystemInfoSync().windowWidth
@@ -97,7 +161,9 @@
 				return Math.floor(rpx)
 			},
 			// 发送消息
-			handleSend() {
+			async handleSend() {
+				let tid = uni.getStorageSync('demandId');
+				console.log(tid);
 				//如果消息不为空
 				if(!this.chatMsg||!/^\s+$/.test(this.chatMsg)){
 					let obj = {
@@ -108,10 +174,35 @@
 						userId: 0
 					}
 					this.msgList.push(obj);
+					uni.request({
+					    url: 'http://localhost:8888/demand/replyDemand',
+					    method: 'POST',
+					    header: {
+					        'content-type': 'application/json',
+					        
+					    },
+					    data: {
+					        userId : "4",
+					        replyContent: this.chatMsg,
+							demandId: tid,
+					    },
+					    success: (res) => {
+					        console.log(res)
+					    },
+					    fail: (err) => {
+					        console.log(err)
+					    }
+					})
 					this.chatMsg = '';
 				}else {
 					this.$modal.showToast('不能发送空白消息')
 				}
+				
+				//写回复
+				// const demondreply = await myrequest(demandReplyUrl,'POST',{ userId : "userId=2" })//修改接口
+				// const demondreply = await myrequest(hostreplyurl,{ userId : "2" })
+				// console.log(demondreply)
+				
 			},
 		}
 	}

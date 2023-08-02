@@ -1,5 +1,5 @@
 <template>
-	<!-- <title>心理辅导</title> -->
+	<!-- <title>需求历史页面</title> -->
 	<view class = "demond">
 		<scroll-view scroll-y="true" style="height: 100vh;" bindscrolltolower="loadMore">
 		<div class = "back">
@@ -14,24 +14,30 @@
 		
 		<div class = "box">
 			<view class="search-block">
-				<input type="text" value="" placeholder="请输入需要搜索的需求" class="search-text" maxlength="10" focus />
-				<view class="search-ico-wapper1">
-					<image src="../../static/search.png" class="search-ico-1" mode="">
-					</image>
+				<input type="text" v-model="searchContent" placeholder="请输入需要搜索的需求" class="search-text" maxlength="10" focus />
+				<view class="search-ico-wapper1" > 
+					   <image src="../../static/search.png" class="search-ico-1" mode="" alt="" @click="search()" />
 				</view>
 			</view>
 			<view class="shadow">
 			</view>
-			<!-- 新增内容 -->
+			<!-- 新增内容,历史列表-->
 			<view class="content1" v-for="(item,index) in list3" :key="index" >
-				<view class="content" @click="todetial(item.url)">
+				<view class="content" @click="todetial(item.demand.demandId)">
 					<view class="txt_right">
 						<text class="title">
-							{{item.text1}}
+							{{item.demand.demandDesc}}
+							<!-- {{item.text1}} -->
 						</text>
 						<view class="litxt">
-							<text class="answer">{{item.text2}}</text>
-							<text class="time">{{item.time}}</text>
+							<text class="answer">{{item.replyContent}}</text>
+							<!-- <text class="answer">{{item.demandReply}}</text> -->
+							<!-- <text class="answer">{{item.demandReply.replyTime}}</text> -->
+							<!-- <text class="answer">{{item.demandReplyList[0].replyTime}}</text> -->
+							<!-- <text class="answer">{{item.demandReplyList[0].replyContent}}</text> -->
+							<!-- <text class="answer">{{item.text2}}</text> -->
+							<text class="time">{{item.demand.demandCreate}}</text>
+							
 							
 							<!-- <img :src="item.imgpass" class="img1"> -->
 						</view>
@@ -54,6 +60,19 @@
 </template>
 
 <script>
+	import main from '../../main.js';
+	import {
+			historyDemondUrl,
+			searchDemandUrl,
+			myrequest,
+			myget,
+		} from '../../api.js';
+	
+	// import axios from "axios";
+	// import {postRequest} from "../../axios.js";
+	
+	
+	// import { postRequest } from "../../api.js";
 	export default{
 		 data() {
 		        return {
@@ -213,6 +232,8 @@
 						url: "../demond/history/demondAnswerMeasure",
 					},
 					],//列表结束
+					
+					searchContent:"",
 		     		loading: true, // 是否正在加载
 					page: 1, // 当前页码
 					pageSize: 4,// 每页显示的数据量
@@ -221,16 +242,94 @@
 		        };
 				
 				
-				
-				
 		    },
 		mounted(){
 			// this.scrollWindow()
 		},
-			
-			
+		created(){
+			// this.init();//初始化
+			this.initial();//初始化
+		},
+		
 		methods:{
-
+			
+			// init(){//js.$http 版本
+			// 	this.$http.post(main.url + "/d/dd ",{'dd': 0}).then(
+			// 	success=>{
+			// 		this.list3 = success.data;
+			// 	})	
+			// },
+			
+			
+			// initial(){//axios 版本
+			// 	const _this = this;
+			// 	    // this.professionId = window.sessionStorage.getItem("professionId");  获取id
+			// 	    postRequest("/demand/getHistoryDemond", { userId: "1" }).then(
+			// 	      function (resp) {
+			// 	        if (resp.succeed) {
+			// 				console.log(resp.data)
+			// 				// this.list3 = success.data;
+			// 	          }
+			// 	        }
+			// 	      }
+			// 	    );
+			// },
+			
+			// initial(){//uniapp 版本
+			// 	const _this = this;
+			// 	    // this.professionId = window.sessionStorage.getItem("professionId");  获取id
+			// 	    uni.request({
+			// 	      url: "https://127.0.0.1/8888/demand/getHistoryDemond",
+			// 		  method: 'GET',
+			// 		  header:{
+			// 		  		'Content-Type' : 'application/json',
+			// 		  		token : uni.getStorageSync("TOKEN")
+			// 		  	},
+			// 		  	data: {
+			// 		  		userId : "2"
+			// 		  	},
+			// 	      success: (res) => {
+			// 	        console.log(res.data);
+			// 	      },
+			// 	      fail: (err) => {
+			// 	        console.error(err);
+			// 	      },
+			// 	    });
+			// },
+			
+			
+			async initial(){ //自带版本
+				let demondreply = await myrequest(historyDemondUrl,'GET',{ userId : "userId=2" });
+				// const demondreply = await myrequest(hostreplyurl,{ userId : "2" })
+				console.log(demondreply);
+				console.log(demondreply.data);
+				// this.list3 = demondreply["data"] || [];
+				this.list3 = demondreply.data;
+				// this.list3.text2 = demondreply.data.demandReplyList[0].replyContent;
+				console.log(this.list3[0].demand.demandDesc);
+				console.log(this.list3[0].replyContent);
+				// console.log(this.list3[0].text2);
+				// console.log(this.list3[0].demandReplyList[0].replyContent);
+				console.log(this.list3[0].demandReply.replyContent);
+				
+				// console.log(this.list3[0].demandReplyList);
+				
+			},
+			async search(){
+				
+				let searchContent = "userId=2&keyword=" + this.searchContent;
+				let searchreply = await myrequest(searchDemandUrl,'GET',{ userId : searchContent});
+				// const demondreply = await myrequest(hostreplyurl,{ userId : "2" })
+				console.log(searchreply);
+				console.log(searchreply.data);
+				// this.list3 = demondreply["data"] || [];
+				this.list3 = searchreply.data;
+				// this.list3.text2 = demondreply.data.demandReplyList[0].replyContent;
+				// console.log(this.list3[0].demand.demandDesc);
+				// console.log(this.list3[0].text2);
+			},
+			
+			
 			onLoad() {
 			    // 初始化数据
 			    this.loadMore();
@@ -255,9 +354,14 @@
 			    }, 1000);
 			  },  
 			
-			todetial(item) {
+			todetial(id) {
+				console.log(id);
+				uni.setStorage({key:'demandId',data:id});
+				// let tid = uni.getStorageSync('demandId');
+				// console.log(tid);
+				
 				uni.navigateTo({
-					url: item
+					url:"../demond/history/demondAnswerMotion"
 				});
 			},
 			demondApply(url){
@@ -265,6 +369,7 @@
 				    url:"../demond/demondType"
 				});
 			},
+			
 			history1(url){
 				uni.navigateTo({
 				    url:"../demond/history/demondAnswerMotion"
@@ -533,7 +638,7 @@
 			padding-left: 15px;
 			color: gray;
 			width: 400px;
-			font-size: 13px;
+			font-size: 12px;
 			letter-spacing: 0.1em;
 		}
 		.search {
@@ -556,6 +661,7 @@
 		.search-ico-1 {
 			width: 40upx;
 			height: 40upx;
+			z-index: 1;
 		}
 		
 		.search-text {

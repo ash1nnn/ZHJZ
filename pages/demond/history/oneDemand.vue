@@ -1,5 +1,4 @@
 <template>
-	<!-- 留言板 -->
 	<view class="chat">
 		<scroll-view  :style="{height: `${windowHeight}rpx`}"
 		id="scrollview"
@@ -10,62 +9,50 @@
 		>
 			<!-- 聊天主体 -->
 			<view id="msglistview" class="chat-body">
-				<!-- 留言提示 -->
-				<view class="picMessageBoard">
-					<img src="../../static/liuyanban1.png" mode="widthFix" class="picMessage">
-				</view>
-				
-				<!-- <view class="message">
-					{{messageBoard}}
-				</view> -->
-
-
 				<!-- 聊天记录 -->
 				<view v-for="(item,index) in msgList" :key="index">
 					<!-- 自己发的消息 -->
-					<!-- <view class="item self" v-if="item.userContent != ''" > -->
+					<view class="item self" v-if="item.userContent != ''" >
 						<!-- 文字内容 -->
-						<!-- <view class="content right">
+						<view class="content right">
 						{{item.userContent}}
-						</view> -->
-						<!-- 头像 -->
-						<!-- <view class="avatar">
-							<img src="../../static/wen.png" width="24px" height="24px" class="wenicon">
 						</view>
-					</view> -->
-					<!-- 新的自己发的消息 -->
-					<view class="item Ai" v-if="item.userContent != ''" >
 						<!-- 头像 -->
 						<view class="avatar">
-							<img src="../../static/6.png" width="24px" height="24px" class="daicon">
-						</view>
-						<!-- 文字内容 -->
-						<view class="content left">
-						{{item.userContent}}
+							<img src="../../../static/6.png" width="24px" height="24px" class="wenicon">
 						</view>
 					</view>
-					
-					
-					
-					
 					<!-- 机器人发的消息 -->
 					<view class="item Ai" v-if="item.botContent != ''">
-						<!-- 头像 -->
+						<!-- 头像 -->     
 						<view class="avatar">
-							<!-- <img src="../../static/da.png" width="24px" height="24px" class="daicon"> -->
-							<img src="../../static/xl.png" width="24px" height="24px" class="daicon">
+							<img src="../../../static/xl.png" width="24px" height="24px" class="daicon">
 						</view>
 						<!-- 文字内容 -->
 						<view class="content left">
 							{{item.botContent}}
 						</view>
 					</view>
+					<!-- 回复的消息 -->
+					<view class="item Ai" v-if="item.ansContent != ''">
+						<!-- 头像 -->     
+						<view class="avatar">
+							<img src="../../../static/da.png" width="24px" height="24px" class="daicon">
+						</view>
+						<!-- 文字内容 -->
+						<view class="content left">
+							{{item.ansContent}}
+						</view>
+					</view>
+					
+					
+					
 				</view>
 			</view>
 		</scroll-view>
 		<!-- 底部消息发送栏 -->
 		<!-- 用来占位，防止聊天消息被发送框遮挡 -->
-		<view class="chat-bottom">
+		<!-- <view class="chat-bottom">
 			<view class="send-msg">
                 <view class="uni-textarea">
 					<textarea v-model="chatMsg"
@@ -73,20 +60,18 @@
 					  :show-confirm-bar="false"
 					 auto-height></textarea>
 				</view>
-				<button @click="handleSend" class="send-btn">写留言</button>
+				<button @click="handleSend" class="send-btn">发送</button>
 			</view>
-		</view>
+		</view> -->
 	</view>
 </template>
 <script>
-	
-	import main from '../../main.js';
+	import main from '../../../main.js';
 	import {
-			demandAddUrl,
+			historyDemondUrl,
 			myrequest,
 			myget,
-		} from '../../api.js';
-		
+		} from '../../../api.js';
 		
 	export default {
 		data() {
@@ -96,33 +81,55 @@
 				userId:'',
 				//发送的消息
 				chatMsg:"",
-				messageBoard:"您好，有什么需求请留言",
 				msgList:[
-
 					{
 					    botContent: "",
 					    recordId: 0,
 					    titleId: 0,
 					    userContent: "你好我要留言",
+						ansContent:"",
+					    userId: 0
+					},{
+					    botContent: "",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "应对突发事件发生的方法？",
+						ansContent:"",
 					    userId: 0
 					},
-				]
+					{
+					    botContent: "收到您的留言了，您的家人正在拯救宇宙，请等待回复。",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "",
+						ansContent:"",
+					    userId: 0
+					},
+					{
+					    botContent: "",
+					    recordId: 0,
+					    titleId: 0,
+					    userContent: "",
+						ansContent:"遇到突发事件不要围观,应立即离开;如正处在突发事件现场,且无法逃避时,应利用地形、隐蔽物遮掩、躲藏;如遇恐怖事件实施者抛洒不明气体或液体，应迅速躲避,且用毛巾、衣物等捂住口鼻。",
+					    userId: 0
+					},
+				]	
 			}
 		},
-		
+		created(){
+			this.initial();
+		},
 		computed: {
 			windowHeight() {
 			    return this.rpxTopx(uni.getSystemInfoSync().windowHeight)
 			}
 		},
-		created() {
-			let tid = uni.getStorageSync('demandType');
-			console.log(tid);
-			
-		},
 		methods: {
-			
-			
+			async initial(){ //自带版本初始化
+				const demondreply = await myrequest(historyDemondUrl,'GET',{ userId : "userId=2" })//接口要改
+				// const demondreply = await myrequest(hostreplyurl,{ userId : "2" })
+				console.log(demondreply)
+			},
 			
 			
 			// px转换成rpx
@@ -132,67 +139,30 @@
 				return Math.floor(rpx)
 			},
 			// 发送消息
-			async handleSend() {
-				let ttype = uni.getStorageSync('demandType');
-				console.log(ttype);
-				
-				
+			handleSend() {
 				//如果消息不为空
 				if(!this.chatMsg||!/^\s+$/.test(this.chatMsg)){
 					let obj = {
-						botContent: 0,
+						botContent: "",
 						recordId: 0,
 						titleId: 0,
 						userContent: this.chatMsg,
 						userId: 0
 					}
 					this.msgList.push(obj);
-					let obj1 = {
-						botContent: "收到您的留言了，您的家人正在拯救宇宙，请等待回复。",
-						recordId: 0,
-						titleId: 0,
-						userContent: 0,
-						userId: 0
-					}
-					this.msgList.push(obj1);
-					uni.request({
-					    url: 'http://localhost:8888/demand/addDemand',
-					    method: 'POST',
-					    header: {
-					        'content-type': 'application/json',
-					        
-					    },
-					    data: {
-					        userId : "2",
-					        demandDesc: this.chatMsg,
-							demandType: ttype
-					    },
-					    success: (res) => {
-					        console.log(res)
-					    },
-					    fail: (err) => {
-					        console.log(err)
-					    }
-					})
 					this.chatMsg = '';
 				}else {
 					this.$modal.showToast('不能发送空白消息')
 				}
-				
-				//向后端写需求
-				// const demondadd = await myrequest(demandAddUrl,'POST',{ userId : "userId=2" ,demandDesc: this.chatMsg,demandType: ttype})//修改接口
-				// const demondreply = await myrequest(hostreplyurl,{ userId : "2" })
-				// console.log(demondadd)
-				
 			},
 		}
 	}
 </script>
 <style lang="scss" scoped>
-
+	
 	$chatContentbgc: #C2DCFF;
 	$sendBtnbgc: #4F7DF5;
-
+	
 	view,button,text,input,textarea {
 		margin: 0;
 		padding: 0;
@@ -210,16 +180,16 @@
 					    background: transparent;
 					    color: transparent;
 					  }
-
+			
 			// background-color: orange;
 			background-color: #F6F6F6;
-
+			
 			.chat-body {
 				display: flex;
 				flex-direction: column;
-				padding-top: 0rpx;
+				padding-top: 23rpx;
 				// background-color:skyblue;
-
+				
 				.self {
 					justify-content: flex-end;
 				}
@@ -283,7 +253,7 @@
 						background: white;
 						// border-radius: 8rpx;
 						overflow: hidden;
-
+						
 						image {
 							align-self: center;
 						}
@@ -312,7 +282,7 @@
 
 			.uni-textarea {
 				padding-bottom: 70rpx;
-
+                
 				textarea {
 					width: 537rpx;
 					min-height: 75rpx;
@@ -326,7 +296,7 @@
 					padding: 5rpx 8rpx;
 				}
 			}
-
+            
 			.send-btn {
 				display: flex;
 				align-items: center;
@@ -344,7 +314,7 @@
 				line-height: 28rpx;
 			}
 		}
-
+		
 	}
 	.wenicon{
 		position: absolute;
@@ -356,32 +326,4 @@
 		width: 78rpx;
 		height: 78rpx;
 	}
-	.message{
-		background-color: #FFFFFF;
-
-		width: 700rpx;
-		height: 50rpx;
-		margin-left: 25rpx;
-		font-size: 30rpx;
-		font-family: PingFang SC;
-		font-weight: 500;
-		text-align:center;
-		// vertical-align:middle;
-		// display:table-cell;
-		border-radius: 20rpx;
-		border: 12rpx solid transparent;
-		border-right: 12rpx solid #FFFFFF;
-
-	}
-	
-	.picMessageBoard{
-		text-align:center;
-	}
-	.picMessage{
-		text-align:center;
-		width: 400px;
-		
-		
-	}
-	
 </style>
