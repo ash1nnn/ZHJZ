@@ -1,1 +1,1 @@
-<view class="a"><view wx:for="{{a}}" wx:for-item="item" class="ii"><image src="{{item.a}}" alt="" class="img"></image><view class="b"><text class="txt">{{item.b}}</text><text class="txt1">{{item.c}}</text></view></view></view>
+<view wx:for="{{a}}" wx:for-item="item" class="content1"><view class="content"><view class="txt_right"><text class="title">{{item.a}}</text><view class="litxt"><text class="xijie">{{item.b}}</text><text class="xijie">{{item.c}}</text></view></view></view></view>

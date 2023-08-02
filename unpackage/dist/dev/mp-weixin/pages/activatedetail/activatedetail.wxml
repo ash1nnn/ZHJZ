@@ -1,1 +1,1 @@
-<view class="ss"><image src="/static/400.jpg" mode="widthFix"></image><text class="but" bindtap="{{a}}">立即报名</text></view>
+<view class="ss"><image src="https://zhjz-pic.pages.dev/1.jpg" mode="widthFix" class="img"></image><text class="but" bindtap="{{a}}">立即报名</text></view>

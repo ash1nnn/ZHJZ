@@ -1,1 +1,1 @@
-.ss{display:flex;flex-direction:column;margin-bottom:100rpx;text-align:center}.but{background-color:red;font-size:45rpx;color:#fff;padding-top:20rpx;padding-bottom:20rpx;width:100%;position:fixed;bottom:0}
+.ss{display:flex;flex-direction:column;margin-bottom:100rpx;text-align:center}.but{background-color:#2f6dff;font-size:45rpx;color:#fff;padding-top:20rpx;padding-bottom:20rpx;width:100%;position:fixed;bottom:0}.img{width:100%}

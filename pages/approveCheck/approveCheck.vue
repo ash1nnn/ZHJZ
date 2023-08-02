@@ -1,5 +1,14 @@
 <template>
-	<view class="cc">
+	<view class="topTabBar">
+		<view class="grid" v-for="(item, tbIndex) in handlingType" @click="showType(tbIndex)">
+			<!-- <view class="">
+				{{item.value}}
+			</view> -->
+			<view class="text" :class="[tbIndex == tabbarIndex ? 'active' : '']">{{item.value}}</view>
+	
+		</view>
+	</view>
+	<view class="cc" v-if="tabbarIndex==0">
 		<view class="content1" v-for="(item,index) in list">
 			<view class="content" @click="todetial(item)">
 				<view class="txt_right">
@@ -26,7 +35,36 @@
 				<!-- <img :src="item.imgsrc" class="img"> -->
 			</view>
 		</view>
-		<!-- <text class="xijie1">-----已显示全部活动审核-----</text> -->
+		<text class="xijie1">-----已显示全部审批事项审核-----</text>
+	</view>
+	<view class="cc" v-if="tabbarIndex==1">
+		<view class="content1" v-for="(item,index) in list1">
+			<view class="content" @click="todetial(item)">
+				<view class="txt_right">
+					<text class="title1">
+						{{item.title1}}
+					</text>					
+					<text class="title">
+						{{item.title}}
+					</text>
+					<text class="title">
+						{{item.title2}}
+					</text>
+					<view class="litxt">
+						<text class="xijie">{{item.detial1}}</text>
+						<text class="xijie">{{item.detial2}}</text>
+						<text class="xijie">{{item.detial3}}</text>
+						<text class="xijie" v-if="item.id == 1">{{item.detial4}}</text>
+						<text class="xijie" v-if="item.id == 2">{{item.detial5}}</text>
+						<text class="xijie" v-if="item.id == 3">{{item.detial6}}</text>
+						<img :src="item.imgpass" class="img1" v-if="item.url == 1">
+						<img :src="item.img1" class="img1" v-if="item.url == 2">
+					</view>
+				</view>
+				<!-- <img :src="item.imgsrc" class="img"> -->
+			</view>
+		</view>
+		<text class="xijie1">-----已显示全部审批事项审核-----</text>
 	</view>
 </template>
 
@@ -34,8 +72,16 @@
 	export default {
 		data() {
 			return {
+				tabbarIndex: 0,
+				handlingType: [{
+						value: '待审核'
+					},
+					{
+						value: '已审核'
+					}
+				],
 				list: [{
-						id: "2",
+						id: "1",
 						title1: "请审批：请假",
 						title: "地点：江苏省太仓市",
 						title2: " 时间：2023.6.22-2023.6.24",
@@ -48,7 +94,7 @@
 						imgpass: "../../static/sh (1).png",
 						img1:"../../static/sh (2).png",
 						imgsrc: "../../static/jiuye1.jpg",
-						url: "1",
+						url: "2",
 					},
 					{
 						id: "1",
@@ -66,14 +112,47 @@
 						imgsrc: "../../static/jiuye2.jpg",
 						url: "2",
 					}
-				]
+				],
+				list1: [{
+						id: "2",
+						title1: "请审批：请假",
+						title: "地点：江苏省太仓市",
+						title2: " 时间：2023.6.22-2023.6.24",
+						detial1: "报名人:",
+						detial2: "杨福宝",
+						detial3: "审核结果:",
+						detial4: "",
+						detial5: "通过",
+						detial6: "未通过",
+						imgpass: "../../static/sh (1).png",
+						img1:"../../static/sh (2).png",
+						imgsrc: "../../static/jiuye1.jpg",
+						url: "1",
+					},
+					{
+						id: "3",
+						title1: "请审批：居住地变更",
+						title: "地点：上海市徐家汇街道",
+						title2: " 时间：2023.6.24",
+						detial1: "报名人:",
+						detial2: "胡骁俊",
+						detial3: "审核结果:",
+						detial4: "",
+						detial5: "通过",
+						detial6: "未通过",
+						imgpass: "../../static/sh (1).png",
+						img1: "../../static/sh (2).png",
+						imgsrc: "../../static/jiuye2.jpg",
+						url: "1",
+					}
+				],
 			}
 		},
 		methods: {
 			todetial(item) {
 				if(item.url == 2){
 					uni.showModal({
-							title: '活动预约审核',
+							title: '审批事项审核',
 							content: '是否同意该申请？',
 							
 							cancelText: "不同意",
@@ -97,16 +176,58 @@
 			
 			
 			},
-			tolist(){
-				uni.navigateTo({
-					url: '../../pages/orderlist/orderlist'
-				});	
-			}
+			// tolist(){
+			// 	uni.navigateTo({
+			// 		url: '../../pages/orderlist/orderlist'
+			// 	});	
+			// },
+			showType(tbIndex) {
+				// that = this
+				//跳转订单列表类型
+				this.tabbarIndex = tbIndex;
+				if (this.tabbarIndex == 0) {
+			
+				}
+				if (this.tabbarIndex == 1) {
+			
+				}
+				console.info(this.tabbarIndex)
+			},
 		}
 	}
 </script>
 
 <style>
+	.topTabBar {
+		width: 100%;
+		height: 80upx;
+		display: flex;
+		justify-content: space-around;
+		position: fixed;
+		top: 0px;
+		background-color: #f8f8f8;
+	}
+	
+	.grid {
+		width: 20%;
+		height: 80upx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #444;
+		font-size: 28upx;
+	}
+	
+	.text {
+		height: 76upx;
+		display: flex;
+		align-items: center;
+	}
+	
+	.active {
+		color: #0a79ff;
+		border-bottom: solid 4upx #0a79ff;
+	}
 	.cc{
 		display: flex;
 		flex-direction: column;
@@ -114,6 +235,7 @@
 		align-content: center;
 		justify-items: center;
 		width: 100%;
+		padding-top: 30px;
 	}
 	.but[plain]{
 		background-color: #ebf2ff;
@@ -166,7 +288,7 @@
 	.title1 {
 		padding-top: 10rpx;
 		padding-left: 15rpx;
-		font-size: 40rpx;
+		font-size: 35rpx;
 		/* font-weight: 600; */
 		/* font-style: oblique; */
 		color: #5a6679;

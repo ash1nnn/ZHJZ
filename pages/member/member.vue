@@ -1,5 +1,5 @@
 <template>
-		<view class="" v-for="(item,index) in list1">
+		<view class="yy" v-for="(item,index) in list1">
 			<view class=""  v-if="id === item.idd">
 				<view class="a">
 					<view class="cc">
@@ -27,42 +27,47 @@
 						<text class="d">{{item.level}}</text>
 					</view>
 				</view>
-				<view class="e">
-					<text class="i">本月数据</text>
+				<view class="may">
+					<view class="e">
+						<text class="i">本月数据</text>
+					</view>
+					<view class="b" >
+						<image src="../../static/me/2.png" mode="" class="c"></image>
+						<text class="x">集中教育次数</text>
+						<text class="y">5次</text>
+					</view>
+					<view class="b" >
+						<image src="../../static/me/3.png" mode="" class="c"></image>
+						<text class="x">个别教育次数</text>
+						<text class="y">3次</text>
+					</view>
 				</view>
-				<view class="b" >
-					<image src="../../static/me/2.png" mode="" class="c"></image>
-					<text class="x">集中教育次数</text>
-					<text class="y">5次</text>
+				<view class="mayy">
+					<view class="e">
+						<text class="i">历史数据</text>
+					</view>
+					<view class="b" >
+						<image src="../../static/me/2.png" mode="" class="c"></image>
+						<text class="x">集中教育次数</text>
+						<text class="y">5次</text>
+					</view>
+					<view class="b" >
+						<image src="../../static/me/3.png" mode="" class="c"></image>
+						<text class="x">个别教育次数</text>
+						<text class="y">3次</text>
+					</view>
+					<view class="b" >
+						<image src="../../static/me/4.png" mode="" class="c"></image>
+						<text class="x">积分考核</text>
+						<text class="y">86分</text>
+					</view>
+					<view class="b"  >
+						<image src="../../static/me/5.png" mode="" class="c"></image>
+						<text class="x">活动报名次数</text>
+						<text class="y">6次</text>
+					</view>
 				</view>
-				<view class="b" >
-					<image src="../../static/me/3.png" mode="" class="c"></image>
-					<text class="x">个别教育次数</text>
-					<text class="y">3次</text>
-				</view>
-				<view class="e">
-					<text class="i">历史数据</text>
-				</view>
-				<view class="b" >
-					<image src="../../static/me/2.png" mode="" class="c"></image>
-					<text class="x">集中教育次数</text>
-					<text class="y">5次</text>
-				</view>
-				<view class="b" >
-					<image src="../../static/me/3.png" mode="" class="c"></image>
-					<text class="x">个别教育次数</text>
-					<text class="y">3次</text>
-				</view>
-				<view class="b" >
-					<image src="../../static/me/4.png" mode="" class="c"></image>
-					<text class="x">积分考核</text>
-					<text class="y">86分</text>
-				</view>
-				<view class="b"  >
-					<image src="../../static/me/5.png" mode="" class="c"></image>
-					<text class="x">活动报名次数</text>
-					<text class="y">6次</text>
-				</view>
+		
 
 			</view>
 		
@@ -139,12 +144,39 @@
 </script>
 
 <style>
+	.yy{
+		height: 100%;
+		background-color: #FBFAFF;
+	}
 	.a{
-		margin-left: 50rpx;
+		width: 98%;
+		height: 400rpx;
+		margin-top: 20rpx;
+/* 		margin-bottom: 20rpx; */
+		background-color: #ffffff;
+		border-radius: 25rpx;
+		border: 3px solid #F5F6FA;
+	}
+	.may{
+		width: 98%;
+		height: 400rpx;
+		margin-top: 20rpx;
+		background-color: #ffffff;
+		border-radius: 25rpx;
+		border: 3px solid #F5F6FA;
+	}
+	.mayy{
+		width: 98%;
+		height: 600rpx;
+		margin-top: 20rpx;
+		background-color: #ffffff;
+		border-radius: 25rpx;
+		border: 3px solid #F5F6FA;
 	}
 		
 	.cc{
 		margin-top: 20rpx;
+		margin-left: 20rpx;
 	}
 	.d{
 		margin-left: 30rpx;
@@ -157,13 +189,14 @@
 	.i{
 		font-weight: bold;
 		font-size: 40rpx;
+		text-align: center;
 	}
 	.b{
 		display: flex;
 		flex-direction: row;
 		margin-top: 40rpx;
 		height: 80rpx;
-		border-bottom: 3px solid #F5F6FA;
+		border-bottom: 1px solid #CDCDCD;
 		position: relative;
 		
 	}

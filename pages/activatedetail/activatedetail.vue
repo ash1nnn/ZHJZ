@@ -1,6 +1,6 @@
 <template>
 	<view class="ss">
-		<image src="../../static/400.jpg" mode="widthFix"></image>
+		<image src="https://zhjz-pic.pages.dev/1.jpg" mode="widthFix" class="img"></image>
 <!-- 		<image src="../../static/400.jpg" mode=""></image>
 		<image src="../../static/400.jpg" mode=""></image> -->
 		<!-- <text class="but" plain @click="orderok" >立即报名</text> -->
@@ -70,7 +70,7 @@
 	.but{
 /* 		justify-items: center;
 		align-content: center; */
-		background-color: #ff0000;
+		background-color: #2f6dff;
 		font-size: 45rpx;
 		color: #ffffff;
 		padding-top: 20rpx;
@@ -89,6 +89,9 @@
 		bottom:0;
 		
 		
+	}
+	.img{
+		width: 100%;
 	}
 </style>
 

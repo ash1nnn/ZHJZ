@@ -27,12 +27,12 @@
 						{
 							icon: "../../static/check/11.png",
 							text: "居住地变更",
-							url: "/pages/locationChange/locationChange"
+							url: "/pages/addressChange/addressChange"
 						},
 						{
 							icon: "../../static/check/12.png",
 							text: "执行地变更",
-							url: "/pages/addressChange/addressChange"
+							url: "/pages/locationChange/locationChange"
 						}
 						
 					],
