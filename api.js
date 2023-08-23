@@ -1,10 +1,8 @@
-const api = 'http://127.0.0.1:8888';
-
-// /* 精品推荐 */
-// export const recommendurl = api + '/service/recommend';
-// /* 服务列表 */
-// export const listurl = api + '/service/list';
-
+// 本地
+// const api = 'http://127.0.0.1:8888';
+//服务器
+const api = 'http://118.25.148.102:8080/';
+// const api = 'http://118.25.148.102:8080/user/list';
 
 /*需求界面*/
 export const historyDemondUrl = api + '/demand/getHistoryDemand';
@@ -14,7 +12,6 @@ export const demandReplyInitialUrl = api + '/demand/getDemand';
 export const demandReplyUrl = api + '/demand/replyDemand';
 export const demandAddUrl = api + '/demand/addDemand';
 export const hostReplyUrl = api + '/demand/hostReply';
-
 
 export const myrequest = function(url, method, data) {
 	if (data != null || data != undefined || data != {}) {

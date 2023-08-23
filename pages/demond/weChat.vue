@@ -156,7 +156,10 @@
 					}
 					this.msgList.push(obj1);
 					uni.request({
-					    url: 'http://localhost:8888/demand/addDemand',
+					   //本地
+					    // url: 'http://localhost:8888/demand/addDemand',
+						//服务器
+					    url: 'http://118.25.148.102:8080/demand/addDemand',
 					    method: 'POST',
 					    header: {
 					        'content-type': 'application/json',
