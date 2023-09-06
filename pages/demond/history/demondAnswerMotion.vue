@@ -1,4 +1,5 @@
 <template>
+	<!-- <title>本模块为需求历史细节</title> -->
 	<view class="chat">
 		<scroll-view  :style="{height: `${windowHeight}rpx`}"
 		id="scrollview"
@@ -376,10 +377,12 @@
 		position: absolute;
 		width: 78rpx;
 		height: 78rpx;
+		background-color: #F6F6F6;
 	}
 	.daicon{
 		position: absolute;
 		width: 78rpx;
 		height: 78rpx;
+		background-color: #F6F6F6;
 	}
 </style>

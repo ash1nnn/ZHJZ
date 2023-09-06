@@ -1,5 +1,5 @@
 <template>
-<!-- <title>心理辅导</title> -->
+<!-- <title>需求APPLY页面</title> -->
 	<view class = "demond">
 		<div class = "back">
 			<div class="container">
@@ -152,6 +152,7 @@
 		left:10px;
 		width: 24px;
 		height: 24px;
+		background-color: #F6F6F6;
 	}
 	.contentTitle{
 		position: absolute;
@@ -185,6 +186,7 @@
 		left:10px;
 		width: 24px;
 		height: 24px;
+		background-color: #F6F6F6;
 	}
 	.txt4{
 		position: absolute;

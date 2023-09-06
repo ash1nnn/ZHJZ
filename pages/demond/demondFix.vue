@@ -1,5 +1,6 @@
 <template>
 	<!-- <title>需求历史页面</title> -->
+	<!-- <title>本模块为矫正对象需求的主界面</title> -->
 	<view class = "demond">
 		<scroll-view scroll-y="true" style="height: 100vh;" bindscrolltolower="loadMore">
 		<div class = "back">
@@ -313,7 +314,6 @@
 				console.log(this.list3[0].demandReply.replyContent);
 				
 				// console.log(this.list3[0].demandReplyList);
-				
 			},
 			async search(){
 				
@@ -370,16 +370,16 @@
 				});
 			},
 			
-			history1(url){
-				uni.navigateTo({
-				    url:"../demond/history/demondAnswerMotion"
-				});
-			},
-			history2(url){
-				uni.navigateTo({
-				    url:"../demond/history/demondAnswerMeasure"
-				});
-			},
+			// history1(url){
+			// 	uni.navigateTo({
+			// 	    url:"../demond/history/demondAnswerMotion"
+			// 	});
+			// },
+			// history2(url){
+			// 	uni.navigateTo({
+			// 	    url:"../demond/history/demondAnswerMeasure"
+			// 	});
+			// },
 		}
 		    
 	}

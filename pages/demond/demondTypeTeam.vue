@@ -1,4 +1,5 @@
 <template>
+	<!-- 矫正小组端type -->
 	<view >
 		<image class="a" src="https://test-37b.pages.dev/check/1.png" mode="widthFix"></image>
 	</view>

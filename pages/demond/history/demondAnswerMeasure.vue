@@ -1,4 +1,5 @@
 <template>
+	<!-- <title>本模块已放弃使用</title> -->
 	<view class="chat">
 		<scroll-view  :style="{height: `${windowHeight}rpx`}"
 		id="scrollview"

@@ -156,7 +156,7 @@
 					}
 					this.msgList.push(obj1);
 					uni.request({
-					   //本地
+						//本地
 					    // url: 'http://localhost:8888/demand/addDemand',
 						//服务器
 					    url: 'http://118.25.148.102:8080/demand/addDemand',
@@ -353,11 +353,13 @@
 		position: absolute;
 		width: 78rpx;
 		height: 78rpx;
+		background-color: #F6F6F6;
 	}
 	.daicon{
 		position: absolute;
 		width: 78rpx;
 		height: 78rpx;
+		background-color: #F6F6F6;
 	}
 	.message{
 		background-color: #FFFFFF;
