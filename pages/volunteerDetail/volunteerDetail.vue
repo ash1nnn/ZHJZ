@@ -202,15 +202,16 @@
 		margin-top: 30rpx;
 		width: 700rpx;
 	}
-	.aa{
+	.aa {
 		width: 500rpx;
-		align-items: center;  
+		align-items: center;
 		margin: auto;
 		letter-spacing: 100rpx;
 		text-indent: 100rpx;
-		background-color: #6796F9;
+		background-color: #2f6dff;
 		margin-top: 50rpx;
 		border-radius: 30rpx;
+		color:white;
 	}
 	
 	
