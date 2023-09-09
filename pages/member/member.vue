@@ -15,11 +15,11 @@
 						<text class="d">{{item.age}}</text>
 					</view>
 					<view class="cc">
-						<text>联系电话:</text>
+						<text>电话:</text>
 						<text class="d">{{item.tel}}</text>
 					</view>
 					<view class="cc">
-						<text>居住地:</text>
+						<text>地址:</text>
 						<text class="d">{{item.place}}</text>
 					</view>
 					<view class="cc">
@@ -207,7 +207,7 @@
 	}
 		
 	.x{
-		margin-left: 50rpx;
+		margin-left: 20rpx;
 	}
 	.y{
 		

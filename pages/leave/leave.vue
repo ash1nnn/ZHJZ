@@ -21,16 +21,16 @@
 			<view class="may">
 				<view class="tel">
 					<text class="tt">目的地:</text>
-					<input class="t" type="text" placeholder="请输入外出目的地(乡镇、街道)">
+					<input class="t" type="text" placeholder="请输入外出目的地(乡镇、街道)" placeholder-class="font">
 					<!-- 	<input class="t" type="text" focus placeholder="请输入外出目的地"> -->
 				</view>
 				<view class="tel">
 					<text class="tt">目的地明细:</text>
-					<input class="t" type="text"  placeholder="请输入外出目的地明细">
+					<input class="t" type="text"  placeholder="请输入外出目的地明细" placeholder-class="font">
 				</view>
 				<view class="tel">
 					<text class="tt">外出天数:</text>
-					<input class="t" type="number"  placeholder="请输入外出天数">
+					<input class="t" type="number"  placeholder="请输入外出天数" placeholder-class="font">
 				</view>
 				<view class="tell">
 					<text class="tt">外出日期:</text>
@@ -41,7 +41,7 @@
 			<view class="reason">
 
 				<text class="ii">外出理由：</text>
-				<textarea class="jj" name="" id="" cols="30" rows="10" placeholder="请输入外出理由"></textarea>
+				<textarea class="jj" name="" id="" cols="30" rows="10" ></textarea>
 
 				<!-- 		<input class="jj" type="text" focus placeholder="请输入外出理由"> -->
 
@@ -404,6 +404,10 @@
 		// padding-bottom: 5rpx;
 		text-align: right;
 		width: 500rpx;
+	}
+	
+	.font{
+		font-size: 25rpx;
 	}
 
 	.tt {

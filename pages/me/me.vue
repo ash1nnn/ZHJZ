@@ -180,7 +180,7 @@
 	}
 	.f{
 		margin-top: 30rpx;
-		margin-left:100rpx;
+		margin-left:50rpx;
 		width: 100rpx;
 		height: 20rpx;
 		font-size: 30rpx;
@@ -207,7 +207,7 @@
 	}
 		
 	.i{
-		color: gray;
+		// color: #CDCDCD;
 		font-weight: 10;
 		font-size: 28rpx;
 	}
@@ -227,15 +227,15 @@
 	}
 		
 	.x{
-		margin-left: 50rpx;
+		margin-left: 20rpx;
 	}
 	.y{
-		margin-left: 300rpx;
+		margin-left: 330rpx;
 	}
 	.z{
 		width:50rpx;
 		height:50rpx;
-		margin-left: 300rpx;
+		margin-left: 330rpx;
 	}
 	.h{
 		display: flex;

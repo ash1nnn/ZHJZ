@@ -34,6 +34,7 @@
     "pages/demond/typeAnswer/demondAnswerEmploy",
     "pages/demond/typeAnswer/demondAnswerLaw",
     "pages/demond/typeAnswer/demondAnswerHelp",
+    "pages/demond/history/oneDemand",
     "pages/orderlist/orderlist",
     "pages/ordermanage/ordermanage",
     "pages/toptabbarcompent/toptabbar/toptabbar",

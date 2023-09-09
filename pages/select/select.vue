@@ -68,6 +68,7 @@
 	}
 	.x{
 		margin-left: 50rpx;
+		margin-top: 10rpx;
 	}
 	.z{
 		width:50rpx;

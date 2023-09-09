@@ -96,7 +96,7 @@
 		margin-top: 20rpx;
 		padding-left: 30rpx;
 		color: white;
-		font-weight: 100;
+		font-weight: 300;
 		position: absolute;
 	}
 	.dd{
